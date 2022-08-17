@@ -93,7 +93,35 @@ class webSite
         <script type="text/javascript" src="../../app/controllers/template.js"></script>
 
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
+
+        
+                <div class=" col col-md-4 col-sm-12 col-12" >
+
+                <span class="worksans">Encuentranos en:</span>
+                <br>
+
+                <a style="padding-right:5px">
+                <img src="../../resources/img/linkedin.png" width="20px" class="d-inline-block align-top" alt="">
+        
+                </a>
+        
+                <a style="padding-right:5px" >
+                <img src="../../resources/img/linkedin.png"  width="20px" class="d-inline-block align-top" alt="">
+        
+                </a>
+        
+                <a style="padding-right:5px" >
+                <img src="../../resources/img/linkedin.png"  width="20px" class="d-inline-block align-top" alt="">
+        
+                </a>
+                </div>
+
+                <div class=" col col-md-4 col-sm-12 col-12" >
+
+                <span class="worksans">
+                7a Calle Poniente 5146, Colonia Escalon, San Salvador, El Salvador:</span>
+                <br>
+
                 
                 </div>
 
