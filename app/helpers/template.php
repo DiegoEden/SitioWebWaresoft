@@ -22,16 +22,19 @@ class webSite
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
                 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
                 <!--Se informa al navegador que el sitio web está optimizado para dispositivos móviles-->
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <!--Título del documento-->
                 <title>Waresoft | ' . $title . '</title>
               </head>
-        <body>';
+        <body>
+       ';
 
         //elaboracion de navbar
         
-        print'<nav class="navbar navbar-expand-lg sticky-top" id="navbar" role="navigation" style="background-color:transparent;">
+        print'<nav class="navbar navbar-expand-lg sticky-top" id="navbar" role="navigation" style="background-color:white;">
             <a class="navbar-brand" href="index.php">
             <img src="../../resources/img/LogoClaro.png" width="117px" height="47px" class="d-inline-block align-top" alt="">
             </a>
@@ -57,22 +60,24 @@ class webSite
             </li>
           </ul>
         </div>
-        <a style="padding-right:5px" id="linkedin">
-        <img src="../../resources/img/linkedin.png" width="20px" class="d-inline-block align-top" alt="">
+        <a style="padding-right:10px" id="linkedin" href="https://www.linkedin.com/company/waresoftsv" target="_blank">
+        <img src="../../resources/img/linkedin.png" width="20px" class="d-inline-block " alt="">
 
         </a>
 
-        <a style="padding-right:5px" id="facebook">
-        <img src="../../resources/img/linkedin.png"  width="20px" class="d-inline-block align-top" alt="">
+        <a style="padding-right:10px" id="facebook" href="https://www.facebook.com/waresoftsv" target="_blank">
+        <img src="../../resources/img/Facebook.png"  width="20px" class="d-inline-block " alt="">
 
         </a>
 
-        <a style="padding-right:40px" id="insta">
-        <img src="../../resources/img/linkedin.png"  width="20px" class="d-inline-block align-top" alt="">
+        <a style="padding-right:40px" id="insta" target="_blank">
+        <img src="../../resources/img/insta.png"  width="20px" class="d-inline-block " alt="">
 
         </a>
 
-        </nav>';
+        </nav>
+        
+        <main>';
 
 
         /*navbar movil*/
@@ -92,7 +97,7 @@ class webSite
         <script type="text/javascript" src="../../app/controllers/' . $controller . '"></script>
         <script type="text/javascript" src="../../app/controllers/template.js"></script>
 
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" >
 
         
                 <div class=" col col-md-4 col-sm-12 col-12" >
@@ -100,18 +105,17 @@ class webSite
                 <span class="worksans">Encuentranos en:</span>
                 <br>
 
-                <a style="padding-right:5px">
-                <img src="../../resources/img/linkedin.png" width="20px" class="d-inline-block align-top" alt="">
+                <a href="https://www.linkedin.com/company/waresoftsv" target="_blank" style="padding-right:5px;text-decoration:none;" >
+                <img src="../../resources/img/linkedin.png" width="20px" class="d-inline-block " alt="" >
         
                 </a>
         
-                <a style="padding-right:5px" >
-                <img src="../../resources/img/linkedin.png"  width="20px" class="d-inline-block align-top" alt="">
-        
+                <a style="padding-right:5px;text-decoration:none;" href="https://www.facebook.com/waresoftsv" target="_blank">
+                <img src="../../resources/img/Facebook.png"  width="20px" class="d-inline-block " alt="">
                 </a>
         
-                <a style="padding-right:5px" >
-                <img src="../../resources/img/linkedin.png"  width="20px" class="d-inline-block align-top" alt="">
+                <a style="padding-right:5px;text-decoration:none;" target="_blank">
+                <img src="../../resources/img/insta.png"  width="20px" class="d-inline-block " alt="" >
         
                 </a>
                 </div>
@@ -119,7 +123,7 @@ class webSite
                 <div class=" col col-md-4 col-sm-12 col-12" >
 
                 <span class="worksans">
-                7a Calle Poniente 5146, Colonia Escalon, San Salvador, El Salvador:</span>
+                7a Calle Poniente 5146, Colonia Escalon, San Salvador, El Salvador</span>
                 <br>
 
                 
@@ -128,12 +132,24 @@ class webSite
                 
         </footer>
         
-
+</main>
         
         </body>
         </html> 
     ');
     }
+
+    public static function formTemplate() {
+
+
+
+
+  
+    }
 }
 
+
+
 ?>
+
+

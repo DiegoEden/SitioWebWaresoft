@@ -43,11 +43,10 @@
 
 
 footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    color: white;
+    background-color: white;
     text-align: center;
 }
 
@@ -57,4 +56,14 @@ footer {
     font-family: 'work sans', serif;
     color: black;
     font-size: 11px;
+}
+
+
+.logins {
+
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #9FA2B4;
+    font-size:12px;
+
 }
