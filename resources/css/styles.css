@@ -10,6 +10,10 @@
 
 }
 
+.navbar-brand{
+    padding-left:40px;
+}
+
 
 @media(max-width:992px) {
 
@@ -23,6 +27,10 @@
 
     #insta {
         display: none;
+    }
+
+    .navbar-brand{
+        padding-left:0px;
     }
 }
 

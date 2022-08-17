@@ -32,14 +32,14 @@ class webSite
         //elaboracion de navbar
         
         print'<nav class="navbar navbar-expand-lg sticky-top" id="navbar" role="navigation" style="background-color:transparent;">
-            <a class="navbar-brand" style="padding-left:40px" href="index.php">
+            <a class="navbar-brand" href="index.php">
             <img src="../../resources/img/LogoClaro.png" width="117px" height="47px" class="d-inline-block align-top" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav align-items-center">
             <li class="nav-item">
               <a class="nav-link" id="home" aria-current="page" href="index.php">INICIO</a>
             </li>
