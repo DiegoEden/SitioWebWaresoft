@@ -20,6 +20,8 @@ class webSite
                 <link rel="icon" type="image/png" href="../../resources/img/iconows.png" />
                 <link type="text/css" rel="stylesheet" href="../../resources/css/styles.css" />
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+                <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
                 <!--Se informa al navegador que el sitio web está optimizado para dispositivos móviles-->
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <!--Título del documento-->
@@ -33,7 +35,10 @@ class webSite
             <a class="navbar-brand" style="padding-left:40px" href="index.php">
             <img src="../../resources/img/LogoClaro.png" width="117px" height="47px" class="d-inline-block align-top" alt="">
             </a>
-            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" id="home" aria-current="page" href="index.php">INICIO</a>
@@ -52,17 +57,17 @@ class webSite
             </li>
           </ul>
         </div>
-        <a style="padding-right:5px">
+        <a style="padding-right:5px" id="linkedin">
         <img src="../../resources/img/linkedin.png" width="20px" class="d-inline-block align-top" alt="">
 
         </a>
 
-        <a style="padding-right:5px">
+        <a style="padding-right:5px" id="facebook">
         <img src="../../resources/img/linkedin.png"  width="20px" class="d-inline-block align-top" alt="">
 
         </a>
 
-        <a style="padding-right:40px">
+        <a style="padding-right:40px" id="insta">
         <img src="../../resources/img/linkedin.png"  width="20px" class="d-inline-block align-top" alt="">
 
         </a>
@@ -89,17 +94,10 @@ class webSite
 
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                 <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+                
                 </div>
 
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-                </ul>
+                
         </footer>
         
 

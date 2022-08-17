@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.href == current_url) {
             e.classList += " current";
         }
-        if(current_url=='http://localhost/SitioWebWaresoft/views/public/'){
+        if(current_url=='http://localhost/sitioWebWaresoft/views/public/'){
             document.getElementById('home').classList.add('current');
         }
     });
