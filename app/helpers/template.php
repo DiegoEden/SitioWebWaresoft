@@ -14,7 +14,7 @@ class webSite
         print '
         <!DOCTYPE html>
             <html lang="es">
-              <head>
+              <head onload="load()">
                 <meta charset="utf-8"> 
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
                 <link rel="icon" type="image/png" href="../../resources/img/iconows.png" />
@@ -34,10 +34,10 @@ class webSite
        ';
 
         //elaboracion de navbar
-        
-        print'<nav class="navbar navbar-expand-lg sticky-top" id="navbar" role="navigation" style="background-color:white;">
+
+        print '<nav class="navbar navbar-expand-lg sticky-top" id="navbar" role="navigation" >
             <a class="navbar-brand" href="index.php">
-            <img src="../../resources/img/LogoClaro.png" width="117px" height="47px" class="d-inline-block align-top" alt="">
+            <img src="../../resources/img/LogoClaro.png" width="117px" height="47px" class="d-inline-block align-top" alt="" id="logoNav">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -76,18 +76,18 @@ class webSite
 
         </a>
 
+        <button type="button" class="btn btn-light" onclick="modoClaro()">Light</button>
+        <button type="button" class="btn btn-dark" onclick="modoOscuro()">Dark</button>
+
+
         </nav>
         
         <main>
         
         ';
-       
+
 
         /*navbar movil*/
-
-       
-
-
     }
 
 
@@ -100,7 +100,7 @@ class webSite
         <script type="text/javascript" src="../../app/controllers/' . $controller . '"></script>
         <script type="text/javascript" src="../../app/controllers/template.js"></script>
 
-        <div class="container">
+        <div class="container" id="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" >
 
         
@@ -146,9 +146,10 @@ class webSite
     }
 
     /*template para formulario*/
-    public static function formTemplate() {
+    public static function formTemplate()
+    {
 
-      print('<div class="container">
+        print('<div class="container" id="formContainer">
       <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
           <p class="titulosHorizontal">CONTÁCTANOS</p>
@@ -183,17 +184,15 @@ class webSite
   
   </div>
   </div>');
-
-
-  
     }
 
 
     /*template de slier infinito*/
 
-    public static function infiniteSlider(){
+    public static function infiniteSlider()
+    {
 
-      print('<div class="slider">
+        print('<div class="slider">
       <div class="slide-track">
           <div class="slide">
               <img src="../../resources/img/acsa.png" height="250" width="250" alt="" />
@@ -261,8 +260,9 @@ class webSite
 
     /*template de banner ws academy*/
 
-    public static function wsacademyBanner() {
-    print('<div class="wsacademy">
+    public static function wsacademyBanner()
+    {
+        print('<div class="wsacademy">
                   <div class="row d-flex justify-content-center align-items-center h-100">
                       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
                           <div class="row ">
