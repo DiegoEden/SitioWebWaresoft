@@ -154,7 +154,8 @@ footer {
     font-weight: 700;
     color: #35A8E0;
     font-size: 160px;
-    font-family: 'Montserrat'
+    font-family: 'Montserrat';
+    letter-spacing: -25px;
 }
 
 .margenform {
@@ -218,6 +219,9 @@ footer {
 
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 23%, rgba(25, 27, 52, 1) 23%);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
 }
 
 .imgwsacademy {
@@ -318,7 +322,7 @@ footer {
     color: #35A8E0;
 }
 
-.wsacademylinks{
+.wsacademylinks {
 
     font-family: 'work sans', serif;
     color: white;
@@ -328,7 +332,30 @@ footer {
 }
 
 
-.links{
+.links {
     border-top: 50px;
     padding-top: 20px
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.colorLetra {
+    color: black;
 }

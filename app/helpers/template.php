@@ -157,7 +157,6 @@ class webSite
               <div class="row margenform">
                   <div class="col col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12 marginsuperior" id="colForm">
                       <h1 class="numerows">4<sup>+</sup></h1>
-                      <br>
                       <h5 class="headers">AÑOS</h5>
                       <h5 class="headers">EXPERIENCIA</h5>
                       <h5 class="headers">LABORAL</h5>
