@@ -8,34 +8,6 @@ webSite::header('Inicio');
 
 
 
-<?php
-
-
-webSite::wsacademyBanner();
-
-?>
-
-<br>
-<br>
-<br>
-
-
-<?php
-
-
-webSite::formTemplate();
-
-?>
-
-<br>
-<br>
-<br>
-<?php
-
-
-webSite::infiniteSlider();
-
-?>
 
 <?php
 //Se imprime la plantilla del footer y se envía el controlador a usar

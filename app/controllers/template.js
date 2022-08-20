@@ -25,7 +25,7 @@ function load() {
 
 
     let mode = localStorage.getItem("mode");
-    if (mode == '') {
+    if (mode == ''|| mode==null) {
         modoClaro();
     }
     if (mode == 'claro') {
@@ -56,20 +56,10 @@ function modoOscuro() {
     var footer = document.querySelector("footer");
     footer.style.setProperty("transition", ".6s");
 
-
-
-
-
-
-
-
-
 }
 
 
 function modoClaro() {
-
-
 
     document.documentElement.style.setProperty('--body-color', '#FFFFFF');
     document.documentElement.style.setProperty('--color-fondo', '#FFFFFF');
@@ -79,9 +69,6 @@ function modoClaro() {
     document.getElementById('logoNav').src = "../../resources/img/logoClaro.png";
     localStorage.setItem('mode', 'claro');
     document.documentElement.style.setProperty('--colorSlider','#F2F2F2');
-  
-
-
 
 
 }
