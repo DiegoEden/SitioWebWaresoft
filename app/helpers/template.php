@@ -24,6 +24,7 @@ class webSite
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
                 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
                 <!--Se informa al navegador que el sitio web está optimizado para dispositivos móviles-->
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,6 +59,14 @@ class webSite
           </li>
           <li class="nav-item">
               <a class="nav-link" aria-current="page" href="contacto.php">CONTACTO</a>
+          </li>
+            <li class="nav-item">
+                <button type="button" class="btn" id="claro" onclick="modoClaro()"><span class="material-icons margenModo">
+                light_mode
+                </span></button>
+                <button type="button" class="btn" id="oscuro" onclick="modoOscuro()"><span class="material-icons margenModo">
+                dark_mode
+                </span></button>            
             </li>
           </ul>
         </div>
@@ -76,8 +85,9 @@ class webSite
 
         </a>
 
-        <button type="button" class="btn btn-light" onclick="modoClaro()">Light</button>
-        <button type="button" class="btn btn-dark" onclick="modoOscuro()">Dark</button>
+       
+
+        
 
 
         </nav>

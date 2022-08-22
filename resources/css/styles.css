@@ -36,6 +36,13 @@
     }
 
 
+    .carousel-button {
+
+        font-size: 0;
+
+    }
+
+
 }
 
 .navbar {
@@ -70,7 +77,7 @@ footer {
     background-color: var(--color-fondo);
     text-align: center;
     color: var(--colorLetra);
-    
+
 
 }
 
@@ -230,7 +237,7 @@ footer {
 
 .wsacademy {
 
-    background:var(--bannerWs);
+    background: var(--bannerWs);
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -375,4 +382,132 @@ footer {
 
 body {
     background-color: var(--body-color);
+    transition: var(--animation);
+}
+
+
+#claro {
+    color: white;
+    padding-top: 10px;
+    border: none;
+}
+
+#claro:hover {
+
+    color: yellow;
+}
+
+#oscuro {
+    color: black;
+    padding-top: 10px;
+    border: none;
+}
+
+#oscuro:hover {
+
+    color: gold;
+}
+
+.navbar-toggler {
+    border: none;
+    transition: .6s;
+
+}
+
+.navbar-toggler:focus {
+
+    border: none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0);
+}
+
+.navbar-toggler:active {
+
+    border: none;
+}
+
+
+
+.navbar-toggler-icon {
+    background-image: var(--imgToggle);
+    transition: .6s;
+}
+
+.margenModo {
+    margin-left: 30px
+}
+
+
+#myCarousel .nav a small {
+    display: block;
+}
+
+.carousel-item {
+    height: calc(88vh - 73px);
+}
+
+#myCarousel .nav {
+    background: var(--color-fondo);
+    transition: 0.6s;
+}
+
+.nav-justified>li>a {
+    border-radius: 0px;
+    text-decoration: none;
+    font-size: 70px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: var(--colorLetra) !important;
+    width: 250px;
+    background-color: var(--color-fondo);
+    border: none;
+    transition: 0.6s;
+    padding-left: 20px;
+    text-align: center;
+
+
+}
+
+
+.nav-justified>li>a:focus {
+
+    color: var(--colorLetra) !important;
+
+}
+
+
+.nav-justified>li>a:hover {
+    color: #35A8E0 !important;
+    transition: 0.6s;
+
+}
+
+.nav-justified>li>a span{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    color: var(--colorLetra) !important;
+    transition: 0.6s;
+    display: inline-block;
+    position: relative;
+    margin-left: -20px;
+    padding-top: 0px;
+
+
+    
+}
+
+.nav-pills>li[data-bs-slide-to="0"].active a {
+    color: #35A8E0 !important;
+}
+
+.nav-pills>li[data-bs-slide-to="1"].active a {
+    color: #35A8E0 !important;
+}
+
+.nav-pills>li[data-bs-slide-to="2"].active a {
+    color: #35A8E0 !important;
+}
+
+.nav-pills>li[data-bs-slide-to="3"].active a {
+    color: #35A8E0 !important;
 }
