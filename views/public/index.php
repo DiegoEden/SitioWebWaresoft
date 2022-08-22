@@ -12,6 +12,12 @@ webSite::carousel();
 
 ?>
 
+<?php
+
+webSite::projectSlider();
+
+?>
+
 <br>
 <br>
 <br>
