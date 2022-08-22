@@ -11,6 +11,18 @@ webSite::header('Experiencia');
 
 
 
+<br>
+<br>
+<br>
+
+<?php
+
+webSite::formTemplate();
+
+?>
+
+
+
 
 
 <?php

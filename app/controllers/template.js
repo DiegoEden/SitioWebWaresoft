@@ -66,6 +66,10 @@ function modoOscuro() {
     document.documentElement.style.setProperty('--imgToggle', 'url("../../resources/img/menuOscuro.png")');
     document.documentElement.style.setProperty('--animation', '.6s');
     localStorage.setItem('estado', 'active');
+    document.documentElement.style.setProperty('--dot-colors', "#FFFFFF");
+    document.documentElement.style.setProperty('--opacity', "initial");
+
+
 
 
 }
@@ -88,6 +92,10 @@ function modoClaro() {
     document.documentElement.style.setProperty('--imgToggle', 'url("../../resources/img/menu.png")');
     document.documentElement.style.setProperty('--animation', '.6s');
     localStorage.setItem('estado', 'active');
+    document.documentElement.style.setProperty('--dot-colors', "#C4C4C4");
+    document.documentElement.style.setProperty('--opacity', ".5");
+
+
 
 
 

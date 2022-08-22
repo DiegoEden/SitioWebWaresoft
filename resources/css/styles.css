@@ -1,3 +1,7 @@
+/*Archivo css para estilo de sitio web Waresoft*/
+
+/*inicio estlio template head y footer*/
+
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 30px;
     font-size: 14px;
@@ -36,14 +40,85 @@
     }
 
 
-    .carousel-button {
+    .nav-justified>li>a span {
 
-        font-size: 0;
+        font-size: 0 !important;
+    }
 
+    #myCarousel .nav {
+        justify-content: center !important;
     }
 
 
+    .nav-justified>li>a {
+        font-size: 45px !important;
+        padding-left: 20px !important;
+        margin-right: 0px !important;
+
+
+    }
+
+    #myCarousel .nav {
+        margin-right: 0px !important;
+        width: 100%;
+        margin-bottom: -1px !important;
+
+
+    }
+
+    .titulosSlider {
+        font-size: 50px !important;
+    }
+
+    .borderCol {
+        background-size: 85px !important;
+    }
+
+    .colImg{
+        display: none !important;
+    }
+    
+
+
 }
+
+@media(max-width:1024px) {
+    .borderCol {
+        background-size: 85px !important;
+    }
+}
+
+
+@media(max-width:349px) {
+
+    .nav-justified>li>a {
+        font-size: 30px !important;
+        padding-left: 15px !important;
+        margin-right: 0px !important;
+
+
+    }
+
+    #myCarousel .nav {
+
+        margin-bottom: -1px !important;
+    }
+
+
+    .titulosSliderImage {
+        font-size: 12px !important;
+    }
+
+
+
+}
+
+@media (max-width:1280px) {
+    .borderCol {
+        background-size: 85px !important;
+    }
+}
+
 
 .navbar {
     background-color: var(--color-fondo);
@@ -60,6 +135,8 @@
     }
 
 }
+
+
 
 
 
@@ -89,6 +166,10 @@ footer {
     font-size: 11px;
 }
 
+/*fin estlio template head y footer*/
+
+
+/*inicio estilos form y responsive*/
 
 .forms {
 
@@ -139,7 +220,32 @@ footer {
 
     }
 
+    .titulosSlider {
+        font-size: 40px !important;
+    }
 
+    .titulosSliderImage {
+        font-size: 12px !important;
+    }
+
+
+
+
+}
+
+@media(max-width:1279px) {
+    .titulosSlider {
+        font-size: 40px !important;
+    }
+
+    .titulosSliderImage {
+        font-size: 14px !important;
+    }
+
+    #myCarousel .nav {
+
+        margin-bottom: -4px !important;
+    }
 }
 
 .marginsuperior {
@@ -155,6 +261,7 @@ footer {
     margin: 50px;
     margin-left: -150px;
 
+
 }
 
 
@@ -162,12 +269,15 @@ footer {
     font-weight: 700;
     font-family: 'Montserrat';
     color: var(--colorLetra);
+    transition: var(--animation);
+
 }
 
 
 .headerceleste {
     color: #35A8E0;
-    font-family: 'Montserrat'
+    font-family: 'Montserrat';
+    transition: var(--animation);
 }
 
 .numerows {
@@ -176,13 +286,18 @@ footer {
     font-size: 160px;
     font-family: 'Montserrat';
     letter-spacing: -25px;
+    transition: var(--animation);
+
 }
 
 .margenform {
     margin-top: 60px;
 }
 
+/*fin estilo form*/
 
+
+/*inicio estilo slider */
 
 @keyframes scroll {
     0% {
@@ -193,6 +308,7 @@ footer {
         transform: translateX(calc(-250px * 7));
     }
 }
+
 
 .slider {
     background: var(--colorSlider);
@@ -234,6 +350,10 @@ footer {
     width: 250px;
 }
 
+/*fin estilos infinite slider*/
+
+
+/*inicio estilos banner wsacademy*/
 
 .wsacademy {
 
@@ -241,6 +361,7 @@ footer {
     margin: auto;
     overflow: hidden;
     position: relative;
+    transition: var(--animation);
 
 }
 
@@ -357,6 +478,10 @@ footer {
     padding-top: 20px
 }
 
+/*fin estilos banner wscademy*/
+
+/*inicio configuraciones modo oscuro*/
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -436,18 +561,25 @@ body {
     margin-left: 30px
 }
 
+/* fin configuraciones modo oscuro*/
 
+/*inicio estilos carousel*/
 #myCarousel .nav a small {
     display: block;
 }
 
 .carousel-item {
-    height: calc(88vh - 73px);
+    height: calc(110vh - 73px);
+    background: var(--color-fondo);
+    transition: .6s;
 }
 
 #myCarousel .nav {
     background: var(--color-fondo);
     transition: 0.6s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .nav-justified>li>a {
@@ -461,8 +593,9 @@ body {
     background-color: var(--color-fondo);
     border: none;
     transition: 0.6s;
-    padding-left: 20px;
+    padding-left: 50px;
     text-align: center;
+    margin-right: 20px;
 
 
 }
@@ -482,7 +615,7 @@ body {
 }
 
 .nav-justified>li>a span {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     font-family: 'Montserrat';
     color: var(--colorLetra) !important;
@@ -511,3 +644,166 @@ body {
 .nav-pills>li[data-bs-slide-to="3"].active a {
     color: #35A8E0 !important;
 }
+
+
+
+.titulosSlider {
+
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 80px;
+    color: white;
+    justify-content: left;
+    text-align: left;
+    transition: .6s;
+
+}
+
+.headercelesteSlider {
+    justify-content: left;
+    color: #35A8E0;
+    font-family: 'Montserrat';
+    transition: var(--animation);
+    text-align: left;
+    transition: .6s;
+
+
+}
+
+
+.titulosSliderImage {
+    color: white;
+    font-family: 'work sans', serif;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .6s;
+    margin-top: 20px
+}
+
+.titulosSliderImage2 {
+    color: white;
+    font-family: 'work sans', serif;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .6s;
+    margin-top: -20px
+}
+
+.btnSlider {
+    color: white;
+    font-family: 'work sans', serif;
+    border: none;
+    font-weight: 700;
+    transition: .6s;
+
+}
+
+.btnSlider:hover {
+    color: #35A8E0;
+    transition: .6s;
+
+}
+
+.borderCol {
+
+    background-image: url("../../resources/img/Rectangle.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 130px;
+    transition: .6s;
+
+
+}
+
+/*fin estilos carousel*/
+
+
+/*inicio estilo slider experiencia*/
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: var(--dot-colors);
+    background-clip: padding-box !important;
+    opacity: var(--opacity) !important;
+
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background: #35A8E0 !important;
+    background-clip: padding-box !important;
+}
+
+.tituloExperiencia {
+    color: #35A8E0;
+    font-family: 'work sans', serif;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .6s;
+    margin-top: 20px;
+    text-align: left;
+    transition: .6s;
+
+}
+
+
+.titulosExperiencia {
+
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--colorLetra);
+    justify-content: left;
+    text-align: left;
+    transition: .6s;
+
+}
+
+
+.parrafoExperiencia {
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--colorLetra);
+    text-align: left;
+    transition: .6s;
+
+}
+
+.btnExp {
+    background-color: #35A8E0;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 0px;
+    width: 195px;
+    height: 52px;
+    padding-top:15px;
+    border: none;
+}
+
+.btnExp:hover {
+
+    background-color: #1D82C2;
+}
+
+.btnExp:active{
+    background-color: #35A8E0;
+
+}
+
+
+.btnExp:focus{
+    background-color: #1D82C2;
+
+}
+
+
+/*final estilo slider experiencia*/

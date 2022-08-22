@@ -10,6 +10,17 @@ webSite::header('Servicios');
 
 
 
+<br>
+<br>
+<br>
+
+<?php
+
+webSite::formTemplate();
+
+?>
+
+
 
 
 <?php

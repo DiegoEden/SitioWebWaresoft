@@ -36,7 +36,11 @@ class webSite
 
         //elaboracion de navbar
 
-        print '<nav class="navbar navbar-expand-lg sticky-top" id="navbar" role="navigation" >
+        print '
+        
+        <main>
+        
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar" role="navigation" >
             <a class="navbar-brand" href="index.php">
             <img src="../../resources/img/LogoClaro.png" width="117px" height="47px" class="d-inline-block align-top" alt="" id="logoNav">
             </a>
@@ -92,7 +96,7 @@ class webSite
 
         </nav>
         
-        <main>
+        
         
         ';
 
@@ -320,5 +324,119 @@ class webSite
                       </div>
                   </div>
             </div>');
+    }
+
+    /*template carousel*/
+
+    public static function carousel()
+    {
+        print '<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video class="" autoplay loop muted src="../../resources/video/Tropical.mp4"></video>
+                <div class="carousel-caption d-flex flex-column justify-content-center " style="top: 0">
+                    <div class="row">
+                        <div class="col borderCol">
+                            <p class="titulosSliderImage">SOFTWARE</p>
+                            <h1 class="titulosSlider">Imagina</h1>
+                            <h1 class="titulosSlider"><span class="headercelesteSlider">Y lo </span></h1>
+                            <h1 class="titulosSlider">Hacemos</h1>
+                            <br>
+    
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto ></a></p>
+    
+    
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video class="" autoplay loop muted src="../../resources/video/Agua-natural.mp4"></video>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+                    <div class="row">
+                        <div class="col borderCol">
+                            <p class="titulosSliderImage">SOFTWARE</p>
+                            <h1 class="titulosSlider">Imagina</h1>
+                            <h1 class="titulosSlider"><span class="headercelesteSlider">Y lo </span></h1>
+                            <h1 class="titulosSlider">Hacemos</h1>
+                            <br>
+    
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto ></a></p>
+    
+    
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video class="" autoplay loop muted src="../../resources/video/forest.mp4"></video>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+                    <div class="row">
+                        <div class="col borderCol">
+                            <p class="titulosSliderImage">SOFTWARE</p>
+                            <h1 class="titulosSlider">Imagina</h1>
+                            <h1 class="titulosSlider"><span class="headercelesteSlider">Y lo </span></h1>
+                            <h1 class="titulosSlider">Hacemos</h1>
+                            <br>
+    
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto ></a></p>
+    
+    
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video class="" autoplay loop muted src="../../resources/video/Tropical.mp4"></video>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+                    <div class="row">
+                        <div class="col borderCol">
+                            <p class="titulosSliderImage">SOFTWARE</p>
+                            <h1 class="titulosSlider">Imagina</h1>
+                            <h1 class="titulosSlider"><span class="headercelesteSlider">Y lo </span></h1>
+                            <h1 class="titulosSlider">Hacemos</h1>
+                            <br>
+    
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto ></a></p>
+    
+    
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+            </div>
+    
+    
+    
+            <ul class="nav nav-pills nav-justified justify-content-end">
+                <li data-bs-target="#myCarousel" class="active" data-bs-slide-to="0"><a href="#">01 <span class="spanSlider">Servicio <br>Tecnología &nbsp;</span> </a></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"><a href="#">02 <span>Servicio <br>Software</span></a></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"><a href="#">03 <span>Servicio <br>Cloud</span></a></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"><a href="#">04 <span>Servicio <br>Digital</span></a></li>
+    
+            </ul>
+    
+    
+        </div>
+    
+    </div>
+    
+    </div>
+    ';
+    }
+
+    public static function projectSlider() {
+        
     }
 }

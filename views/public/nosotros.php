@@ -9,6 +9,17 @@ webSite::header('Nosotros');
 
 
 
+<br>
+<br>
+<br>
+
+<?php
+
+webSite::formTemplate();
+
+?>
+
+
 
 
 
