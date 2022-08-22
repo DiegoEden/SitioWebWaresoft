@@ -59,10 +59,10 @@ webSite::header('Inicio');
     </div>
     <!-- End Carousel Inner -->
     <ul class="nav nav-pills nav-justified justify-content-end">
-        <li data-bs-target="#myCarousel" class="active" data-bs-slide-to="0"><a href="#">01 <span>Servicio Tecnología</span> </a></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="1"><a href="#">02 <span>Servicio Software</span></a></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="2"><a href="#">03 <span>Servicio Cloud</span></a></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="3"><a href="#">04 <span>Servicio Digital</span></a></li>
+        <li data-bs-target="#myCarousel" class="active" data-bs-slide-to="0"><a href="#">01 <span>Servicio <br>Tecnología</span> </a></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="1"><a href="#">02 <span>Servicio <br>Software</span></a></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="2"><a href="#">03 <span>Servicio <br>Cloud</span></a></li>
+        <li data-bs-target="#myCarousel" data-bs-slide-to="3"><a href="#">04 <span>Servicio <br>Digital</span></a></li>
 
 
 
