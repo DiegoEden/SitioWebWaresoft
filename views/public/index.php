@@ -22,6 +22,15 @@ webSite::projectSlider();
 <br>
 <br>
 
+<?php
+
+webSite::serviceSlider();
+
+?>
+
+<br>
+<br>
+<br>
 
 <?php
 

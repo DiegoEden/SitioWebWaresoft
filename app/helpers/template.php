@@ -25,6 +25,7 @@ class webSite
                 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
                 <!--Se informa al navegador que el sitio web está optimizado para dispositivos móviles-->
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,7 +39,6 @@ class webSite
 
         print '
         
-        <main>
         
         <nav class="navbar navbar-expand-lg fixed-top" id="navbar" role="navigation" >
             <a class="navbar-brand" href="index.php">
@@ -95,7 +95,8 @@ class webSite
 
 
         </nav>
-        
+        <main>
+
         
         
         ';
@@ -333,7 +334,7 @@ class webSite
         print '<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <video class="" autoplay loop muted src="../../resources/video/Tropical.mp4"></video>
+                <video class="" autoplay loop muted src="../../resources/video/Waves.mp4"></video>
                 <div class="carousel-caption d-flex flex-column justify-content-center " style="top: 0">
                     <div class="row">
                         <div class="col borderCol">
@@ -436,8 +437,9 @@ class webSite
     ';
     }
 
-    public static function projectSlider() {
-        
+    public static function projectSlider()
+    {
+
         print('
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -554,5 +556,39 @@ class webSite
             </div>
         </div>
         ');
+    }
+
+    public static function serviceSlider()
+    {
+        print('
+        <div class="container d-flex flex-column justify-content-center h-100" style="top: 0">
+            <div class="row">
+                <div class="col col-md-12 col-lg-6 col-xl-6 col-sm-12 col-12 ">
+                    <video class="img-fluid" id="video1" autoplay loop muted src="../../resources/video/forest.mp4"></video>
+                    <video class="img-fluid d-none" id="video2" autoplay loop muted src="../../resources/video/Agua-natural.mp4"></video>
+                    <video class="img-fluid d-none" id="video3" autoplay loop muted src="../../resources/video/Tropical.mp4"></video>
+                    <video class="img-fluid d-none" id="video4" autoplay loop muted src="../../resources/video/Waves.mp4"></video>
+        
+        
+                </div>
+                <div class="col col-md-12 align-items-center col-lg-6 col-xl-6 col-sm-12 col-12 ">
+                    <p class="tituloExperiencia">SERVICIOS</p>
+                    <h2 id="titulo1" class="titulosExperiencia">Estamos</h2>
+                    <h2 id="titulo2" class="titulosExperiencia">aquí</h2>
+                    <h2 id="titulo3" class="titulosExperiencia">para ayudarte</h2>
+                    <br>
+                    <ul class="listaServicios">
+                        <li class="item"><button id="btnV1" class="buttonServicios activeServicios" onclick="showVideo1()">01. SERVICIO TECNOLOGÍA</button></li>
+                        <li class="item"><button id="btnV2" class="buttonServicios" onclick="showVideo2()">02. SERVICIO SOFTWARE</button></li>
+                        <li class="item"><button id="btnV3" class="buttonServicios" onclick="showVideo3()">03. SERVICIO CLOUD</button></li>
+                        <li class="item"><button id="btnV4" class="buttonServicios" onclick="showVideo4()">04. SERVICIO DIGITAL</button></li>
+        
+                    </ul>
+        
+        
+                </div>
+        
+            </div>
+        </div>');
     }
 }

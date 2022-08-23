@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.href == current_url) {
             e.classList += " current";
         }
-        if (current_url == 'http://localhost/sitioWebWaresoft/views/public/' ||current_url == 'http://localhost/sitioWebWaresoft/views/public/#') {
+        if (current_url == 'http://localhost/sitioWebWaresoft/views/public/' || current_url == 'http://localhost/sitioWebWaresoft/views/public/#' || current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php#') {
             document.getElementById('home').classList.add('current');
         }
     });
@@ -102,17 +102,17 @@ function modoClaro() {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#myCarousel').carousel({
         interval: 4000
     });
 
     var clickEvent = false;
-    $('#myCarousel').on('click', '.nav a', function() {
+    $('#myCarousel').on('click', '.nav a', function () {
         clickEvent = true;
         $('.nav li').removeClass('active');
         $(this).parent().addClass('active');
-    }).on('slid.bs.carousel', function(e) {
+    }).on('slid.bs.carousel', function (e) {
         if (!clickEvent) {
             var count = $('.nav').children().length - 1;
             var current = $('.nav li.active');
@@ -125,3 +125,60 @@ $(document).ready(function() {
         clickEvent = false;
     });
 });
+
+
+function showVideo1() {
+
+    document.getElementById('video1').className = "img-fluid animate__animated animate__slideInLeft";
+    document.getElementById('video2').className = "d-none";
+    document.getElementById('video3').className = "d-none";
+    document.getElementById('video4').className = "d-none";
+    document.getElementById('btnV2').classList.remove("activeServicios");
+    document.getElementById('btnV3').classList.remove("activeServicios");
+    document.getElementById('btnV4').classList.remove("activeServicios");
+    document.getElementById('btnV1').classList.add("activeServicios");
+
+}
+
+function showVideo2() {
+
+    document.getElementById('video2').className = "img-fluid animate__animated animate__slideInLeft";
+    document.getElementById('video1').className = "d-none";
+    document.getElementById('video3').className = "d-none";
+    document.getElementById('video4').className = "d-none";
+    document.getElementById('btnV1').classList.remove("activeServicios");
+    document.getElementById('btnV3').classList.remove("activeServicios");
+    document.getElementById('btnV4').classList.remove("activeServicios");
+    document.getElementById('btnV2').classList.add("activeServicios");
+
+
+}
+
+function showVideo3() {
+
+    document.getElementById('video3').className = "img-fluid animate__animated animate__slideInLeft";
+    document.getElementById('video1').className = "d-none";
+    document.getElementById('video2').className = "d-none";
+    document.getElementById('video4').className = "d-none";
+    document.getElementById('btnV2').classList.remove("activeServicios");
+    document.getElementById('btnV1').classList.remove("activeServicios");
+    document.getElementById('btnV4').classList.remove("activeServicios");
+    document.getElementById('btnV3').classList.add("activeServicios");
+
+
+}
+
+function showVideo4() {
+
+    document.getElementById('video4').className = "img-fluid animate__animated animate__slideInLeft";
+    document.getElementById('video1').className = "d-none";
+    document.getElementById('video3').className = "d-none";
+    document.getElementById('video2').className = "d-none";
+    document.getElementById('btnV2').classList.remove("activeServicios");
+    document.getElementById('btnV3').classList.remove("activeServicios");
+    document.getElementById('btnV1').classList.remove("activeServicios");
+    document.getElementById('btnV4').classList.add("activeServicios");
+
+
+}
+

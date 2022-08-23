@@ -61,7 +61,6 @@
     #myCarousel .nav {
         margin-right: 0px !important;
         width: 100%;
-        margin-bottom: -1px !important;
 
 
     }
@@ -74,12 +73,26 @@
         background-size: 85px !important;
     }
 
-    .colImg{
+    .colImg {
         display: none !important;
     }
-    
 
 
+
+}
+
+@media (max-width: 991px) {
+    #titulo1 {
+        display: none !important;
+    }
+
+    #titulo2 {
+        display: none !important;
+    }
+
+    #titulo3 {
+        display: none !important;
+    }
 }
 
 @media(max-width:1024px) {
@@ -97,11 +110,6 @@
         margin-right: 0px !important;
 
 
-    }
-
-    #myCarousel .nav {
-
-        margin-bottom: -1px !important;
     }
 
 
@@ -242,10 +250,6 @@ footer {
         font-size: 14px !important;
     }
 
-    #myCarousel .nav {
-
-        margin-bottom: -4px !important;
-    }
 }
 
 .marginsuperior {
@@ -416,6 +420,7 @@ footer {
     font-size: 14px;
     width: 200px;
     height: 41px;
+    transition: .6s;
 
 
 
@@ -569,7 +574,7 @@ body {
 }
 
 .carousel-item {
-    height: calc(110vh - 73px);
+    height: calc(111vh - 73px);
     background: var(--color-fondo);
     transition: .6s;
 }
@@ -785,25 +790,83 @@ body {
     border-radius: 0px;
     width: 195px;
     height: 52px;
-    padding-top:15px;
+    padding-top: 15px;
     border: none;
 }
 
 .btnExp:hover {
 
     background-color: #1D82C2;
+    transition: .6s;
+
 }
 
-.btnExp:active{
+.btnExp:active {
     background-color: #35A8E0;
 
 }
 
 
-.btnExp:focus{
+.btnExp:focus {
     background-color: #1D82C2;
 
 }
 
 
 /*final estilo slider experiencia*/
+
+
+/*inicio slider servicios*/
+
+.buttonServicios {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 400;
+    color: #787878;
+    transition: var(--animation);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.buttonServicios:hover {
+    color: var(--colorLetra);
+    transition: .6s;
+
+}
+
+
+.buttonServicios:active {
+    color: var(--colorLetra);
+}
+
+.buttonServicios:focus {
+    color: var(--colorLetra);
+}
+
+.listaServicios {
+    justify-content: left;
+    list-style: none;
+    padding-left: 2px;
+
+}
+
+
+li.menu-item {
+    margin: 0 0 10px 0;
+}
+
+.item {
+    margin-bottom: 15px;
+
+}
+
+.activeServicios {
+    color: var(--colorLetra) !important;
+    transition: .6s;
+
+}
+
+
+/*fin slider servicios*/
