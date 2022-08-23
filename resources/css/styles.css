@@ -83,16 +83,9 @@
 
 @media (max-width: 991px) {
     #titulo1 {
-        display: none !important;
+        font-size: 40px !important;
     }
 
-    #titulo2 {
-        display: none !important;
-    }
-
-    #titulo3 {
-        display: none !important;
-    }
 }
 
 @media(max-width:1024px) {

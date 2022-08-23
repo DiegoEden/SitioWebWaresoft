@@ -573,9 +573,7 @@ class webSite
                 </div>
                 <div class="col col-md-12 align-items-center col-lg-6 col-xl-6 col-sm-12 col-12 ">
                     <p class="tituloExperiencia">SERVICIOS</p>
-                    <h2 id="titulo1" class="titulosExperiencia">Estamos</h2>
-                    <h2 id="titulo2" class="titulosExperiencia">aquí</h2>
-                    <h2 id="titulo3" class="titulosExperiencia">para ayudarte</h2>
+                    <h2 id="titulo1" class="titulosExperiencia">Estamos <br>aquí<br>para ayudarte</h2>
                     <br>
                     <ul class="listaServicios">
                         <li class="item"><button id="btnV1" class="buttonServicios activeServicios" onclick="showVideo1()">01. SERVICIO TECNOLOGÍA</button></li>
