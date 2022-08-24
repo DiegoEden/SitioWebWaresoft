@@ -6,11 +6,35 @@ webSite::header('Experiencia');
 ?>
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container" id="formContainer">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-7 col-lg-6 col-xl-6 col-sm-12">
+            <p class="titulosHorizontal">EXPERIENCIA</p>
+            <div class="row margenform">
+                <div class="col col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12 marginsuperior">
+                    <h2 class="titulosExperiencia">Lukky</h2>
 
 
+                    <p class="parrafoExperiencia">Es una aplicación móvil que te permite mantener un historial de tu máscota en su veterinaria: vacunas, citas, medicamentos y más. Además de la placa inteligente que te permite rastrear a tu perro por si se extravía.</p>
+                </div>
+                <div class="col col col-md-5 col-lg-6 col-xl-6 col-sm-12 col-12">
+                    <img src="../../resources/img/luckyLaptop.png" class="img-fluid" alt="">
 
+                </div>
+            </div>
 
+        </div>
 
+    </div>
+</div>
+
+<br>
 <br>
 <br>
 <br>

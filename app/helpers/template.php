@@ -589,4 +589,201 @@ class webSite
             </div>
         </div>');
     }
+
+
+    public static function teamSlider()
+    {
+        print('
+        <div id="carouselTeam" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+
+            </div>
+        <div class="carousel-inner">
+    
+    
+            <div class="carousel-item active">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+    
+                    <div class="container overflow-hidden">
+                        <p class="tituloExperiencia">NOSOTROS</p>
+    
+                        <br>
+                        <br>
+                        <br>
+    
+                        <div class="row gx-5">
+                            <div class="col">
+                                <div class="p-3 layout">
+    
+                                    <img src="../../resources/img/marco.png" class="profile" alt="">
+    
+    
+                                    <br>
+                                    <br>
+                                    <h1 class="nombres">Marco</h1>
+    
+                                    <h3 class="rol">Director</h3>
+    
+                                    <br>
+                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
+                                    </p>
+    
+    
+    
+    
+                                </div>
+                            </div>
+                            <div class="col ">
+                                <div class="p-3 layout">
+                                    <img src="../../resources/img/marco.png" class="profile" alt="">
+    
+    
+                                    <br>
+                                    <br>
+                                    <h1 class="nombres">Marco</h1>
+    
+                                    <h3 class="rol">Director</h3>
+    
+                                    <br>
+                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
+                                    </p>
+    
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <a href="#" class="btn btnTeam" role="button">Ver Team ></a>
+    
+    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+                    <div class="container overflow-hidden">
+                        <p class="tituloExperiencia">NOSOTROS</p>
+    
+                        <br>
+                        <br>
+                        <br>
+    
+                        <div class="row gx-5">
+                            <div class="col">
+                                <div class="p-3 layout">
+    
+                                    <img src="../../resources/img/marco.png" class="profile" alt="">
+    
+    
+                                    <br>
+                                    <br>
+                                    <h1 class="nombres">Marco</h1>
+    
+                                    <h3 class="rol">Director</h3>
+    
+                                    <br>
+                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
+                                    </p>
+    
+    
+    
+    
+                                </div>
+                            </div>
+                            <div class="col ">
+                                <div class="p-3 layout">
+                                    <img src="../../resources/img/marco.png" class="profile" alt="">
+    
+    
+                                    <br>
+                                    <br>
+                                    <h1 class="nombres">Marco</h1>
+    
+                                    <h3 class="rol">Director</h3>
+    
+                                    <br>
+                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
+                                    </p>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <a href="#" class="btn btnTeam" role="button">Ver Team ></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
+                    <div class="container overflow-hidden">
+                        <p class="tituloExperiencia">NOSOTROS</p>
+                        <br>
+    
+                        <br>
+                        <br>
+    
+                        <div class="row gx-5">
+                            <div class="col">
+                                <div class="p-3 layout">
+    
+                                    <img src="../../resources/img/marco.png" class="profile" alt="">
+    
+    
+                                    <br>
+                                    <br>
+                                    <h1 class="nombres">Marco</h1>
+    
+                                    <h3 class="rol">Director</h3>
+    
+                                    <br>
+                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
+                                    </p>
+    
+    
+    
+    
+                                </div>
+                            </div>
+                            <div class="col ">
+                                <div class="p-3 layout">
+                                    <img src="../../resources/img/marco.png" class="profile" alt="">
+    
+    
+                                    <br>
+                                    <br>
+                                    <h1 class="nombres">Marco</h1>
+    
+                                    <h3 class="rol">Director</h3>
+    
+                                    <br>
+                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
+                                    </p>
+    
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <a href="#" class="btn btnTeam" role="button">Ver Team ></a>
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>');
+    }
+
+
+    public static function templateLukky(){
+
+
+    }
 }

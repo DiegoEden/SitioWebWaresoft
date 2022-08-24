@@ -86,7 +86,7 @@
         font-size: 35px !important;
     }
 
-    .buttonServicios{
+    .buttonServicios {
         font-size: 12px !important;
     }
 
@@ -494,7 +494,7 @@ footer {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #35A8E0;
 }
 
 /* Handle on hover */
@@ -870,9 +870,96 @@ li.menu-item {
 
 }
 
-.marginVideo{
+.marginVideo {
 
     margin-top: 50px;
 }
 
 /*fin slider servicios*/
+
+/*inicio slider nosotros*/
+
+
+.layout {
+    border: 4px solid #35A8E0;
+}
+
+.profile {
+    width: 80px;
+    height: 80px;
+    margin-top: -60px;
+    border-radius: 50%;
+    margin-left: -350px;
+
+}
+
+.comilla {
+
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Work Sans';
+    color: #35A8E0;
+    text-align: right;
+    transition: .6s;
+}
+
+.rol {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--colorLetra);
+    text-align: left;
+    transition: .6s;
+
+
+}
+
+.nombres {
+
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: var(--colorLetra);
+    text-align: left;
+    transition: .6s;
+
+
+}
+
+.parrafoEquipo {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #787878;
+    text-align: left;
+    transition: .6s;
+
+
+}
+
+
+.btnTeam {
+    font-family: 'work sans', serif;
+    border: none;
+    font-weight: 700;
+    transition: .6s;
+    text-align: right;
+    color: #35A8E0;
+
+
+
+}
+
+.btnTeam:hover {
+    transition: .6s;
+
+    color: #1D82C2;
+
+}
+
+/*fin slider nosotros*/
+

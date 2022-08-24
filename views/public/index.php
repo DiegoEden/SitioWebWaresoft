@@ -19,8 +19,7 @@ webSite::projectSlider();
 ?>
 
 <br>
-<br>
-<br>
+
 
 <?php
 
@@ -35,6 +34,14 @@ webSite::serviceSlider();
 <?php
 
 webSite::infiniteSlider();
+
+?>
+
+
+
+<?php
+
+webSite::teamSlider();
 
 ?>
 
