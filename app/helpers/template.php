@@ -402,7 +402,7 @@ class webSite
                     <div class="row">
                         <div class="col borderCol">
                             <p class="titulosSliderImage">SOFTWARE</p>
-                            <h1 class="titulosSlider">Imagina</h1>
+                            <h1 class="titulosSlider">Imagina<br></h1>
                             <h1 class="titulosSlider"><span class="headercelesteSlider">Y lo </span></h1>
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
@@ -563,7 +563,7 @@ class webSite
         print('
         <div class="container d-flex flex-column justify-content-center h-100" style="top: 0">
             <div class="row">
-                <div class="col col-md-12 col-lg-6 col-xl-6 col-sm-12 col-12 ">
+                <div class="col marginVideo col-md-7 col-lg-6 col-xl-6 col-sm-12 col-12 ">
                     <video class="img-fluid" id="video1" autoplay loop muted src="../../resources/video/forest.mp4"></video>
                     <video class="img-fluid d-none" id="video2" autoplay loop muted src="../../resources/video/Agua-natural.mp4"></video>
                     <video class="img-fluid d-none" id="video3" autoplay loop muted src="../../resources/video/Tropical.mp4"></video>
@@ -571,7 +571,7 @@ class webSite
         
         
                 </div>
-                <div class="col col-md-12 align-items-center col-lg-6 col-xl-6 col-sm-12 col-12 ">
+                <div class="col col-md-5 align-items-center col-lg-6 col-xl-6 col-sm-12 col-12 ">
                     <p class="tituloExperiencia">SERVICIOS</p>
                     <h2 id="titulo1" class="titulosExperiencia">Estamos <br>aquí<br>para ayudarte</h2>
                     <br>

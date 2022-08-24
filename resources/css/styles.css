@@ -83,7 +83,11 @@
 
 @media (max-width: 991px) {
     #titulo1 {
-        font-size: 40px !important;
+        font-size: 35px !important;
+    }
+
+    .buttonServicios{
+        font-size: 12px !important;
     }
 
 }
@@ -466,7 +470,6 @@ footer {
     font-family: 'work sans', serif;
     color: white;
     font-size: 12px;
-    margin-right: 20px;
     font-weight: 400;
 }
 
@@ -654,6 +657,8 @@ body {
     justify-content: left;
     text-align: left;
     transition: .6s;
+    margin-left: 20px;
+
 
 }
 
@@ -676,7 +681,9 @@ body {
     font-weight: 500;
     font-size: 16px;
     transition: .6s;
-    margin-top: 20px
+    margin-top: 20px;
+    margin-left: 20px;
+
 }
 
 .titulosSliderImage2 {
@@ -686,7 +693,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     transition: .6s;
-    margin-top: -20px
+    margin-top: -20px;
 }
 
 .btnSlider {
@@ -695,6 +702,8 @@ body {
     border: none;
     font-weight: 700;
     transition: .6s;
+    margin-left: 20px;
+
 
 }
 
@@ -861,5 +870,9 @@ li.menu-item {
 
 }
 
+.marginVideo{
+
+    margin-top: 50px;
+}
 
 /*fin slider servicios*/
