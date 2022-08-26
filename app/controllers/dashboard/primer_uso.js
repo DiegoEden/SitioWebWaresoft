@@ -1,5 +1,24 @@
 const API_USUARIOS = '../../app/api/usuarios.php?action=';
 
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    fetch(API_USUARIOS + 'readAll')
+        .then(request => {
+            //Se verifica si la petición fue correcta
+            if (request.ok) {
+                request.json().then(response => {
+                    //Se verifica si la respuesta no es correcta para redireccionar al primer uso
+                    if (response.status) {
+                        sweetAlert(3, response.message, 'index.php');
+                    }
+                })
+            } else {
+                console.log(request.status + ' ' + request.statusText);
+            }
+        }).catch(error => console.log(error));
+});
+
 document.getElementById('register-Form').addEventListener('submit', function (event) {
     //Evento para evitar que recargue la página
     event.preventDefault();

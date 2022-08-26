@@ -29,20 +29,46 @@ if (isset($_GET['action'])) {
                                         if ($proyectos->setImagen_principal($_FILES['imagen1'])) {
                                             if (is_uploaded_file($_FILES['imagen2']['tmp_name'])) {
                                                 if ($proyectos->setImagen_secundaria($_FILES['imagen2'])) {
-                                                    if ($proyectos->register($_SESSION['id_usuario'])) {
-                                                        $result['status'] = 1;
-                                                        // Guardamos la imagen dentro de la carpeta del proyecto
-                                                        if ($proyectos->saveFile($_FILES['imagen1'], $proyectos->getRuta(), $proyectos->getimagen_Principal())) {
-                                                            if ($proyectos->saveFile($_FILES['imagen2'], $proyectos->getRuta(), $proyectos->getimagen_Secundaria())) {
-                                                                $result['message'] = 'Proyecto creado correctamente';
+                                                    if ($proyectos->readAll()) {
+                                                        if ($data = $proyectos->getLastId()) {
+                                                            if ($proyectos->setIndex($data['index_proyecto'] + 1)) {
+                                                                if ($proyectos->register($_SESSION['id_usuario'])) {
+                                                                    $result['status'] = 1;
+                                                                    // Guardamos la imagen dentro de la carpeta del proyecto
+                                                                    if ($proyectos->saveFile($_FILES['imagen1'], $proyectos->getRuta(), $proyectos->getimagen_Principal())) {
+                                                                        if ($proyectos->saveFile($_FILES['imagen2'], $proyectos->getRuta(), $proyectos->getimagen_Secundaria())) {
+                                                                            $result['message'] = 'Proyecto creado correctamente';
+                                                                        } else {
+                                                                            $result['message'] = 'Proyecto creado pero no se guardó la imagen';
+                                                                        }
+                                                                    } else {
+                                                                        $result['message'] = 'Proyecto creado pero no se guardó la imagen';
+                                                                    }
+                                                                } else {
+                                                                    $result['exception'] = Database::getException();;
+                                                                }
+                                                            } else {
+                                                                $result['exception'] = 'Index esperado incorrecto';
+                                                            }
+                                                        } else {
+                                                            $result['exception'] = 'No id';
+                                                        }
+                                                    } else {
+                                                        if ($proyectos->registerFirst($_SESSION['id_usuario'])) {
+                                                            $result['status'] = 1;
+                                                            // Guardamos la imagen dentro de la carpeta del proyecto
+                                                            if ($proyectos->saveFile($_FILES['imagen1'], $proyectos->getRuta(), $proyectos->getimagen_Principal())) {
+                                                                if ($proyectos->saveFile($_FILES['imagen2'], $proyectos->getRuta(), $proyectos->getimagen_Secundaria())) {
+                                                                    $result['message'] = 'Proyecto creado correctamente';
+                                                                } else {
+                                                                    $result['message'] = 'Proyecto creado pero no se guardó la imagen';
+                                                                }
                                                             } else {
                                                                 $result['message'] = 'Proyecto creado pero no se guardó la imagen';
                                                             }
                                                         } else {
-                                                            $result['message'] = 'Proyecto creado pero no se guardó la imagen';
+                                                            $result['exception'] = Database::getException();;
                                                         }
-                                                    } else {
-                                                        $result['exception'] = Database::getException();;
                                                     }
                                                 } else {
                                                     $result['exception'] = 'Imagen incorrecta';
@@ -82,6 +108,46 @@ if (isset($_GET['action'])) {
 
                 break;
 
+            case 'readAll':
+                if ($result['dataset'] = $proyectos->readAll()) {
+                    $result['status'] = 1;
+                } else {
+                    if (Database::getException()) {
+                        $result['exception'] = Database::getException();
+                    } else {
+                        $result['exception'] = 'No se ha encontrado ningún proyecto registrado.';
+                    }
+                }
+                break;
+
+
+            case 'readIndicators':
+                if ($result['dataset'] = $proyectos->readAll()) {
+                    $result['status'] = 1;
+                } else {
+                    if (Database::getException()) {
+                        $result['exception'] = Database::getException();
+                    } else {
+                        $result['exception'] = 'No se ha encontrado ningún proyecto registrado.';
+                    }
+                }
+                break;
+
+            case 'readOne':
+                if ($proyectos->setid_proyectos($_POST['id_proyecto'])) {
+                    if ($result['dataset'] = $proyectos->readProyecto()) {
+                        $result['status'] = 1;
+                    } else {
+                        if (Database::getException()) {
+                            $result['exception'] = Database::getException();
+                        } else {
+                            $result['exception'] = 'Proyecto inexistente';
+                        }
+                    }
+                } else {
+                    $result['exception'] = 'Proyecto incorrecto';
+                }
+                break;
 
             default:
                 $result['exception'] = 'Acción no disponible dentro de la sesión';

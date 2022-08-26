@@ -149,9 +149,28 @@ class Proyectos extends Validator
         return $this->ruta;
     }
 
+    public function getIndex()
+    {
+        return $this->index;
+    }
+
 
 
     public function register($usuario)
+    {
+
+        $sql = "INSERT INTO ws_proyectos(nombre_proyecto,
+         texto_principal, texto_cliente, texto_desafio, texto_solucion, 
+         imagen_principal, imagen_secundaria, index_proyecto, 
+         id_usuario, fecha_creacion) VALUES (?,?,?,?,?,?,?,?,$usuario,default);";
+        $params = array(
+            $this->nombre_proyecto, $this->texto_principal, $this->texto_cliente, $this->texto_desafio, $this->texto_solucion, $this->imagen_principal, $this->imagen_secundaria, $this->index
+        );
+
+        return Database::executeRow($sql, $params);
+    }
+
+    public function registerFirst($usuario)
     {
 
         $sql = "INSERT INTO ws_proyectos(nombre_proyecto,
@@ -163,5 +182,29 @@ class Proyectos extends Validator
         );
 
         return Database::executeRow($sql, $params);
+    }
+
+
+    public function readAll()
+    {
+        $sql = 'SELECT id_proyecto, nombre_proyecto, texto_principal, texto_cliente, texto_desafio, texto_solucion, imagen_principal, imagen_secundaria, index_proyecto, id_usuario, fecha_creacion FROM ws_proyectos';
+        $params = null;
+        return Database::getRows($sql, $params);
+    }
+
+
+    public function getLastId()
+    {
+        $sql = 'SELECT max(index_proyecto) as index_proyecto from ws_proyectos';
+        $params = null;
+        return Database::getRow($sql, $params);
+    }
+
+
+    public function readProyecto()
+    {
+        $sql = 'SELECT id_proyecto, nombre_proyecto, texto_principal, texto_cliente, texto_desafio, texto_solucion, imagen_principal, imagen_secundaria, index_proyecto, id_usuario, fecha_creacion FROM ws_proyectos WHERE id_proyecto = ?';
+        $params = array($this->id_proyecto);
+        return Database::getRow($sql, $params);
     }
 }

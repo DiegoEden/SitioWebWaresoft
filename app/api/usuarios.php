@@ -23,6 +23,7 @@ if (isset($_GET['action'])) {
                 // Mostramos mensaje de confirmacion
                 $result['message'] = 'Sesión eliminada correctamente';
                 break;
+                
             default:
                 $result['exception'] = 'Acción no disponible dentro de la sesión';
         }
@@ -31,6 +32,8 @@ if (isset($_GET['action'])) {
                 // Caso para cargar todos datos de la tabla
             case 'readAll':
                 if ($result['dataset'] = $usuarios->readAll()) {
+                    $result['message'] = 'Ya hay un usuario existente.';
+
                     $result['status'] = 1;
                 } else {
                     // Se ejecuta si existe algun error en la base de datos 

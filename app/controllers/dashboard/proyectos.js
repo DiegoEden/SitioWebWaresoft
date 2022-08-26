@@ -14,6 +14,7 @@ document.getElementById('register-Form').addEventListener('submit', function (ev
                 //Se verifica si la respuesta fue satisfactoria, de lo contrario se muestra la excepción
                 if (response.status) {
                     sweetAlert(1, response.message, null);
+                    clear();
                 } else {
                     sweetAlert(2, response.exception, null);
                 }
@@ -23,3 +24,16 @@ document.getElementById('register-Form').addEventListener('submit', function (ev
         }
     }).catch(error => console.log(error));
 })
+
+
+function clear() {
+
+    document.getElementById('nombre_proyecto').value = "";
+    document.getElementById('imagen1').value = "";
+    document.getElementById('imagen2').value = "";
+    document.getElementById('textoPrincipal').value = "";
+    document.getElementById('textoCliente').value = "";
+    document.getElementById('textoDesafio').value = "";
+    document.getElementById('textSolucion').value = "";
+
+}

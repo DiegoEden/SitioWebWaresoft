@@ -18,13 +18,13 @@ webSite::header('Experiencia');
             <p class="titulosHorizontal">EXPERIENCIA</p>
             <div class="row margenform">
                 <div class="col col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12 marginsuperior">
-                    <h2 class="titulosExperiencia">Lukky</h2>
+                    <h2 class="titulosExperiencia" id="tituloProyecto"></h2>
 
 
-                    <p class="parrafoExperiencia">Es una aplicación móvil que te permite mantener un historial de tu máscota en su veterinaria: vacunas, citas, medicamentos y más. Además de la placa inteligente que te permite rastrear a tu perro por si se extravía.</p>
+                    <p class="parrafoExperiencia" id="parrafoPrincipal"></p>
                 </div>
                 <div class="col col col-md-5 col-lg-6 col-xl-6 col-sm-12 col-12">
-                    <img src="../../resources/img/luckyLaptop.png" class="img-fluid" alt="">
+                    <img class="img-fluid" alt="" id="imagenPrincipal">
 
                 </div>
             </div>
@@ -52,5 +52,5 @@ webSite::formTemplate();
 <?php
 //Se imprime la plantilla del footer y se envía el controlador a usar
 
-webSite::footer('index.js');
+webSite::footer('experiencia.js');
 ?>
