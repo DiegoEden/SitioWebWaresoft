@@ -115,7 +115,6 @@ class webSite
         <script type="text/javascript" src="../../app/controllers/' . $controller . '"></script>
         <script type="text/javascript" src="../../app/controllers/template.js"></script>
         <script src="../../app/helpers/components.js"></script>
-        <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
 
 
 
