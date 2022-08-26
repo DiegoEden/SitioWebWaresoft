@@ -105,7 +105,7 @@ class Usuarios extends Validator
     public function checkUser($username)
     {
         $sql = 'SELECT id_usuario,username, nombre, apellido FROM ws_usuarios 
-                WHERE username = ?';
+                WHERE binary username = ?';
         $params = array($username);
         if ($data = Database::getRow($sql, $params)) {
             $this->idUsuario = $data['id_usuario'];

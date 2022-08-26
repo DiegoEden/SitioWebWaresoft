@@ -23,7 +23,7 @@ if (isset($_GET['action'])) {
                 // Mostramos mensaje de confirmacion
                 $result['message'] = 'Sesión eliminada correctamente';
                 break;
-                
+
             default:
                 $result['exception'] = 'Acción no disponible dentro de la sesión';
         }
@@ -53,12 +53,16 @@ if (isset($_GET['action'])) {
                         if ($usuarios->setUsername($_POST['username'])) {
                             if ($_POST['password'] == $_POST['password2']) {
                                 if ($usuarios->setPassword($_POST['password'])) {
-                                    if ($usuarios->register()) {
-                                        $result['status'] = 1;
-                                        $result['message'] = 'Usuario registrado correctamente.';
+                                    if ($usuarios->readAll()) {
+                                        $result['exception'] = 'Ya existe un usuario';
                                     } else {
-                                        $result['error'] = 1;
-                                        $result['exception'] = Database::getException();
+                                        if ($usuarios->register()) {
+                                            $result['status'] = 1;
+                                            $result['message'] = 'Usuario registrado correctamente.';
+                                        } else {
+                                            $result['error'] = 1;
+                                            $result['exception'] = Database::getException();
+                                        }
                                     }
                                 } else {
                                     $result['exception'] = 'Contraseña incorrecta';
@@ -93,7 +97,7 @@ if (isset($_GET['action'])) {
                         $result['exception'] = 'Contraseña incorrecta';
                     }
                 } else {
-                    $result['exception'] = 'El correo ingresado es incorrecto.';
+                    $result['exception'] = 'El nombre de usuario ingresado es incorrecto.';
                 }
 
                 break;
