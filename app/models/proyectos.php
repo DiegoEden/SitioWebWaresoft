@@ -11,7 +11,7 @@ class Proyectos extends Validator
     private $texto_desafio = null;
     private $texto_solucion = null;
     private $index;
-    private $ruta = '../../../resources/img/projects/';
+    private $ruta = '..\..\resources\img\projects/';
 
     public function setid_proyectos($value)
     {
@@ -48,8 +48,6 @@ class Proyectos extends Validator
 
     public function setImagen_secundaria($file)
     {
-
-        // Validamos el tipo de dato del valor ingresado
         if ($this->validateImageFile($file, 4000, 4000)) {
             $this->imagen_secundaria = $this->getImageName();
             return true;

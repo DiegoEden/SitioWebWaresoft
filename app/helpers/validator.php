@@ -296,6 +296,8 @@ class Validator
     *   
     *   Retorno: booleano (true si el archivo fue subido al servidor o false en caso contrario).
     */
+    
+
     public function saveFile($file, $path, $name)
     {
         // Se verifica que el archivo exista.

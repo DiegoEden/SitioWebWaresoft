@@ -18,7 +18,7 @@ Dashboard::header('Proyectos');
         </div>
 
         <!-- Login Form -->
-        <form id="register-Form" method="post" autocomplete="off">
+        <form id="register-Form" method="post" autocomplete="off" enctype="multipart/form-data">
             <div class="row">
                 <div class="col col col-md-12 col-lg-6 col-xl-6 col-sm-12 col-12">
                     <input type="text" id="nombre_proyecto" class="fadeIn" name="nombre_proyecto" placeholder="Nombre del proyecto">
