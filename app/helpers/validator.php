@@ -5,13 +5,13 @@
 */
 class Validator
 {
-    // Propiedades para manejar la validación de archivos de imagen.
+    // Propiedades para manejar algunas validaciones.
     private $passwordError = null;
     private $imageError = null;
     private $imageName = null;
 
     /*
-    *   Método para obtener el error al validar una imagen.
+    *   Método para obtener el error al validar una contraseña.
     */
     public function getPasswordError()
     {
@@ -67,6 +67,16 @@ class Validator
         }
     }
 
+    public function validateNaturalNumberCart($value)
+    {
+        // Se verifica que el valor sea un número entero mayor o igual a uno.
+        if (filter_var($value, FILTER_VALIDATE_INT, array('min_range' => 0))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /*
     *   Método para validar un archivo de imagen.
     *
@@ -79,7 +89,7 @@ class Validator
         // Se verifica si el archivo existe, de lo contrario se establece un número de error.
         if ($file) {
             // Se comprueba si el archivo tiene un tamaño menor o igual a 2MB, de lo contrario se establece un número de error.
-            if ($file['size'] <= 2097152) {
+            if ($file['size'] <= 5242880) {
                 // Se obtienen las dimensiones de la imagen y su tipo.
                 list($width, $height, $type) = getimagesize($file['tmp_name']);
                 // Se verifica si la imagen cumple con las dimensiones máximas, de lo contrario se establece un número de error.
@@ -89,7 +99,7 @@ class Validator
                         // Se obtiene la extensión del archivo.
                         $extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
                         // Se establece un nombre único para el archivo.
-                        $this->imageName = uniqid() . '.' . $extension;
+                        $this->imageName = uniqid().'.'.$extension;
                         return true;
                     } else {
                         $this->imageError = 'El tipo de la imagen debe ser gif, jpg o png';
@@ -99,10 +109,10 @@ class Validator
                     $this->imageError = 'La dimensión de la imagen es incorrecta';
                     return false;
                 }
-            } else {
-                $this->imageError = 'El tamaño de la imagen debe ser menor a 2MB';
+             } else {
+                $this->imageError = 'El tamaño de la imagen debe ser menor a 5MB';
                 return false;
-            }
+             }
         } else {
             $this->imageError = 'El archivo de la imagen no existe';
             return false;
@@ -151,24 +161,7 @@ class Validator
     public function validateString($value, $minimum, $maximum)
     {
         // Se verifica el contenido y la longitud de acuerdo con la base de datos.
-        if (preg_match('/^[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s\,\;\.]{' . $minimum . ',' . $maximum . '}$/', $value)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    /*
-    *   Método para validar una cadena de texto sin restriccion.
-    *
-    *   Parámetros: $value (dato a validar).
-    *   
-    *   Retorno: booleano (true si el valor es correcto o false en caso contrario).
-    */
-    public function validateText($value)
-    {
-        // Se verifica el contenido y la longitud de acuerdo con la base de datos.
-        if ($value) {
+        if (preg_match('/^[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s\,\;\.]{'.$minimum.','.$maximum.'}$/', $value)) {
             return true;
         } else {
             return false;
@@ -185,7 +178,7 @@ class Validator
     public function validateAlphabetic($value, $minimum, $maximum)
     {
         // Se verifica el contenido y la longitud de acuerdo con la base de datos.
-        if (preg_match('/^[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{' . $minimum . ',' . $maximum . '}$/', $value)) {
+        if (preg_match('/^[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{'.$minimum.','.$maximum.'}$/', $value)) {
             return true;
         } else {
             return false;
@@ -202,7 +195,7 @@ class Validator
     public function validateAlphanumeric($value, $minimum, $maximum)
     {
         // Se verifica el contenido y la longitud de acuerdo con la base de datos.
-        if (preg_match('/^[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s]{' . $minimum . ',' . $maximum . '}$/', $value)) {
+        if (preg_match('/^[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s.,]{'.$minimum.','.$maximum.'}$/', $value)) {
             return true;
         } else {
             return false;
@@ -235,11 +228,12 @@ class Validator
     */
     public function validatePassword($value)
     {
-        
-        if (preg_match('/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])(?=\S*[\W])\S*$/', $value)) {
+        // Se verifica la longitud mínima de la contraseña.
+        if (preg_match('/^\S*(?=\S{8,16})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])(?=\S*[\W])\S*$/', $value)) {
             return true;
         } else {
-            $this->passwordError = 'La clave debe tener al menos 8 caracteres entre especiales y alfanuméricos, al menos uno de cada uno';
+            $this->passwordError = 'Su contraseña no cumple con los requisitos especificados.'; 
+            return false;
         }
     }
 
@@ -309,8 +303,12 @@ class Validator
             // Se comprueba que la ruta en el servidor exista.
             if (file_exists($path)) {
                 // Se verifica que el archivo sea movido al servidor.
-                if (move_uploaded_file($file['tmp_name'], $path . $name)) {
-                    return true;
+                if (move_uploaded_file($file['tmp_name'], $path.$name)) {
+                    if (chmod($path . $name, 0.755)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
                 } else {
                     return false;
                 }
@@ -334,7 +332,7 @@ class Validator
         // Se verifica que la ruta exista.
         if (file_exists($path)) {
             // Se comprueba que el archivo sea borrado del servidor.
-            if (@unlink($path . $name)) {
+            if (@unlink($path.$name)) {
                 return true;
             } else {
                 return false;
@@ -343,4 +341,15 @@ class Validator
             return false;
         }
     }
+
+    public function validateText($value)
+    {
+        // Se verifica el contenido y la longitud de acuerdo con la base de datos.
+        if ($value) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
+?>

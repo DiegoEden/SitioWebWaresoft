@@ -25,11 +25,11 @@ Dashboard::header('Proyectos');
                     <label for="">Imagen principal</label>
 
                     <br>
-                    <input type="file" id="imagen1" class="fadeIn" name="imagen1" placeholder="Imagen principal" accept=".gif, .jpg, .png">
+                    <input type="file" id="imagen1" class="fadeIn" name="imagen1" accept=".gif, .jpg, .png">
                     <label for="">Imagen secundaria</label>
 
                     <br>
-                    <input type="file" id="imagen2" class="fadeIn" name="imagen2" placeholder="Imagen principal" accept=".gif, .jpg, .png">
+                    <input type="file" id="imagen2" class="fadeIn" name="imagen2" accept=".gif, .jpg, .png">
                     <br>
 
                     <label for="">Texto principal</label>
