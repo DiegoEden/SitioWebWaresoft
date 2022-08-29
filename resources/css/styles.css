@@ -570,7 +570,7 @@ body {
 }
 
 .carousel-item {
-    height: calc(111vh - 73px);
+    height: calc(110vh - 73px);
     background: var(--color-fondo);
     transition: .6s;
 }

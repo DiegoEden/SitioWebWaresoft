@@ -112,8 +112,8 @@ class webSite
 
         print('
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../../app/controllers/' . $controller . '"></script>
-        <script type="text/javascript" src="../../app/controllers/template.js"></script>
+        <script type="text/javascript" src="../../app/controllers/public/' . $controller . '"></script>
+        <script type="text/javascript" src="../../app/controllers/public/template.js"></script>
         <script src="../../app/helpers/components.js"></script>
 
 
@@ -359,7 +359,7 @@ class webSite
                 </div>
             </div>
             <div class="carousel-item">
-                <video class="" autoplay loop muted src="../../resources/video/Agua-natural.mp4"></video>
+                <video width="1920" height="1080" autoplay loop muted src="../../resources/video/coding.mp4"></video>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
                     <div class="row">
                         <div class="col borderCol">
