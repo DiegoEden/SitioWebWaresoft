@@ -885,6 +885,16 @@ li.menu-item {
 }
 
 
+.tarjeta {
+    content: "";
+    background-color: var(--color-fondo);
+    width: 352px;
+    height: 352px !important;
+    border: 3px solid #35A8E0;
+    transition: .6s;
+}
+
+
 
 .profile {
     width: 80px;
@@ -964,4 +974,3 @@ li.menu-item {
 }
 
 /*fin slider nosotros*/
-
