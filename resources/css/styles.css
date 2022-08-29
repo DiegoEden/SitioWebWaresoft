@@ -884,6 +884,12 @@ li.menu-item {
     border: 4px solid #35A8E0;
 }
 
+.layout2 {
+    border: 3px solid #35A8E0;
+    margin-top: 20px;
+}
+
+
 .profile {
     width: 80px;
     height: 80px;

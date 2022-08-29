@@ -681,9 +681,4 @@ class webSite
     </div>');
     }
 
-
-    public static function templateLukky(){
-
-
-    }
 }

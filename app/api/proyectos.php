@@ -29,12 +29,42 @@ if (isset($_GET['action'])) {
                                         if ($proyectos->setImagen_principal($_FILES['imagen1'])) {
                                             if (is_uploaded_file($_FILES['imagen2']['tmp_name'])) {
                                                 if ($proyectos->setImagen_secundaria($_FILES['imagen2'])) {
-                                                    if ($proyectos->readAll()) {
-                                                        if ($data = $proyectos->getLastId()) {
-                                                            if ($proyectos->setIndex($data['index_proyecto'] + 1)) {
-                                                                if ($proyectos->register($_SESSION['id_usuario'])) {
-                                                                    $result['status'] = 1;
-                                                                    // Guardamos la imagen dentro de la carpeta del proyecto
+                                                    if ($proyectos->setLogo($_FILES['logoProyecto'])) {
+                                                        if ($proyectos->readAll()) {
+                                                            if ($data = $proyectos->getLastId()) {
+                                                                if ($proyectos->setIndex($data['index_proyecto'] + 1)) {
+                                                                    if ($proyectos->register($_SESSION['id_usuario'])) {
+                                                                        $result['status'] = 1;
+                                                                        // Guardamos la imagen dentro de la carpeta del proyecto
+                                                                        if ($proyectos->saveFile($_FILES['logoProyecto'], $proyectos->getRuta(), $proyectos->getLogo())) {
+                                                                            if ($proyectos->saveFile($_FILES['imagen1'], $proyectos->getRuta(), $proyectos->getimagen_Principal())) {
+                                                                                if ($proyectos->saveFile($_FILES['imagen2'], $proyectos->getRuta(), $proyectos->getimagen_Secundaria())) {
+
+                                                                                    $result['message'] = 'Proyecto creado correctamente';
+                                                                                } else {
+                                                                                    $result['message'] = 'Proyecto creado pero no se guardó la imagen 2';
+                                                                                }
+                                                                            } else {
+                                                                                $result['message'] = 'Proyecto creado pero no se guardó la imagen 1';
+                                                                            }
+                                                                        } else {
+                                                                            $result['message'] = 'Proyecto creado pero no se guardó el logo';
+                                                                        }
+                                                                    } else {
+                                                                        $result['exception'] = Database::getException();;
+                                                                    }
+                                                                } else {
+                                                                    $result['exception'] = 'Index esperado incorrecto';
+                                                                }
+                                                            } else {
+                                                                $result['exception'] = 'No id';
+                                                            }
+                                                        } else {
+                                                            if ($proyectos->registerFirst($_SESSION['id_usuario'])) {
+                                                                $result['status'] = 1;
+                                                                // Guardamos la imagen dentro de la carpeta del proyecto
+                                                                if ($proyectos->saveFile($_FILES['logoProyecto'], $proyectos->getRuta(), $proyectos->getLogo())) {
+
                                                                     if ($proyectos->saveFile($_FILES['imagen1'], $proyectos->getRuta(), $proyectos->getimagen_Principal())) {
                                                                         if ($proyectos->saveFile($_FILES['imagen2'], $proyectos->getRuta(), $proyectos->getimagen_Secundaria())) {
                                                                             $result['message'] = 'Proyecto creado correctamente';
@@ -45,40 +75,24 @@ if (isset($_GET['action'])) {
                                                                         $result['message'] = 'Proyecto creado pero no se guardó la imagen';
                                                                     }
                                                                 } else {
-                                                                    $result['exception'] = Database::getException();;
+                                                                    $result['message'] = 'Proyecto creado pero no se guardó el logo';
                                                                 }
                                                             } else {
-                                                                $result['exception'] = 'Index esperado incorrecto';
+                                                                $result['exception'] = Database::getException();;
                                                             }
-                                                        } else {
-                                                            $result['exception'] = 'No id';
                                                         }
                                                     } else {
-                                                        if ($proyectos->registerFirst($_SESSION['id_usuario'])) {
-                                                            $result['status'] = 1;
-                                                            // Guardamos la imagen dentro de la carpeta del proyecto
-                                                            if ($proyectos->saveFile($_FILES['imagen1'], $proyectos->getRuta(), $proyectos->getimagen_Principal())) {
-                                                                if ($proyectos->saveFile($_FILES['imagen2'], $proyectos->getRuta(), $proyectos->getimagen_Secundaria())) {
-                                                                    $result['message'] = 'Proyecto creado correctamente';
-                                                                } else {
-                                                                    $result['message'] = 'Proyecto creado pero no se guardó la imagen';
-                                                                }
-                                                            } else {
-                                                                $result['message'] = 'Proyecto creado pero no se guardó la imagen';
-                                                            }
-                                                        } else {
-                                                            $result['exception'] = Database::getException();;
-                                                        }
+                                                        $result['exception'] = 'Logo incorrecto';
                                                     }
                                                 } else {
-                                                    $result['exception'] = 'Imagen incorrecta';
+                                                    $result['exception'] = 'Imagen 2 incorrecta';
                                                 }
                                             } else {
                                                 $result['exception'] = 'Seleccione una imagen';
                                             }
                                         } else {
 
-                                            $result['exception'] = 'Imagen incorrecta';
+                                            $result['exception'] = 'Imagen 1 incorrecta';
                                         }
                                     } else {
 

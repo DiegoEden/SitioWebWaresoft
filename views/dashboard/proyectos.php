@@ -19,7 +19,7 @@ Dashboard::header('Proyectos');
 
         <!-- Login Form -->
         <form id="register-Form" method="post" autocomplete="off" enctype="multipart/form-data">
-            
+
             <input type="text" id="nombre_proyecto" class="fadeIn" name="nombre_proyecto" placeholder="Nombre del proyecto" required>
             <label for="">Imagen principal</label>
 
@@ -31,6 +31,11 @@ Dashboard::header('Proyectos');
             <input type="file" id="imagen2" class="fadeIn" name="imagen2" accept=".gif, .jpg, .png" required>
             <br>
 
+            <label for="">Logo del proyecto</label>
+
+            <input type="file" id="logoProyecto" class="fadeIn" name="logoProyecto" accept=".gif, .jpg, .png" required>
+
+            <br>
             <label for="">Texto principal</label>
             <br>
             <br>
