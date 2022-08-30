@@ -321,7 +321,7 @@ class webSite
 
                                       </div>
                                       <div class="col col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12">
-                                          <a class="btn wslink" href="https://waresoft.academy/" target="_blank" role="button">Ir a página ></a>
+                                          <a class="btn wslink" href="https://waresoft.academy/" target="_blank" role="button">Ir a página 〉</a>
                                       </div>
                                   </div>
                               </div>
