@@ -68,6 +68,10 @@ function modoOscuro() {
     localStorage.setItem('estado', 'active');
     document.documentElement.style.setProperty('--dot-colors', "#FFFFFF");
     document.documentElement.style.setProperty('--opacity', "initial");
+    document.getElementById('proyectos').className="d-none";
+    document.getElementById('proyectos2').className="row justify-content-center animate__animated animate__backInUp";
+
+
 
 
 
@@ -94,6 +98,10 @@ function modoClaro() {
     localStorage.setItem('estado', 'active');
     document.documentElement.style.setProperty('--dot-colors', "#C4C4C4");
     document.documentElement.style.setProperty('--opacity', ".5");
+    document.getElementById('proyectos2').className="d-none";
+    document.getElementById('proyectos').className="row justify-content-center animate__animated animate__backInUp";
+
+
 
 
 

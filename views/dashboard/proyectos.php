@@ -34,6 +34,10 @@ Dashboard::header('Proyectos');
             <label for="">Logo del proyecto</label>
 
             <input type="file" id="logoProyecto" class="fadeIn" name="logoProyecto" accept=".gif, .jpg, .png" required>
+            <br>
+            <label for="">Logo del proyecto(modo oscuro)</label>
+
+            <input type="file" id="logoProyecto2" class="fadeIn" name="logoProyecto2" accept=".gif, .jpg, .png" required>
 
             <br>
             <label for="">Texto principal</label>

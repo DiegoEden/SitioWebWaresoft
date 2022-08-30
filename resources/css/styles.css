@@ -888,7 +888,6 @@ li.menu-item {
 .tarjeta {
     content: "";
     background-color: var(--color-fondo);
-    width: 352px;
     height: 352px !important;
     border: 3px solid #35A8E0;
     transition: .6s;
@@ -974,3 +973,53 @@ li.menu-item {
 }
 
 /*fin slider nosotros*/
+
+/*inicio estilos tarjeta*/
+
+.parrafoCard {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: left;
+    color: var(--colorLetra);
+    margin: 20px;
+    transition: var(--animation);
+}
+
+.headersTarjeta {
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: var(--colorLetra);
+    transition: var(--animation);
+    font-size: 28px;
+    margin-top: 50px;
+
+}
+
+
+.content {
+    background: var(--color-fondo);
+    transition: .6s;
+    cursor: pointer;
+
+}
+
+.contenido {
+    opacity: 0;
+    transition: .6s;
+
+}
+
+.content:hover {
+    background: var(--color-fondo) !important;
+    transition: .6s;
+
+
+}
+
+.content:hover .contenido {
+    opacity: 1;
+    transition: .6s;
+
+}

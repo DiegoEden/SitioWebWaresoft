@@ -35,5 +35,8 @@ function clear() {
     document.getElementById('textoCliente').value = "";
     document.getElementById('textoDesafio').value = "";
     document.getElementById('textSolucion').value = "";
+    document.getElementById('logoProyecto').value = "";
+    document.getElementById('logoProyecto2').value = "";
+
 
 }

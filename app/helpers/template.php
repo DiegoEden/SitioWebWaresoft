@@ -335,7 +335,7 @@ class webSite
 
     public static function carousel()
     {
-        print '<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        print '<div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <video class="" autoplay loop muted src="../../resources/video/Waves.mp4"></video>
@@ -348,7 +348,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto ></a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>
@@ -369,7 +369,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto ></a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>
@@ -390,7 +390,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto ></a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>
@@ -411,7 +411,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto ></a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>
@@ -559,7 +559,7 @@ class webSite
                     </div>
                     <br>
                     <br>
-                    <a href="#" class="btn btnTeam" role="button">Ver Team ></a>
+                    <a href="#" class="btn btnTeam" role="button">Ver Team 〉</a>
     
     
                 </div>
@@ -616,7 +616,7 @@ class webSite
                     </div>
                     <br>
                     <br>
-                    <a href="#" class="btn btnTeam" role="button">Ver Team ></a>
+                    <a href="#" class="btn btnTeam" role="button">Ver Team 〉</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -672,7 +672,7 @@ class webSite
                     </div>
                     <br>
                     <br>
-                    <a href="#" class="btn btnTeam" role="button">Ver Team ></a>
+                    <a href="#" class="btn btnTeam" role="button">Ver Team 〉</a>
                 </div>
     
             </div>

@@ -7,6 +7,7 @@ class Proyectos extends Validator
     private $imagen_principal = null;
     private $imagen_secundaria = null;
     private $logo_proyecto = null;
+    private $logo_proyecto_oscuro = null;
     private $texto_principal = null;
     private $texto_cliente = null;
     private $texto_desafio = null;
@@ -61,6 +62,16 @@ class Proyectos extends Validator
     {
         if ($this->validateImageFile($file, 4000, 4000)) {
             $this->logo_proyecto = $this->getImageName();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function setLogoOscuro($file)
+    {
+        if ($this->validateImageFile($file, 4000, 4000)) {
+            $this->logo_proyecto_oscuro = $this->getImageName();
             return true;
         } else {
             return false;
@@ -140,6 +151,11 @@ class Proyectos extends Validator
         return $this->logo_proyecto;
     }
 
+    public function getLogo_Oscuro()
+    {
+        return $this->logo_proyecto_oscuro;
+    }
+
     public function getTexto_principal()
     {
         return $this->texto_principal;
@@ -177,11 +193,11 @@ class Proyectos extends Validator
 
         $sql = "INSERT INTO ws_proyectos(nombre_proyecto,
          texto_principal, texto_cliente, texto_desafio, texto_solucion, 
-         imagen_principal, imagen_secundaria,logo_proyecto, index_proyecto, 
-         id_usuario, fecha_creacion) VALUES (?,?,?,?,?,?,?,?,?,$usuario,default);";
+         imagen_principal, imagen_secundaria,logo_proyecto,logo_proyecto_oscuro, index_proyecto, 
+         id_usuario, fecha_creacion) VALUES (?,?,?,?,?,?,?,?,?,?,$usuario,default);";
         $params = array(
             $this->nombre_proyecto, $this->texto_principal, $this->texto_cliente, $this->texto_desafio, $this->texto_solucion, $this->imagen_principal, $this->imagen_secundaria,
-            $this->logo_proyecto, $this->index
+            $this->logo_proyecto, $this->logo_proyecto_oscuro, $this->index
         );
 
         return Database::executeRow($sql, $params);
@@ -192,11 +208,11 @@ class Proyectos extends Validator
 
         $sql = "INSERT INTO ws_proyectos(nombre_proyecto,
          texto_principal, texto_cliente, texto_desafio, texto_solucion, 
-         imagen_principal, imagen_secundaria,logo_proyecto, index_proyecto, 
-         id_usuario, fecha_creacion) VALUES (?,?,?,?,?,?,?,?,default,$usuario,default);";
+         imagen_principal, imagen_secundaria,logo_proyecto, logo_proyecto_oscuro, index_proyecto, 
+         id_usuario, fecha_creacion) VALUES (?,?,?,?,?,?,?,?,?,default,$usuario,default);";
         $params = array(
             $this->nombre_proyecto, $this->texto_principal, $this->texto_cliente, $this->texto_desafio, $this->texto_solucion, $this->imagen_principal, $this->imagen_secundaria,
-            $this->logo_proyecto
+            $this->logo_proyecto, $this->logo_proyecto_oscuro
         );
 
         return Database::executeRow($sql, $params);
@@ -205,7 +221,7 @@ class Proyectos extends Validator
 
     public function readAll()
     {
-        $sql = 'SELECT id_proyecto, nombre_proyecto, texto_principal, texto_cliente, texto_desafio, texto_solucion, imagen_principal, imagen_secundaria, logo_proyecto, index_proyecto, id_usuario, fecha_creacion FROM ws_proyectos';
+        $sql = 'SELECT id_proyecto, nombre_proyecto, texto_principal, texto_cliente, texto_desafio, texto_solucion, imagen_principal, imagen_secundaria, logo_proyecto,logo_proyecto_oscuro, index_proyecto, id_usuario, fecha_creacion FROM ws_proyectos';
         $params = null;
         return Database::getRows($sql, $params);
     }
@@ -221,7 +237,7 @@ class Proyectos extends Validator
 
     public function readProyecto()
     {
-        $sql = 'SELECT id_proyecto, nombre_proyecto, texto_principal, texto_cliente, texto_desafio, texto_solucion, imagen_principal, imagen_secundaria, logo_proyecto, index_proyecto, id_usuario, fecha_creacion FROM ws_proyectos WHERE id_proyecto = ?';
+        $sql = 'SELECT id_proyecto, nombre_proyecto, texto_principal, texto_cliente, texto_desafio, texto_solucion, imagen_principal, imagen_secundaria, logo_proyecto, logo_proyecto_oscuro, index_proyecto, id_usuario, fecha_creacion FROM ws_proyectos WHERE id_proyecto = ?';
         $params = array($this->id_proyecto);
         return Database::getRow($sql, $params);
     }

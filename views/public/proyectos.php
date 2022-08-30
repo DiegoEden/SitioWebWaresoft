@@ -16,7 +16,7 @@ webSite::header($proyecto);
 <br>
 
 <div class="container" id="formContainer">
-    <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="row animate__animated animate__backInUp d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-7 col-lg-6 col-xl-6 col-sm-12">
             <p class="titulosHorizontal">EXPERIENCIA</p>
             <div class="row margenform">

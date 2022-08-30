@@ -24,7 +24,7 @@
             </div>
 
             <!-- Login Form -->
-            <form id="loginForm" method="post" autocomplete="off" >
+            <form id="loginForm" method="post" autocomplete="on" >
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
                 <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
                 <input type="submit" class="fadeIn fourth" value="Iniciar sesión">
