@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     let current_url = document.location;
+    console.log(current_url);
 
     document.querySelectorAll(".nav-link").forEach(function (e) {
         if (e.href == current_url) {
@@ -68,8 +69,16 @@ function modoOscuro() {
     localStorage.setItem('estado', 'active');
     document.documentElement.style.setProperty('--dot-colors', "#FFFFFF");
     document.documentElement.style.setProperty('--opacity', "initial");
-    document.getElementById('proyectos').className="d-none";
-    document.getElementById('proyectos2').className="row justify-content-center animate__animated animate__backInUp";
+    document.documentElement.style.setProperty('--colorPrev', "#787878");
+    document.documentElement.style.setProperty('--colorNext', "#A1A1A1");
+    document.documentElement.style.setProperty('--colorOn', "#E0E0E0");
+    let current_url = document.location;
+
+    if (current_url == "http://localhost/sitioWebWaresoft/views/public/experiencia.php") {
+        document.getElementById('proyectos').className = "d-none";
+        document.getElementById('proyectos2').className = "row justify-content-center animate__animated animate__backInUp";
+    }
+
 
 
 
@@ -92,14 +101,26 @@ function modoClaro() {
     document.getElementById("oscuro").style.setProperty("display", "block");
     document.getElementById("claro").style.setProperty("transition", ".6s");
     document.getElementById("oscuro").style.setProperty("transition", ".6s");
+    document.documentElement.style.setProperty('--colorPrev', "#E0E0E0");
+    document.documentElement.style.setProperty('--colorNext', "#A1A1A1");
+    document.documentElement.style.setProperty('--colorOn', "#787878");
+
 
     document.documentElement.style.setProperty('--imgToggle', 'url("../../resources/img/menu.png")');
     document.documentElement.style.setProperty('--animation', '.6s');
     localStorage.setItem('estado', 'active');
     document.documentElement.style.setProperty('--dot-colors', "#C4C4C4");
     document.documentElement.style.setProperty('--opacity', ".5");
-    document.getElementById('proyectos2').className="d-none";
-    document.getElementById('proyectos').className="row justify-content-center animate__animated animate__backInUp";
+
+    let current_url = document.location;
+
+    if (current_url == "http://localhost/sitioWebWaresoft/views/public/experiencia.php") {
+
+        document.getElementById('proyectos2').className = "d-none";
+        document.getElementById('proyectos').className = "row justify-content-center animate__animated animate__backInUp";
+    }
+
+
 
 
 

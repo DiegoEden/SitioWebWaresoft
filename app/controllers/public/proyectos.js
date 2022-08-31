@@ -28,6 +28,12 @@ function readOneProyecto(id) {
                     document.getElementById('imagenPrincipal').setAttribute('src', '../../resources/img/projects/' + response.dataset.imagen_principal);
                     document.getElementById('parrafoPrincipal').textContent = response.dataset.texto_principal;
                     document.getElementById('tituloProyecto').textContent = response.dataset.nombre_proyecto;
+                    document.getElementById('imagenSecundaria').setAttribute('src', '../../resources/img/projects/' + response.dataset.imagen_secundaria);
+                    document.getElementById('parrafoCliente').textContent = response.dataset.texto_cliente;
+                    document.getElementById('parrafoDesafio').textContent = response.dataset.texto_desafio;
+                    document.getElementById('parrafoSolucion').textContent = response.dataset.texto_solucion;
+
+
 
 
                 } else {
@@ -43,3 +49,76 @@ function readOneProyecto(id) {
         console.log(error);
     });
 }
+
+
+function prev() {
+
+    document.getElementById('tituloCliente').className = 'titulosParrafos on';
+    document.getElementById('parrafoCliente').className = 'parrafoExperiencia on';
+
+    document.getElementById('tituloDesafio').className = 'titulosParrafos next';
+    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia next';
+
+    document.getElementById('titulosSolucion').className = 'titulosParrafos prev';
+    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia prev';
+    document.getElementById('btnOn').classList.remove("activeIndicador");
+    document.getElementById('btnPrev').classList.remove("activeIndicador");
+    document.getElementById('btnNext').classList.add("activeIndicador");
+
+
+
+}
+
+function on() {
+
+    document.getElementById('tituloCliente').className = 'titulosParrafos prev';
+    document.getElementById('parrafoCliente').className = 'parrafoExperiencia prev';
+
+    document.getElementById('tituloDesafio').className = 'titulosParrafos on';
+    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia on';
+
+    document.getElementById('titulosSolucion').className = 'titulosParrafos next';
+    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia next';
+
+    document.getElementById('btnPrev').classList.remove("activeIndicador");
+    document.getElementById('btnNext').classList.remove("activeIndicador");
+    document.getElementById('btnOn').classList.add("activeIndicador");
+
+
+
+}
+
+
+function next() {
+
+    document.getElementById('tituloCliente').className = 'titulosParrafos prev';
+    document.getElementById('parrafoCliente').className = 'parrafoExperiencia prev';
+
+    document.getElementById('tituloDesafio').className = 'titulosParrafos next';
+    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia next';
+
+    document.getElementById('titulosSolucion').className = 'titulosParrafos on';
+    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia on';
+
+    document.getElementById('btnNext').classList.remove("activeIndicador");
+    document.getElementById('btnPrev').classList.add("activeIndicador");
+    document.getElementById('btnOn').classList.remove("activeIndicador");
+}
+
+
+
+var button1 = document.getElementById('prev');
+button1.addEventListener('click', function () {
+    prev();
+});
+
+var button2 = document.getElementById('on');
+button2.addEventListener('click', function () {
+    on();
+});
+
+
+var button3 = document.getElementById('next');
+button3.addEventListener('click', function () {
+    next();
+});

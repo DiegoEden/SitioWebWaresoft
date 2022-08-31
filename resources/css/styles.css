@@ -139,6 +139,11 @@
         display: none;
     }
 
+    .marginImg {
+        margin-top: 50px !important;
+    }
+
+
 }
 
 
@@ -252,6 +257,15 @@ footer {
 .marginsuperior {
     margin-top: -30px;
 }
+
+.marginDetalles {
+    margin-top: 50px;
+}
+
+.marginImg {
+    margin-top: 100px;
+}
+
 
 
 .titulosHorizontal {
@@ -570,7 +584,7 @@ body {
 }
 
 .carousel-item {
-    height: calc(110vh - 73px);
+    height: calc(107vh - 73px);
     background: var(--color-fondo);
     transition: .6s;
 }
@@ -776,11 +790,57 @@ body {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 14px;
     color: var(--colorLetra);
     text-align: left;
     transition: .6s;
+
+}
+
+.parrafoExperiencia2 {
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--colorLetra);
+    text-align: left;
+    transition: .6s;
+    cursor: pointer;
+
+}
+
+.titulosParrafos {
+
+    color: var(--colorLetra);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 39px;
+    text-transform: uppercase;
+    transition: .6s;
+    cursor: pointer;
+
+}
+
+.prev {
+    color: var(--colorPrev);
+    transition: .6s;
+}
+
+.next {
+    color: var(--colorNext);
+    transition: .6s;
+
+
+
+}
+
+.on {
+    color: var(--colorOn);
+    transition: .6s;
+
 
 }
 
@@ -813,6 +873,36 @@ body {
     background-color: #1D82C2;
 
 }
+
+.indicadores {
+
+    position: absolute;
+    transform: rotate(-90deg);
+    margin-left: 350px;
+    margin-top: 60px;
+}
+
+.botonesindicador {
+    width: 7.16px;
+    height: 9px;
+    border-radius: 100%;
+    background: var(--dot-colors);
+    background-clip: padding-box !important;
+    opacity: var(--opacity) !important;
+    border: none;
+    transition: .6s;
+
+}
+
+.activeIndicador {
+    opacity: 1;
+    background: #35A8E0 !important;
+    background-clip: padding-box !important;
+    transition: .6s;
+
+}
+
+
 
 
 /*final estilo slider experiencia*/
@@ -980,7 +1070,7 @@ li.menu-item {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     text-align: left;
     color: var(--colorLetra);
     margin: 20px;
@@ -1012,7 +1102,6 @@ li.menu-item {
 }
 
 .content:hover {
-    background: var(--color-fondo) !important;
     transition: .6s;
 
 
@@ -1021,5 +1110,6 @@ li.menu-item {
 .content:hover .contenido {
     opacity: 1;
     transition: .6s;
+    backdrop-filter: blur(5px);
 
 }
