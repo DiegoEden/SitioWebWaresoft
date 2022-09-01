@@ -12,24 +12,12 @@ webSite::header('Experiencia');
 <br>
 <br>
 
-<div class="container" id="formContainer">
-    <p class="tituloExperiencia">CASOS DE ÉXITO</p>
+<?php
 
-    <div class="row justify-content-center animate__animated animate__backInUp" id="proyectos">
+webSite::getProjects();
 
+?>
 
-
-
-    </div>
-
-    <div class="row justify-content-center animate__animated animate__backInUp" id="proyectos2">
-
-
-
-
-    </div>
-
-</div>
 
 <br>
 <br>
