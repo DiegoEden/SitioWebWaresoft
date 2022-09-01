@@ -880,17 +880,19 @@ body {
     transform: rotate(-90deg);
     margin-left: 350px;
     margin-top: 60px;
+    justify-content: center;
 }
 
 .botonesindicador {
-    width: 7.16px;
-    height: 9px;
+    width: 10px;
+    height: 12px;
     border-radius: 100%;
-    background: var(--dot-colors);
+    background-color: var(--dot-colors);
     background-clip: padding-box !important;
     opacity: var(--opacity) !important;
     border: none;
     transition: .6s;
+    margin-left: 10px;
 
 }
 
