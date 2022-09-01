@@ -81,6 +81,15 @@
 
 }
 
+.colImg {
+
+    background-image: url("../../resources/img/Group6.png");
+    background-repeat: no-repeat;
+    background-position: right 105% !important;
+    background-size: 130px;
+    transition: .6s;
+}
+
 @media (max-width: 991px) {
     #titulo1 {
         font-size: 35px !important;
@@ -88,6 +97,15 @@
 
     .buttonServicios {
         font-size: 12px !important;
+    }
+
+    .buttonServicios2 {
+        font-size: 16px !important;
+
+    }
+
+    .listaServicios {
+        line-height: 150% !important;
     }
 
 }
@@ -143,6 +161,13 @@
         margin-top: 50px !important;
     }
 
+    .indicadores {
+        display: none;
+    }
+
+    .titulosExperiencia {
+        font-size: 28px !important;
+    }
 
 }
 
@@ -174,6 +199,7 @@ footer {
     font-family: 'work sans', serif;
     color: var(--colorLetra);
     font-size: 11px;
+    transition: .6s;
 }
 
 /*fin estlio template head y footer*/
@@ -274,7 +300,7 @@ footer {
     position: absolute;
     transform: rotate(-90deg);
     margin: 50px;
-    margin-left: -150px;
+    margin-left: -407px;
 
 
 }
@@ -877,7 +903,6 @@ body {
 .indicadores {
 
     position: absolute;
-    transform: rotate(-90deg);
     margin-left: 350px;
     margin-top: 60px;
     justify-content: center;
@@ -922,6 +947,8 @@ body {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    transition: .6s;
+
 }
 
 .buttonServicios:hover {
@@ -943,7 +970,6 @@ body {
     justify-content: left;
     list-style: none;
     padding-left: 2px;
-
 }
 
 
@@ -1114,4 +1140,48 @@ li.menu-item {
     transition: .6s;
     backdrop-filter: blur(5px);
 
+}
+
+
+.buttonServicios2 {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 36px;
+    font-weight: 400;
+    color: #787878;
+    transition: var(--animation);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: .6s;
+}
+
+.buttonServicios2:hover {
+    color: var(--colorLetra);
+    transition: .6s;
+
+}
+
+
+.buttonServicios2:active {
+    color: var(--colorLetra);
+}
+
+.buttonServicios2:focus {
+    color: var(--colorLetra);
+}
+
+.imagenesServicios {
+    border-radius: 0% 0% 30px 30px;
+    ;
+}
+
+.headerServicios {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--colorLetra);
+    margin-top: 30px;
+    transition: .6s;
 }

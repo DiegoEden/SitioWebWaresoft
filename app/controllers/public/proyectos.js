@@ -54,13 +54,13 @@ function readOneProyecto(id) {
 function prev() {
 
     document.getElementById('tituloCliente').className = 'titulosParrafos on';
-    document.getElementById('parrafoCliente').className = 'parrafoExperiencia on';
+    document.getElementById('parrafoCliente').className = 'parrafoExperiencia2 on';
 
     document.getElementById('tituloDesafio').className = 'titulosParrafos next';
-    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia next';
+    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia2 next';
 
     document.getElementById('titulosSolucion').className = 'titulosParrafos prev';
-    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia prev';
+    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia2 prev';
     document.getElementById('btnOn').classList.remove("activeIndicador");
     document.getElementById('btnPrev').classList.remove("activeIndicador");
     document.getElementById('btnNext').classList.add("activeIndicador");
@@ -72,13 +72,13 @@ function prev() {
 function on() {
 
     document.getElementById('tituloCliente').className = 'titulosParrafos prev';
-    document.getElementById('parrafoCliente').className = 'parrafoExperiencia prev';
+    document.getElementById('parrafoCliente').className = 'parrafoExperiencia2 prev';
 
     document.getElementById('tituloDesafio').className = 'titulosParrafos on';
-    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia on';
+    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia2 on';
 
     document.getElementById('titulosSolucion').className = 'titulosParrafos next';
-    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia next';
+    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia2 next';
 
     document.getElementById('btnPrev').classList.remove("activeIndicador");
     document.getElementById('btnNext').classList.remove("activeIndicador");
@@ -92,13 +92,13 @@ function on() {
 function next() {
 
     document.getElementById('tituloCliente').className = 'titulosParrafos prev';
-    document.getElementById('parrafoCliente').className = 'parrafoExperiencia prev';
+    document.getElementById('parrafoCliente').className = 'parrafoExperiencia2 prev';
 
     document.getElementById('tituloDesafio').className = 'titulosParrafos next';
-    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia next';
+    document.getElementById('parrafoDesafio').className = 'parrafoExperiencia2 next';
 
     document.getElementById('titulosSolucion').className = 'titulosParrafos on';
-    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia on';
+    document.getElementById('parrafoSolucion').className = 'parrafoExperiencia2 on';
 
     document.getElementById('btnNext').classList.remove("activeIndicador");
     document.getElementById('btnPrev').classList.add("activeIndicador");

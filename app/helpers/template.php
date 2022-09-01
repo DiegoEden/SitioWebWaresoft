@@ -441,6 +441,7 @@ class webSite
     ';
     }
 
+    /*template carousel de proyectos*/
     public static function projectSlider()
     {
 
@@ -458,6 +459,7 @@ class webSite
         ');
     }
 
+    /*template secccion de servicios*/
     public static function serviceSlider()
     {
         print('
@@ -490,8 +492,8 @@ class webSite
         </div>');
     }
 
-
-    public static function teamSlider()
+    /*slider equipo waresoft*/
+    function teamSlider()
     {
         print('
         <div id="carouselTeam" class="carousel slide" data-bs-ride="carousel">
@@ -681,6 +683,7 @@ class webSite
     </div>');
     }
 
+    /*template detalle de proyecto seleccionado*/
     public static function projectTemplate()
     {
         print '<div class="container" id="formContainer">
@@ -692,7 +695,7 @@ class webSite
                         <h2 class="titulosExperiencia" id="tituloProyecto"></h2>
     
     
-                        <p class="parrafoExperiencia" id="parrafoPrincipal"></p>
+                        <p class="parrafoExperiencia2" id="parrafoPrincipal"></p>
                     </div>
                     <div class="col col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12">
                         <img class="img-fluid" alt="" id="imagenPrincipal">
@@ -712,11 +715,11 @@ class webSite
                             <p class="parrafoExperiencia2 prev" id="parrafoCliente"></p>
                         </div>
     
-                        <div class="indicadores">
-    
+                        <div class="indicadores" style="transform: rotate(-90deg);">
                             <button type="button" data-target="#next" class="botonesindicador" onclick="next()" id="btnPrev"></button>
                             <button type="button" class="botonesindicador activeIndicador" onclick="on()" id="btnOn"></button>
                             <button type="button" class="botonesindicador" onclick="prev()" id="btnNext"></button>
+
                         </div>
     
                         <div id="on">
@@ -740,6 +743,7 @@ class webSite
     </div>';
     }
 
+    /*casos de exito*/
     public static function getProjects()
     {
         print '<div class="container" id="formContainer">

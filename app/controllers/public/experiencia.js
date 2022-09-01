@@ -19,8 +19,8 @@ function fillTable(dataset) {
     dataset.map(function (row) {
         // Se crean y concatenan las filas de la tabla con los datos de cada registro.
         content += `
-            <div class="animate__animated animate__bounceIn col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
-                <div class="tarjeta content" style="background:url(../../resources/img/projects/${row.logo_proyecto}); background-repeat:no-repeat; background-size:contain; background-position:center; transition: .6s;">
+            <div class="col col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
+                <div class="tarjeta content" style="background:url(../../resources/img/projects/${row.logo_proyecto}); background-repeat:no-repeat; background-size:245px; background-position:center; transition: .6s;">
                     <!-- Fila para Información -->
                     <div class="row">
                         <div class="col-12 contenido">
@@ -49,8 +49,8 @@ function fillIndicators(dataset) {
         // Se crean y concatenan las filas de la tabla con los datos de cada registro.
 
         content += `
-        <div class="animate__animated animate__bounceIn col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
-        <div class="tarjeta content" style="background:url(../../resources/img/projects/${row.logo_proyecto_oscuro}); background-repeat:no-repeat; background-size:contain; background-position:center; transition: .6s;">
+        <div class="col col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
+        <div class="tarjeta content" style="background:url(../../resources/img/projects/${row.logo_proyecto_oscuro}); background-repeat:no-repeat; background-size:245px; background-position:center; transition: .6s;">
             <!-- Fila para Información -->
             <div class="row">
                 <div class="col-12 contenido">
