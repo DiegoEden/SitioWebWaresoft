@@ -15,7 +15,7 @@
 
 <body>
     <div class="wrapper fadeInDown">
-        <div id="formContent">
+        <div id="formContent" style="max-width: 450px;">
             <!-- Tabs Titles -->
 
             <!-- Icon -->
@@ -24,9 +24,9 @@
             </div>
 
             <!-- Login Form -->
-            <form id="loginForm" method="post" autocomplete="on" >
+            <form id="loginForm" method="post" autocomplete="on">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
-                <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
+                <input type="password" id="password" class="fadeIn third" name="password" autocomplete="current-password" placeholder="Contraseña">
                 <input type="submit" class="fadeIn fourth" value="Iniciar sesión">
             </form>
 

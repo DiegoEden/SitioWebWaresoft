@@ -1,6 +1,6 @@
 <?php
 
-/*archivo usado para el uso de plantillas de header y footer para el sitio web */
+/*archivo usado para el uso de plantillas para el sitio web */
 
 class webSite
 {
@@ -348,7 +348,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto 〉</a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="experiencia.php" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>
@@ -369,7 +369,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto 〉</a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>
@@ -390,7 +390,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto 〉</a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>
@@ -411,7 +411,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" target="_blank" role="button">Ver proyecto 〉</a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="https://waresoft.academy/" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>

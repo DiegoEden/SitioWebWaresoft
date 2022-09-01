@@ -2,8 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     let current_url = document.location;
-    console.log(current_url);
-
+/*     console.log(current_url);
+ */
     document.querySelectorAll(".nav-link").forEach(function (e) {
         if (e.href == current_url) {
             e.classList += " current";

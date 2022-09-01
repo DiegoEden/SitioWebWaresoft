@@ -25,7 +25,7 @@
             </div>
 
             <!-- Login Form -->
-            <form id="register-Form" method="post" autocomplete="off" >
+            <form id="register-Form" method="post" autocomplete="on" >
                 <input type="text" id="nombre" class="fadeIn" name="nombre" placeholder="Nombres">
                 <input type="text" id="apellido" class="fadeIn " name="apellido" placeholder="Apellidos">
                 <input type="text" id="username" class="fadeIn " name="username" placeholder="Nombre de usuario">
