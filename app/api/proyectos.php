@@ -139,7 +139,86 @@ if (isset($_GET['action'])) {
 
 
                 break;
+            case 'readAll':
+                if ($result['dataset'] = $proyectos->readAll()) {
+                    $result['status'] = 1;
+                } else {
+                    if (Database::getException()) {
+                        $result['exception'] = Database::getException();
+                    } else {
+                        $result['exception'] = 'No se ha encontrado ningún proyecto registrado.';
+                    }
+                }
+                break;
 
+
+            case 'readIndicators':
+                if ($result['dataset'] = $proyectos->readAll()) {
+                    $result['status'] = 1;
+                } else {
+                    if (Database::getException()) {
+                        $result['exception'] = Database::getException();
+                    } else {
+                        $result['exception'] = 'No se ha encontrado ningún proyecto registrado.';
+                    }
+                }
+                break;
+
+            case 'readOne':
+                if ($proyectos->setid_proyectos($_POST['id_proyecto'])) {
+                    if ($result['dataset'] = $proyectos->readProyecto()) {
+                        $result['status'] = 1;
+                    } else {
+                        if (Database::getException()) {
+                            $result['exception'] = Database::getException();
+                        } else {
+                            $result['exception'] = 'Proyecto inexistente';
+                        }
+                    }
+                } else {
+                    $result['exception'] = 'Proyecto incorrecto';
+                }
+                break;
+            case 'delete':
+                $_POST = $proyectos->validateForm($_POST);
+                if ($proyectos->setid_proyectos($_POST['txtId'])) {
+                    if ($data = $proyectos->readProyecto()) {
+                        if ($proyectos->deleteRow()) {
+                            if ($proyectos->deleteFile($proyectos->getRuta(), $data['logo_proyecto'])) {
+                                if ($proyectos->deleteFile($proyectos->getRuta(), $data['logo_proyecto_oscuro'])) {
+                                    if ($proyectos->deleteFile($proyectos->getRuta(), $data['imagen_principal'])) {
+                                        if ($proyectos->deleteFile($proyectos->getRuta(), $data['imagen_secundaria'])) {
+                                            $result['status'] = 1;
+                                            $result['message'] = 'Proyecto eliminado correctamente';
+                                        } else {
+                                            $result['exception'] = 'Se borró el registro pero no la imagen secundaria';
+                                        }
+                                    } else {
+                                        $result['exception'] = 'Se borró el registro pero no la imagen principal';
+                                    }
+                                } else {
+                                    $result['exception'] = 'Se borró el registro pero no el logo oscuro';
+                                }
+                            } else {
+                                $result['exception'] = 'Se borró el registro pero no el logo';
+                            }
+                        } else {
+                            $result['exception'] = Database::getException();
+                        }
+                    } else {
+                        $result['exception'] = 'Proyecto no existente';
+                    }
+                } else {
+                    $result['exception'] = 'Proyecto seleccionado incorrecto';
+                }
+                break;
+
+            default:
+                $result['exception'] = 'Acción no disponible dentro de la sesión';
+                break;
+        }
+    } else {
+        switch ($_GET['action']) {
             case 'readAll':
                 if ($result['dataset'] = $proyectos->readAll()) {
                     $result['status'] = 1;
@@ -183,9 +262,8 @@ if (isset($_GET['action'])) {
 
             default:
                 $result['exception'] = 'Acción no disponible dentro de la sesión';
+                break;
         }
-    } else {
-        print(json_encode('Recurso no disponible'));
     }
     header('content-type: application/json; charset=utf-8');
     print(json_encode($result));

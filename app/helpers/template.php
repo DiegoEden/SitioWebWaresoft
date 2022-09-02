@@ -182,15 +182,19 @@ class webSite
                       <h5 class="headers">LABORAL</h5>
                   </div>
                   <div class="col col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12">
-                      <label class="forms">NOMBRE</label>
-                      <input type="text" class="form-control forms-input" placeholder="Nombre">
+                      <label class="forms">NOMBRE COMPLETO</label>
+                      <input type="text" class="form-control forms-input" placeholder="Nombre" required> 
                       <br>
-                      <label class="forms">APELLIDO</label>
-                      <input type="text" class="form-control forms-input" placeholder="Apellido">
+                      <label class="forms">¿QUÉ BUSCAS?</label>
+                      <input type="text" class="form-control forms-input" placeholder="Comentarios" required>
                       <br>
   
-                      <label class="forms">¿QUÉ BUSCAS?</label>
-                      <input type="text" class="form-control forms-input" placeholder="Comentarios">
+                      <label class="forms">CORREO ELECTRÓNICO</label>
+                      <input type="email" class="form-control forms-input" placeholder="Correo Electrónico" required>
+                      <br>
+
+                      <label class="forms">MENSAJE</label>
+                      <input type="text" class="form-control forms-input" placeholder="Mensaje" required>
                       <br>
                       <div class="col-md-12 text-center">
                           <button type="submit" class="btn btn-primary forms-button">Enviar</button>

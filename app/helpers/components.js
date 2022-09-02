@@ -175,9 +175,9 @@ function confirmDelete(api, data) {
                         if (response.status) {
                             // Se cargan nuevamente las filas en la tabla de la vista después de borrar un registro.
                             readRows(api);
-                            sweetAlert(1, response.message, null);
+                            sweetAlert(1, response.message, 'proyectos.php');
                         } else {
-                            sweetAlert(2, response.exception, null);
+                            sweetAlert(2, response.exception, 'proyectos.php');
                         }
                     });
                 } else {

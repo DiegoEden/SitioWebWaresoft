@@ -429,7 +429,8 @@ footer {
     width: 200px;
     height: 41px;
     padding-top: 8px;
-    margin-left: -250px
+    margin-left: -250px;
+    transition: .6s;
 }
 
 .botonwsacademy:active {
@@ -880,6 +881,8 @@ body {
     height: 52px;
     padding-top: 15px;
     border: none;
+    transition: .6s;
+
 }
 
 .btnExp:hover {
