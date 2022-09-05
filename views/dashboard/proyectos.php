@@ -6,7 +6,7 @@ Dashboard::header('Proyectos');
 
 
 <div class="wrapper formulario fadeInDown">
-    <div id="formContent">
+    <div id="formContent2">
         <div class="fadeIn first">
             <br>
 
@@ -24,14 +24,14 @@ Dashboard::header('Proyectos');
 
             <div class="row mt-3 justify-content-center table-responsive ">
                 <div class="col-12 justify-content-center align-items-center text-center">
-                    <table class="table table-borderless proyects-list " id="data-table">
+                    <table class="table table-borderless proyects-list" style="transition:.6s;" id="data-table">
                         <thead>
                             <!-- Columnas-->
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col">Nombre del proyecto</th>
                                 <th scope="col">Usuario</th>
-                                <th scope="col">Fecha de creación</th>
+                                <th scope="col">Fecha y hora de creación</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -62,7 +62,7 @@ Dashboard::header('Proyectos');
                         <div class="fadeIn first">
                             <br>
 
-                            <h3>Registrar proyecto</h3>
+                            <h3 id="tituloForm"></h3>
 
                         </div>
 
@@ -73,25 +73,25 @@ Dashboard::header('Proyectos');
                             <div class="row">
 
                                 <div class="col-xl-6 mb-4 col-md-12 col-sm-12 col-xs-12 col-12 centrarColumnas">
-                                    <input class="d-none" type="number" id="txtId" name="txtId" />
+                                    <input class="d-none" type="number" id="id_proyecto" name="id_proyecto" />
                                     <input type="text" id="nombre_proyecto" class="fadeIn" name="nombre_proyecto" placeholder="Nombre del proyecto" required>
                                     <label for="">Imagen principal</label>
 
                                     <br>
-                                    <input type="file" id="imagen1" class="fadeIn" name="imagen1" accept=".gif, .jpg, .png" required>
+                                    <input type="file" id="imagen1" class="fadeIn" name="imagen1" accept=".gif, .jpg, .png" >
                                     <label for="">Imagen secundaria</label>
 
                                     <br>
-                                    <input type="file" id="imagen2" class="fadeIn" name="imagen2" accept=".gif, .jpg, .png" required>
+                                    <input type="file" id="imagen2" class="fadeIn" name="imagen2" accept=".gif, .jpg, .png" >
                                     <br>
 
                                     <label for="">Logo del proyecto</label>
 
-                                    <input type="file" id="logoProyecto" class="fadeIn" name="logoProyecto" accept=".gif, .jpg, .png" required>
+                                    <input type="file" id="logoProyecto" class="fadeIn" name="logoProyecto" accept=".gif, .jpg, .png" >
                                     <br>
                                     <label for="">Logo del proyecto(modo oscuro)</label>
 
-                                    <input type="file" id="logoProyecto2" class="fadeIn" name="logoProyecto2" accept=".gif, .jpg, .png" required>
+                                    <input type="file" id="logoProyecto2" class="fadeIn" name="logoProyecto2" accept=".gif, .jpg, .png" >
                                     <br>
                                     <label for="">Texto principal</label>
                                     <br>
@@ -135,7 +135,7 @@ Dashboard::header('Proyectos');
 
 
 
-                            <input type="submit" class="fadeIn fourth" value="Agregar">
+                            <input type="submit" id="submit" name="submit" class="fadeIn fourth" value="">
                         </form>
 
                     </div>
@@ -148,45 +148,6 @@ Dashboard::header('Proyectos');
     </div>
 </div>
 
-<script>
-    (function(document) {
-        'use strict';
-
-        var TableFilter = (function(myArray) {
-            var search_input;
-
-            function _onInputSearch(e) {
-                search_input = e.target;
-                var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
-                myArray.forEach.call(tables, function(table) {
-                    myArray.forEach.call(table.tBodies, function(tbody) {
-                        myArray.forEach.call(tbody.rows, function(row) {
-                            var text_content = row.textContent.toLowerCase();
-                            var search_val = search_input.value.toLowerCase();
-                            row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
-                        });
-                    });
-                });
-            }
-
-            return {
-                init: function() {
-                    var inputs = document.getElementsByClassName('busqueda');
-                    myArray.forEach.call(inputs, function(input) {
-                        input.oninput = _onInputSearch;
-                    });
-                }
-            };
-        })(Array.prototype);
-
-        document.addEventListener('readystatechange', function() {
-            if (document.readyState === 'complete') {
-                TableFilter.init();
-            }
-        });
-
-    })(document);
-</script>
 
 
 <?php

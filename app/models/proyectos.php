@@ -14,6 +14,7 @@ class Proyectos extends Validator
     private $texto_solucion = null;
     private $index;
     private $ruta = '..\..\resources\img\projects/';
+    private $ruta2 = '../../resources/img/projects/';
 
     public function setid_proyectos($value)
     {
@@ -181,6 +182,11 @@ class Proyectos extends Validator
         return $this->ruta;
     }
 
+    public function getRuta2()
+    {
+        return $this->ruta2;
+    }
+
     public function getIndex()
     {
         return $this->index;
@@ -240,6 +246,28 @@ class Proyectos extends Validator
         $sql = 'SELECT id_proyecto, nombre_proyecto, texto_principal, texto_cliente, texto_desafio, texto_solucion, imagen_principal, imagen_secundaria, logo_proyecto, logo_proyecto_oscuro, index_proyecto, id_usuario, fecha_creacion FROM ws_proyectos WHERE id_proyecto = ?';
         $params = array($this->id_proyecto);
         return Database::getRow($sql, $params);
+    }
+
+    public function updateProyecto($current_logo, $current_logo_oscuro, $current_imagen_principal, $current_imagen_secundaria)
+    {
+
+
+        ($this->logo_proyecto) ? $this->deleteFile($this->getRuta(), $current_logo) : $this->logo_proyecto = $current_logo;
+
+        ($this->logo_proyecto_oscuro) ?$this->deleteFile($this->getRuta(), $current_logo_oscuro) : $this->logo_proyecto = $current_logo_oscuro;
+
+        ($this->imagen_principal) ? $this->deleteFile($this->getRuta(), $current_imagen_principal)  : $this->imagen_principal = $current_imagen_principal;
+
+        ($this->imagen_secundaria) ?$this->deleteFile($this->getRuta(), $current_imagen_secundaria)  : $this->imagen_secundaria = $current_imagen_secundaria;
+
+        $sql = "UPDATE ws_proyectos set nombre_proyecto=?, texto_principal=?, texto_cliente=?, texto_desafio=?, texto_solucion=?, imagen_principal=?, 
+        imagen_secundaria=?, logo_proyecto=?, logo_proyecto_oscuro=? WHERE id_proyecto=?";
+        $params = array(
+            $this->nombre_proyecto, $this->texto_principal, $this->texto_cliente, $this->texto_desafio, $this->texto_solucion,
+            $this->imagen_principal, $this->imagen_secundaria, $this->logo_proyecto, $this->logo_proyecto_oscuro, $this->id_proyecto
+        );
+
+        return Database::executeRow($sql, $params);
     }
 
     public function deleteRow()

@@ -125,7 +125,7 @@ function onlySaveRow(api, action, form, modal) {
 }
 
 
-function saveRow(api, action, form, modal) {
+function saveRow(api, action, form) {
     fetch(api + action, {
         method: 'post',
         body: new FormData(document.getElementById(form))
@@ -136,11 +136,8 @@ function saveRow(api, action, form, modal) {
                 // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
                 if (response.status) {
                     // Se cierra la caja de dialogo (modal) del formulario.
-                    let instance = M.Modal.getInstance(document.getElementById(modal));
-                    instance.close();
-                    // Se cargan nuevamente las filas en la tabla de la vista después de agregar o modificar un registro.
-                    readRows(api);
-                    sweetAlert(1, response.message, null);
+                    sweetAlert(1, response.message, 'proyectos.php');
+                    clear();
                 } else {
                     sweetAlert(2, response.exception, null);
                 }

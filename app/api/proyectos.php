@@ -17,6 +17,95 @@ if (isset($_GET['action'])) {
         // Se compara la acción a realizar cuando un administrador ha iniciado sesión.
         switch ($_GET['action']) {
 
+            case 'update':
+                $_POST = $proyectos->validateForm($_POST);
+                if ($proyectos->setid_proyectos($_POST['id_proyecto'])) {
+                    if ($data=$proyectos->readProyecto()) {
+                        if ($proyectos->setNombre_proyecto($_POST['nombre_proyecto'])) {
+                            if ($proyectos->setTexto_principal($_POST['textoPrincipal'])) {
+                                if ($proyectos->setTexto_cliente($_POST['textoCliente'])) {
+                                    if ($proyectos->setTexto_desafio($_POST['textoDesafio'])) {
+                                        if ($proyectos->setTexto_solucion($_POST['textSolucion'])) {
+                                            if (is_uploaded_file($_FILES['imagen1']['tmp_name'])) {
+                                                if ($proyectos->setImagen_principal($_FILES['imagen1'])) {
+                                                    if (is_uploaded_file($_FILES['imagen2']['tmp_name'])) {
+                                                        if ($proyectos->setImagen_secundaria($_FILES['imagen2'])) {
+                                                            if (is_uploaded_file($_FILES['logoProyecto']['tmp_name'])) {
+                                                                if ($proyectos->setLogo($_FILES['logoProyecto'])) {
+                                                                    if (is_uploaded_file($_FILES['logoProyecto2']['tmp_name'])) {
+                                                                        if ($proyectos->setLogoOscuro($_FILES['logoProyecto2'])) {
+                                                                            if ($proyectos->updateProyecto($data['logo_proyecto'], $data['logo_proyecto_oscuro'], $data['imagen_principal'], $data['imagen_secundaria'])) {
+                                                                                $result['status'] = 1;
+                                                                                if ($proyectos->saveFile($_FILES['logoProyecto2'], $proyectos->getRuta(), $proyectos->getLogo_Oscuro())) {
+                                                                                    if ($proyectos->saveFile($_FILES['logoProyecto'], $proyectos->getRuta(), $proyectos->getLogo())) {
+                                                                                        if ($proyectos->saveFile($_FILES['imagen1'], $proyectos->getRuta(), $proyectos->getimagen_Principal())) {
+                                                                                            if ($proyectos->saveFile($_FILES['imagen2'], $proyectos->getRuta(), $proyectos->getimagen_Secundaria())) {
+
+                                                                                                $result['message'] = 'Proyecto actualizado correctamente';
+                                                                                            } else {
+                                                                                                $result['message'] = 'Proyecto actualizado pero no se guardó la imagen 2';
+                                                                                            }
+                                                                                        } else {
+                                                                                            $result['message'] = 'Proyecto actualizado pero no se guardó la imagen 1';
+                                                                                        }
+                                                                                    } else {
+                                                                                        $result['message'] = 'Proyecto actualizado pero no se guardó el logo';
+                                                                                    }
+                                                                                } else {
+                                                                                    $result['message'] = 'Proyecto actualizado pero no se guardó el logo oscuro';
+                                                                                }
+                                                                            } else {
+                                                                                $result['exception'] = Database::getException();
+                                                                            }
+                                                                        } else {
+                                                                            $result['exception'] = 'Logo incorrecto (modo oscuro)';
+                                                                        }
+                                                                    } else {
+                                                                        $result['exception'] = 'Seleccione un logo (modo oscuro)';
+                                                                    }
+                                                                } else {
+                                                                    $result['exception'] = 'Logo incorrecto';
+                                                                }
+                                                            } else {
+                                                                $result['exception'] = 'Seleccione un logo';
+                                                            }
+                                                        } else {
+                                                            $result['exception'] = 'Imagen secundaaria incorrecta';
+                                                        }
+                                                    } else {
+                                                        $result['exception'] = 'Seleccione una imagen secundaria';
+                                                    }
+                                                } else {
+                                                    $result['exception'] = 'Imagen principal incorrecta';
+                                                }
+                                            } else {
+                                                $result['exception'] = 'Seleccione una imagen principal';
+                                            }
+                                        } else {
+                                            $result['exception'] = 'Texto solución incorrecto';
+                                        }
+                                    } else {
+
+                                        $result['exception'] = 'Texto desafío incorrecto';
+                                    }
+                                } else {
+                                    $result['exception'] = 'Texto acerca del cliente incorrecto';
+                                }
+                            } else {
+                                $result['exception'] = 'Texto principal incorrecto';
+                            }
+                        } else {
+                            $result['exception'] = 'Nombre incorrecto';
+                        }
+                    } else {
+                        $result['exception'] = 'ID incorrecto';
+                    }
+                } else {
+                    $result['exception'] = 'Proyecto seleccionado incorrecto';
+                }
+
+
+                break;
             case 'register':
                 $_POST = $proyectos->validateForm($_POST);
                 if ($proyectos->setNombre_proyecto($_POST['nombre_proyecto'])) {
@@ -180,26 +269,31 @@ if (isset($_GET['action'])) {
                 }
                 break;
             case 'delete':
+                $_POST = $proyectos->validateForm($_POST);
                 if ($proyectos->setid_proyectos($_POST['id_proyecto'])) {
                     if ($data = $proyectos->readProyecto()) {
                         if ($proyectos->deleteRow()) {
-                            if ($proyectos->deleteFile($proyectos->getRuta(), $data['logo_proyecto'])) {
-                                if ($proyectos->deleteFile($proyectos->getRuta(), $data['logo_proyecto_oscuro'])) {
-                                    if ($proyectos->deleteFile($proyectos->getRuta(), $data['imagen_principal'])) {
-                                        if ($proyectos->deleteFile($proyectos->getRuta(), $data['imagen_secundaria'])) {
+                            chmod($proyectos->getRuta2() . $data['logo_proyecto'], 0777);
+                            if (@unlink($proyectos->getRuta2() . $data['logo_proyecto'])) {
+                                chmod($proyectos->getRuta2() . $data['logo_proyecto_oscuro'], 0777);
+                                if (@unlink($proyectos->getRuta2() . $data['logo_proyecto_oscuro'])) {
+                                    chmod($proyectos->getRuta2() . $data['imagen_principal'], 0777);
+                                    if (@unlink($proyectos->getRuta2() . $data['imagen_principal'])) {
+                                        chmod($proyectos->getRuta2() . $data['imagen_secundaria'], 0777);
+                                        if (@unlink($proyectos->getRuta2() . $data['imagen_secundaria'])) {
                                             $result['status'] = 1;
                                             $result['message'] = 'Proyecto eliminado correctamente';
                                         } else {
                                             $result['exception'] = 'Se borró el registro pero no la imagen secundaria';
                                         }
                                     } else {
-                                        $result['exception'] = 'Se borró el registro pero no la imagen principal';
+                                        $result['exception'] = 'Se borró el registro pero no la imagen principal ';
                                     }
                                 } else {
                                     $result['exception'] = 'Se borró el registro pero no el logo oscuro';
                                 }
                             } else {
-                                $result['exception'] = 'Se borró el registro pero no el logo';
+                                $result['exception'] = 'Se borró el registro pero no el logo ';
                             }
                         } else {
                             $result['exception'] = Database::getException();

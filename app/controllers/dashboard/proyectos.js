@@ -3,26 +3,14 @@ const API_PROYECTOS = '../../app/api/proyectos.php?action=';
 document.getElementById('register-Form').addEventListener('submit', function (event) {
     //Evento para evitar que recargue la página
     event.preventDefault();
-    //Fetch para registrar al primer usuario del sistema
-    fetch(API_PROYECTOS + 'register', {
-        method: 'post',
-        body: new FormData(document.getElementById('register-Form'))
-    }).then(request => {
-        //Se la verifica si la petición fue correcta de lo contrario muestra un mensaje de error en consola
-        if (request.ok) {
-            request.json().then(response => {
-                //Se verifica si la respuesta fue satisfactoria, de lo contrario se muestra la excepción
-                if (response.status) {
-                    sweetAlert(1, response.message, 'proyectos.php');
-                    clear();
-                } else {
-                    sweetAlert(2, response.exception, null);
-                }
-            })
-        } else {
-            console.log(response.status + ' ' + response.exception);
-        }
-    }).catch(error => console.log(error));
+    let action = '';
+    // Comparamos si existe o no id 
+    if (document.getElementById('id_proyecto').value) {
+        action = 'update';
+    } else {
+        action = 'register';
+    }
+    saveRow(API_PROYECTOS, action, 'register-Form');
 })
 
 
@@ -37,6 +25,7 @@ function clear() {
     document.getElementById('textSolucion').value = "";
     document.getElementById('logoProyecto').value = "";
     document.getElementById('logoProyecto2').value = "";
+    document.getElementById('id_proyecto').value = "";
 
 
 }
@@ -49,6 +38,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 })
 
+document.getElementById('btnInsert').addEventListener('click', function () {
+    document.getElementById('nombre_proyecto').value = "";
+    document.getElementById('imagen1').value = "";
+    document.getElementById('imagen2').value = "";
+    document.getElementById('textoPrincipal').value = "";
+    document.getElementById('textoCliente').value = "";
+    document.getElementById('textoDesafio').value = "";
+    document.getElementById('textSolucion').value = "";
+    document.getElementById('logoProyecto').value = "";
+    document.getElementById('logoProyecto2').value = "";
+    document.getElementById('id_proyecto').value = "";
+    document.getElementById('tituloForm').textContent = "Registrar proyecto";
+    document.getElementById('submit').value = "Agregar";
+});
 
 //Llenado de tabla
 function fillTable(dataset) {
@@ -102,6 +105,10 @@ function deleteRow(id) {
 
 function readDataOnModal(id) {
     // Se define un objeto con los datos del registro seleccionado.
+    document.getElementById('tituloForm').textContent = "Actualizar proyecto";
+    document.getElementById('submit').value = "Actualizar";
+
+
     const data = new FormData();
     data.append('id_proyecto', id);
 
@@ -112,16 +119,17 @@ function readDataOnModal(id) {
         // Se verifica si la petición es correcta, de lo contrario se muestra un mensaje indicando el problema.
         if (request.ok) {
             request.json().then(function (response) {
-               
-                document.getElementById('textoPrincipal').textContent = response.dataset.texto_principal;
+
+                document.getElementById('textoPrincipal').value = response.dataset.texto_principal;
                 document.getElementById('nombre_proyecto').value = response.dataset.nombre_proyecto;
-                document.getElementById('textoCliente').textContent = response.dataset.texto_cliente;
-                document.getElementById('textoDesafio').textContent = response.dataset.texto_desafio;
-                document.getElementById('textSolucion').textContent = response.dataset.texto_solucion;
-               /*  document.getElementById('imagen1').value = response.dataset.imagen_principal;
-                document.getElementById('imagen2').value = response.dataset.imagen_secundaria;
-                document.getElementById('logoProyecto').value = response.dataset.logo_proyecto;
-                document.getElementById('logoProyecto2').value = response.dataset.logo_proyecto_oscuro; */
+                document.getElementById('textoCliente').value = response.dataset.texto_cliente;
+                document.getElementById('textoDesafio').value = response.dataset.texto_desafio;
+                document.getElementById('textSolucion').value = response.dataset.texto_solucion;
+                document.getElementById('id_proyecto').value = response.dataset.id_proyecto;
+                /*  document.getElementById('imagen1').value = response.dataset.imagen_principal;
+                 document.getElementById('imagen2').value = response.dataset.imagen_secundaria;
+                 document.getElementById('logoProyecto').value = response.dataset.logo_proyecto;
+                 document.getElementById('logoProyecto2').value = response.dataset.logo_proyecto_oscuro; */
 
 
 
@@ -137,3 +145,43 @@ function readDataOnModal(id) {
         console.log(error);
     });
 }
+
+
+
+(function (document) {
+    'use strict';
+
+    var TableFilter = (function (myArray) {
+        var search_input;
+
+        function _onInputSearch(e) {
+            search_input = e.target;
+            var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+            myArray.forEach.call(tables, function (table) {
+                myArray.forEach.call(table.tBodies, function (tbody) {
+                    myArray.forEach.call(tbody.rows, function (row) {
+                        var text_content = row.textContent.toLowerCase();
+                        var search_val = search_input.value.toLowerCase();
+                        row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                    });
+                });
+            });
+        }
+
+        return {
+            init: function () {
+                var inputs = document.getElementsByClassName('busqueda');
+                myArray.forEach.call(inputs, function (input) {
+                    input.oninput = _onInputSearch;
+                });
+            }
+        };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function () {
+        if (document.readyState === 'complete') {
+            TableFilter.init();
+        }
+    });
+
+})(document);
