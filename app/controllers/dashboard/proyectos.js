@@ -74,7 +74,7 @@ function fillTable(dataset) {
                 <th scope="row">
                     <div class="row paddingBotones">
                         <div class="col-12">
-                            <a href="#" onclick="readDataOnModal(${row.id_proyecto}) "data-toggle="modal" data-target="#administrarAdmin" class="btn btn-warning mx-2">Actualizar</a>
+                            <a href="#" onclick="readDataOnModal(${row.id_proyecto})"  data-bs-toggle="modal" data-bs-target="#modalProyectos" class="btn btn-warning mx-2">Actualizar</a>
 
                             <a href="#" onclick="deleteRow(${row.id_proyecto})" class="btn  btn-danger  mx-2">Eliminar</a>
                         </div>
@@ -90,10 +90,50 @@ function fillTable(dataset) {
 }
 
 
-function deleteRow(id){
+function deleteRow(id) {
     // Se define un objeto con los datos del registro seleccionado.
     const data = new FormData();
-    data.append('txtId', id);
+    data.append('id_proyecto', id);
     // Se llama a la función que elimina un registro.
     confirmDelete(API_PROYECTOS, data);
+}
+
+
+
+function readDataOnModal(id) {
+    // Se define un objeto con los datos del registro seleccionado.
+    const data = new FormData();
+    data.append('id_proyecto', id);
+
+    fetch(API_PROYECTOS + 'readOne', {
+        method: 'post',
+        body: data
+    }).then(function (request) {
+        // Se verifica si la petición es correcta, de lo contrario se muestra un mensaje indicando el problema.
+        if (request.ok) {
+            request.json().then(function (response) {
+               
+                document.getElementById('textoPrincipal').textContent = response.dataset.texto_principal;
+                document.getElementById('nombre_proyecto').value = response.dataset.nombre_proyecto;
+                document.getElementById('textoCliente').textContent = response.dataset.texto_cliente;
+                document.getElementById('textoDesafio').textContent = response.dataset.texto_desafio;
+                document.getElementById('textSolucion').textContent = response.dataset.texto_solucion;
+               /*  document.getElementById('imagen1').value = response.dataset.imagen_principal;
+                document.getElementById('imagen2').value = response.dataset.imagen_secundaria;
+                document.getElementById('logoProyecto').value = response.dataset.logo_proyecto;
+                document.getElementById('logoProyecto2').value = response.dataset.logo_proyecto_oscuro; */
+
+
+
+
+
+
+
+            });
+        } else {
+            console.log(request.status + ' ' + request.statusText);
+        }
+    }).catch(function (error) {
+        console.log(error);
+    });
 }

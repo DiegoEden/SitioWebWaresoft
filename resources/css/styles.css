@@ -765,6 +765,15 @@ body {
 
 }
 
+.decoracion{
+    background-image: url("../../resources/img/comilla.png");
+    background-repeat: no-repeat;
+    background-position: 85% 20% !important;
+    background-size: 50px;
+    transition: .6s;
+
+}
+
 /*fin estilos carousel*/
 
 

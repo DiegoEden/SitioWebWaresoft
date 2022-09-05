@@ -13,10 +13,8 @@ Dashboard::header('Proyectos');
             <h3>Gestión de proyectos</h3>
             <br>
 
-            <form class="mx-3" method="post" id="search-form">
-                <input type="text" class="form-control" style="border-bottom: 2px solid #5fbae9;" id="search" name="search" aria-describedby="emailHelp" &#xf002;">
+            <input type="search" class="form-control fadeIn busqueda" placeholder="Buscar proyecto..." data-table="proyects-list" style="border-bottom: 2px solid #5fbae9;" id="search" name="search" aria-describedby="emailHelp" &#xf002;">
 
-            </form>
 
 
             <div class="mt-4 mx-3 mb-3">
@@ -26,7 +24,7 @@ Dashboard::header('Proyectos');
 
             <div class="row mt-3 justify-content-center table-responsive ">
                 <div class="col-12 justify-content-center align-items-center text-center">
-                    <table class="table table-borderless " id="data-table">
+                    <table class="table table-borderless proyects-list " id="data-table">
                         <thead>
                             <!-- Columnas-->
                             <tr>
@@ -75,6 +73,7 @@ Dashboard::header('Proyectos');
                             <div class="row">
 
                                 <div class="col-xl-6 mb-4 col-md-12 col-sm-12 col-xs-12 col-12 centrarColumnas">
+                                    <input class="d-none" type="number" id="txtId" name="txtId" />
                                     <input type="text" id="nombre_proyecto" class="fadeIn" name="nombre_proyecto" placeholder="Nombre del proyecto" required>
                                     <label for="">Imagen principal</label>
 
@@ -149,7 +148,45 @@ Dashboard::header('Proyectos');
     </div>
 </div>
 
+<script>
+    (function(document) {
+        'use strict';
 
+        var TableFilter = (function(myArray) {
+            var search_input;
+
+            function _onInputSearch(e) {
+                search_input = e.target;
+                var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                myArray.forEach.call(tables, function(table) {
+                    myArray.forEach.call(table.tBodies, function(tbody) {
+                        myArray.forEach.call(tbody.rows, function(row) {
+                            var text_content = row.textContent.toLowerCase();
+                            var search_val = search_input.value.toLowerCase();
+                            row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                        });
+                    });
+                });
+            }
+
+            return {
+                init: function() {
+                    var inputs = document.getElementsByClassName('busqueda');
+                    myArray.forEach.call(inputs, function(input) {
+                        input.oninput = _onInputSearch;
+                    });
+                }
+            };
+        })(Array.prototype);
+
+        document.addEventListener('readystatechange', function() {
+            if (document.readyState === 'complete') {
+                TableFilter.init();
+            }
+        });
+
+    })(document);
+</script>
 
 
 <?php

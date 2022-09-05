@@ -497,7 +497,7 @@ class webSite
     }
 
     /*slider equipo waresoft*/
-    function teamSlider()
+    public static function teamSlider()
     {
         print('
         <div id="carouselTeam" class="carousel slide" data-bs-ride="carousel">
@@ -522,7 +522,7 @@ class webSite
                         <br>
     
                         <div class="row gx-5">
-                            <div class="col">
+                            <div class="col decoracion">
                                 <div class="p-3 layout">
     
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
@@ -543,7 +543,7 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col ">
+                            <div class="col decoracion">
                                 <div class="p-3 layout">
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
     
@@ -580,7 +580,7 @@ class webSite
                         <br>
     
                         <div class="row gx-5">
-                            <div class="col">
+                            <div class="col decoracion">
                                 <div class="p-3 layout">
     
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
@@ -601,7 +601,7 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col ">
+                            <div class="col decoracion ">
                                 <div class="p-3 layout">
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
     
@@ -635,7 +635,7 @@ class webSite
                         <br>
     
                         <div class="row gx-5">
-                            <div class="col">
+                            <div class="col decoracion">
                                 <div class="p-3 layout">
     
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
@@ -656,7 +656,7 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col ">
+                            <div class="col decoracion ">
                                 <div class="p-3 layout">
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
     
