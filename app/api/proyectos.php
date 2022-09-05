@@ -180,8 +180,7 @@ if (isset($_GET['action'])) {
                 }
                 break;
             case 'delete':
-                $_POST = $proyectos->validateForm($_POST);
-                if ($proyectos->setid_proyectos($_POST['txtId'])) {
+                if ($proyectos->setid_proyectos($_POST['id_proyecto'])) {
                     if ($data = $proyectos->readProyecto()) {
                         if ($proyectos->deleteRow()) {
                             if ($proyectos->deleteFile($proyectos->getRuta(), $data['logo_proyecto'])) {
