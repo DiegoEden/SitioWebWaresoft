@@ -100,7 +100,7 @@
     }
 
     .buttonServicios2 {
-        font-size: 16px !important;
+        font-size: 30px !important;
 
     }
 
@@ -108,7 +108,9 @@
         line-height: 150% !important;
     }
 
+
 }
+
 
 @media(max-width:1024px) {
     .borderCol {
@@ -972,10 +974,13 @@ body {
 
 .buttonServicios:active {
     color: var(--colorLetra);
+    border: none;
+
 }
 
 .buttonServicios:focus {
     color: var(--colorLetra);
+    border: none;
 }
 
 .listaServicios {
@@ -997,6 +1002,7 @@ li.menu-item {
 .activeServicios {
     color: var(--colorLetra) !important;
     transition: .6s;
+    font-size: 36px !important;
 
 }
 
@@ -1075,7 +1081,7 @@ li.menu-item {
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    color: #787878;
+    color: var(--colorLetra);
     text-align: left;
     transition: .6s;
 
@@ -1158,9 +1164,9 @@ li.menu-item {
 .buttonServicios2 {
     text-decoration: none;
     font-family: 'Montserrat';
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 400;
-    color: #787878;
+    color: var(--colorPrev);
     transition: var(--animation);
     cursor: pointer;
     background-color: transparent;
@@ -1195,5 +1201,9 @@ li.menu-item {
     font-weight: 400;
     color: var(--colorLetra);
     margin-top: 30px;
+    transition: .6s;
+}
+
+.servicios{
     transition: .6s;
 }

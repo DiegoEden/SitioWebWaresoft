@@ -769,4 +769,118 @@ class webSite
     
     </div>';
     }
+
+
+    public static function getServices(){
+
+        print '<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <div class="container d-flex flex-column justify-content-center marginsuperior ">
+            <div class="row ">
+                <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12 " style="margin-left:40px;">
+                    <p class="titulosHorizontal" style="margin-left:-100px; margin-top: 5px;">SERVICIOS</p>
+                    <h6 class="headers" style="font-size:36px">Estamos aquí para ayudarte</h6>
+                    <br>
+                    <ul class="listaServicios" id="listaServicios" style="line-height:600%">
+                        <li class="item"><button id="btnV1" class="buttonServicios2 activeServicios">01. SERVICIO TECNOLOGÍA</button></li>
+                        <li class="item"><button id="btnV2" class="buttonServicios2">02. SERVICIO SOFTWARE</button></li>
+                        <li class="item"><button id="btnV3" class="buttonServicios2">03. SERVICIO CLOUD</button></li>
+                        <li class="item"><button id="btnV4" class="buttonServicios2">04. SERVICIO DIGITAL</button></li>
+        
+                    </ul>
+        
+                </div>
+                <div class="col  col-md-12 col-lg-5 col-xl-6 col-sm-12 col-12 catalogo ">
+        
+        
+                    <div id="tecnologia" class="servicios">
+                        <img src="../../resources/img/tecnologia-.png" alt="" class="img-fluid imagenesServicios">
+        
+                        <h3 class="headerServicios">SERVICIO TECNOLOGÍA</h3>
+                        <p class="parrafoEquipo">La inteligencia artificial es una tecnología en avance que puede tener un impacto significativo en nuestra vida cotidiana. Es una de las tendencias tecnológicas más calientes que ha invadido el escenario empresarial en los últimos años.
+                        <ul>
+                            <li class="parrafoEquipo">Soluciones IA</li>
+                            <li class="parrafoEquipo">Capacitación y Relatoría</li>
+                            <li class="parrafoEquipo">Asesoria Empresarial</li>
+                            <li class="parrafoEquipo">Big Data</li>
+                            <li class="parrafoEquipo">Seguridad Informática</li>
+                        </ul>
+                        </p>
+                    </div>
+        
+                    <div id="software" class="d-none">
+                        <img src="../../resources/img/software.png" alt="" class="img-fluid imagenesServicios">
+        
+                        <h3 class="headerServicios">ARQUITECTURA DE SOFTWARE</h3>
+                        <p class="parrafoEquipo">La Arquitectura de Software se refiere a “las estructuras de un sistema, compuestas de elementos con propiedades visibles de forma externa y las relaciones que existen entre ellos.
+                        <ul>
+                            <li class="parrafoEquipo">Arquitectura de software</li>
+                            <li class="parrafoEquipo">Desarrollo de sofware a medida</li>
+                            <li class="parrafoEquipo">Desarrollo de aplicaciones</li>
+                            <li class="parrafoEquipo">Testing</li>
+                            <li class="parrafoEquipo">Mantenimiento</li>
+                        </ul>
+                        </p>
+                    </div>
+        
+                    <div id="cloud" class="d-none">
+                        <img src="../../resources/img/cloud.png" alt="" class="img-fluid imagenesServicios">
+        
+                        <h3 class="headerServicios">BACKUP AS A SERVICE (BaaS) </h3>
+                        <p class="parrafoEquipo">El servicio de backup en línea, también conocido como backup en cloud o backup como servicio (BaaS), es un método de almacenamiento de datos fuera del sitio en el que se encuentran archivos, carpetas, O todo el contenido de una unidad de disco duro está respaldado regularmente por un proveedor de servicios en un repositorio de datos remoto basado en cloud seguro a través de una conexión de red.
+                        <ul>
+                            <li class="parrafoEquipo">Backup as Service</li>
+                            <li class="parrafoEquipo">Desarrollo de sofware a medida</li>
+                            <li class="parrafoEquipo">Infraestructura as a Service</li>
+                            <li class="parrafoEquipo">Disaster Recovery as a Service</li>
+                            <li class="parrafoEquipo">Desktop as a Service</li>
+                        </ul>
+                        </p>
+                    </div>
+        
+                    <div id="digital" class="d-none">
+                        <img src="../../resources/img/uml.png" alt="" class="img-fluid imagenesServicios">
+        
+                        <h3 class="headerServicios">ARQUITECTURA UX/UI</h3>
+                        <p class="parrafoEquipo">En Waresoft entendemos la importancia de la arquitectura UX / UI y lo que trae a mejores beneficios para nuestros clientes. Es por eso que al momento de diseñar una página web, software o aplicación implementamos todos los conocimientos existentes de arquitectura UX / UI.
+                        <ul>
+                            <li class="parrafoEquipo">Arquitectura UX/UI</li>
+                            <li class="parrafoEquipo">Diseño de Interfaz UI</li>
+                            <li class="parrafoEquipo">Research UX</li>
+                            <li class="parrafoEquipo">Branding</li>
+                        </ul>
+                        </p>
+                    </div>
+        
+                    <div class="indicadores" id="indicadores" style=" transform: rotate(-90deg);margin-left: 700px;margin-top: -300px;">
+        
+                        <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnOn"></button>
+                        <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnNext"></button>
+                        <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnNext2"></button>
+                        <button type="button" style="pointer-events:none;" class="botonesindicador activeIndicador" id="btnPrev"></button>
+        
+        
+                    </div>
+        
+        
+                </div>
+        
+        
+            </div>
+        </div>
+        
+        
+        
+        
+        <br>
+        <br>
+        <br>
+        ';
+    }
 }
