@@ -183,21 +183,21 @@ class webSite
                   </div>
                   <div class="col col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12">
                       <label class="forms">NOMBRE COMPLETO</label>
-                      <input type="text" class="form-control forms-input" placeholder="Nombre" required> 
+                      <input id="nombre" name="nombre" type="text" class="form-control forms-input" placeholder="Nombre" required> 
                       <br>
                       <label class="forms">¿QUÉ BUSCAS?</label>
-                      <input type="text" class="form-control forms-input" placeholder="Comentarios" required>
+                      <input id="comentarios" name="comentarios" type="text" class="form-control forms-input" placeholder="Comentarios" required>
                       <br>
   
                       <label class="forms">CORREO ELECTRÓNICO</label>
-                      <input type="email" class="form-control forms-input" placeholder="Correo Electrónico" required>
+                      <input type="email" id="email" name="email" class="form-control forms-input" placeholder="Correo Electrónico" required>
                       <br>
 
                       <label class="forms">MENSAJE</label>
-                      <input type="text" class="form-control forms-input" placeholder="Mensaje" required>
+                      <textarea id="mensaje" name="mensaje" class="form-control forms-textarea" placeholder="Mensaje" rows="10" required></textarea>
                       <br>
                       <div class="col-md-12 text-center">
-                          <button type="submit" class="btn btn-primary forms-button">Enviar</button>
+                          <button type="submit" id="enviar" name="enviar"  class="btn btn-primary forms-button">Enviar</button>
                       </div>
                   </div>
               </div>
@@ -771,7 +771,8 @@ class webSite
     }
 
 
-    public static function getServices(){
+    public static function getServices()
+    {
 
         print '<br>
         <br>
