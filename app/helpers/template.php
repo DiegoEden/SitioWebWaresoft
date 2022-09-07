@@ -114,6 +114,7 @@ class webSite
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../../app/controllers/public/' . $controller . '"></script>
         <script type="text/javascript" src="../../app/controllers/public/template.js"></script>
+        <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
         <script src="../../app/helpers/components.js"></script>
 
 
@@ -173,7 +174,7 @@ class webSite
       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
           <p class="titulosHorizontal">CONTÁCTANOS</p>
           <h2 class="headers">En <span class="headerceleste">Waresoft</span> Juntos innovamos, crecemos y ganamos</h2>
-          <form method="post" id="save-form" enctype="multipart/form-data">
+          <form method="post" id="save-form">
               <div class="row margenform">
                   <div class="col col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12 marginsuperior" id="colForm">
                       <h1 class="numerows">4<sup>+</sup></h1>

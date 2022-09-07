@@ -29,5 +29,5 @@ webSite::formTemplate();
 <?php
 //Se imprime la plantilla del footer y se envía el controlador a usar
 
-webSite::footer('index.js');
+webSite::footer('contact.js');
 ?>

@@ -1,5 +1,6 @@
 const API_PROYECTOS = '../../app/api/proyectos.php?action=';
 
+
 document.addEventListener('DOMContentLoaded', function () {
 
 
@@ -7,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     readRows(API_PROYECTOS);
     readIndicators(API_PROYECTOS);
 
-    
+
 
 
 });

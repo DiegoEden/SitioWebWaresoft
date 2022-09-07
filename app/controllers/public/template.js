@@ -1,9 +1,10 @@
 
+const API_CONTACTO = '../../app/api/mail.php?action=';
 
 document.addEventListener('DOMContentLoaded', function () {
     let current_url = document.location;
-/*     console.log(current_url);
- */
+    /*     console.log(current_url);
+     */
     document.querySelectorAll(".nav-link").forEach(function (e) {
         if (e.href == current_url) {
             e.classList += " current";
@@ -23,15 +24,17 @@ document.addEventListener('DOMContentLoaded', function () {
 function load() {
 
 
+    
+    var hour = (new Date).getHours();
     let mode = localStorage.getItem("mode");
     if (mode == '' || mode == null) {
         modoClaro();
     }
-    if (mode == 'claro') {
+    if (mode == 'claro' || hour == 6) {
 
         modoClaro();
 
-    } else if (mode == 'oscuro') {
+    } else if (mode == 'oscuro' || hour == 18 ) {
         modoOscuro();
     }
 
@@ -211,3 +214,34 @@ function showVideo4() {
 
 }
 
+
+
+
+document.getElementById('save-form').addEventListener('submit', function (event) {
+    //Se evita que se recargue la pagina
+    event.preventDefault();
+    fetch(API_CONTACTO + 'sendMail', {
+        method: 'post',
+        body: new FormData(document.getElementById('save-form'))
+    }).then(function (request) {
+        // Se verifica si la petición es correcta, de lo contrario se muestra un mensaje indicando el problema.
+        if (request.ok) {
+            request.json().then(function (response) {
+                // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
+                if (response.status) {
+                    sweetAlert(1, response.message, null);
+
+
+
+                } else {
+                    sweetAlert(4, response.exception, null);
+
+                }
+            });
+        } else {
+            console.log(request.status + ' ' + request.statusText);
+        }
+    }).catch(function (error) {
+        console.log(error);
+    });
+});
