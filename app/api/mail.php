@@ -23,68 +23,104 @@ if (isset($_GET['action'])) {
     $result = array('status' => 0, 'recaptcha' => 0, 'error' => 0, 'message' => null, 'exception' => null);
 
     switch ($_GET['action']) {
-
         case 'sendMail':
             $_POST = $mail->validateForm($_POST);
-            if ($mail->setNombres($_POST['nombre'])) {
-                if (isset($_POST['nombre'])) {
-                    if ($mail->setAsunto($_POST['comentarios'])) {
-                        if (isset($_POST['comentarios'])) {
-                            if ($mail->setCorreo($_POST['email'])) {
-                                if (isset($_POST['email'])) {
-                                    if ($mail->setMensaje($_POST['mensaje'])) {
-                                        if (isset($_POST['mensaje'])) {
-                                            try {
-                                                $mailer->SMTPDebug = 0;
-                                                $mailer->isSMTP();
-                                                $mailer->Host       = 'c1960222.ferozo.com';
-                                                $mailer->SMTPAuth   = true;
-                                                $mailer->Username   = 'diego.ramirez@waresoft.com.sv';
-                                                $mailer->Password   = 'W4r3s0ft';
-                                                $mailer->SMTPSecure = 'ssl';
-                                                $mailer->Port       = 465;
-                                                $mailer->CharSet = 'UTF-8';
-                                                $mailer->setFrom($mail->getCorreo(), $mail->getNombres());
-                                                $mailer->addAddress('diego.ramirez@waresoft.com.sv');
+            $token = filter_input(INPUT_POST, 'g-recaptcha-response', FILTER_SANITIZE_STRING);
+            if ($token) {
+                $secretKey = '6Lf0cuAhAAAAAOsaLBxkADyAyM4CY_s1Iy_zy1YB';
+                $ip = $_SERVER['REMOTE_ADDR'];
 
-                                                //Contenido
-                                                $mailer->isHTML(true);
-                                                $mailer->Subject = $mail->getAsunto();
-                                                $mailer->Body    = $mail->getMensaje();
-                                                if ($mailer->send()) {
-                                                    $result['status'] = 1;
-                                                    $result['message'] = 'Gracias por contactarse con nosotros ';
+                $data = array(
+                    'secret' => $secretKey,
+                    'response' => $token,
+                    'remoteip' => $ip
+                );
+
+                $options = array(
+                    'http' => array(
+                        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                        'method'  => 'POST',
+                        'content' => http_build_query($data)
+                    ),
+                    'ssl' => array(
+                        'verify_peer' => false,
+                        'verify_peer_name' => false
+                    )
+                );
+
+                $url = 'https://www.google.com/recaptcha/api/siteverify';
+                $context  = stream_context_create($options);
+                $response = file_get_contents($url, false, $context);
+                $captcha = json_decode($response, true);
+
+                if ($captcha['success']) {
+                    if ($mail->setNombres($_POST['nombre'])) {
+                        if (isset($_POST['nombre'])) {
+                            if ($mail->setAsunto($_POST['comentarios'])) {
+                                if (isset($_POST['comentarios'])) {
+                                    if ($mail->setCorreo($_POST['email'])) {
+                                        if (isset($_POST['email'])) {
+                                            if ($mail->setMensaje($_POST['mensaje'])) {
+                                                if (isset($_POST['mensaje'])) {
+                                                    try {
+                                                        $mailer->SMTPDebug = 0;
+                                                        $mailer->isSMTP();
+                                                        $mailer->Host       = 'c1960222.ferozo.com';
+                                                        $mailer->SMTPAuth   = true;
+                                                        $mailer->Username   = 'diego.ramirez@waresoft.com.sv';
+                                                        $mailer->Password   = 'W4r3s0ft';
+                                                        $mailer->SMTPSecure = 'ssl';
+                                                        $mailer->Port       = 465;
+                                                        $mailer->CharSet = 'UTF-8';
+                                                        $mailer->setFrom($mail->getCorreo(), $mail->getNombres());
+                                                        $mailer->addAddress('diego.ramirez@waresoft.com.sv');
+
+                                                        //Contenido
+                                                        $mailer->isHTML(true);
+                                                        $mailer->Subject = $mail->getAsunto();
+                                                        $mailer->Body    = $mail->getMensaje();
+                                                        if ($mailer->send()) {
+                                                            $result['status'] = 1;
+                                                            $result['message'] = 'Gracias por contactarse con nosotros ';
+                                                        }
+                                                    } catch (Exception $e) {
+
+                                                        $result['exception'] = $mailer->ErrorInfo;
+                                                    }
+                                                } else {
+                                                    $result['exception'] = 'Por favor, escriba su mensaje';
                                                 }
-                                            } catch (Exception $e) {
+                                            } else {
 
-                                                $result['exception'] = $mailer->ErrorInfo;
+                                                $result['exception'] = 'Mensaje incorrecto';
                                             }
                                         } else {
-                                            $result['exception'] = 'Por favor, escriba su mensaje';
+                                            $result['exception'] = 'Por favor, ingrese su correo electrónico';
                                         }
                                     } else {
-
-                                        $result['exception'] = 'Mensaje incorrecto';
+                                        $result['exception'] = 'Correo incorrecto';
                                     }
                                 } else {
-                                    $result['exception'] = 'Por favor, ingrese su correo electrónico';
+                                    $result['exception'] = 'Por favor, llene el campo solicitado';
                                 }
                             } else {
-                                $result['exception'] = 'Correo incorrecto';
+
+                                $result['exception'] = 'Asunto incorrecto';
                             }
                         } else {
-                            $result['exception'] = 'Por favor, llene el campo solicitado';
+                            $result['exception'] = 'Por favor, escriba su nombre';
                         }
                     } else {
 
-                        $result['exception'] = 'Asunto incorrecto';
+                        $result['exception'] = 'Nombres incorrectos';
                     }
                 } else {
-                    $result['exception'] = 'Por favor, escriba su nombre';
+                    $result['recaptcha'] = 1;
+                    $result['exception'] = 'No eres un humano';
                 }
             } else {
 
-                $result['exception'] = 'Nombres incorrectos';
+                $result['exception'] = 'Ocurrió un problema al cargar el reCAPTCHA';
             }
 
             break;

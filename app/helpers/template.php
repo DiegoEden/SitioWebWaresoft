@@ -116,6 +116,7 @@ class webSite
         <script type="text/javascript" src="../../app/controllers/public/template.js"></script>
         <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
         <script src="../../app/helpers/components.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6Lf0cuAhAAAAAJIimQGNnPTNO5ww7TS9kkkQnvwm"></script>
 
 
 
@@ -174,7 +175,9 @@ class webSite
       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
           <p class="titulosHorizontal">CONTÁCTANOS</p>
           <h2 class="headers">En <span class="headerceleste">Waresoft</span> Juntos innovamos, crecemos y ganamos</h2>
-          <form method="post" id="save-form">
+          <form method="post" id="save-form" autocomplete="off" >
+          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
+
               <div class="row margenform">
                   <div class="col col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12 marginsuperior" id="colForm">
                       <h1 class="numerows">4<sup>+</sup></h1>
@@ -195,7 +198,7 @@ class webSite
                       <br>
 
                       <label class="forms">MENSAJE</label>
-                      <textarea id="mensaje" name="mensaje" class="form-control forms-textarea" placeholder="Mensaje" rows="10" required></textarea>
+                      <textarea id="mensaje" name="mensaje" class="form-control forms-textarea" placeholder="Mensaje" rows="5" required></textarea>
                       <br>
                       <div class="col-md-12 text-center">
                           <button type="submit" id="enviar" name="enviar"  class="btn btn-primary forms-button">Enviar</button>

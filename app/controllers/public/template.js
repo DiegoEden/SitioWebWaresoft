@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     load();
+    reCAPTCHA();
 
 
 });
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function load() {
 
 
-    
+
     var hour = (new Date).getHours();
     let mode = localStorage.getItem("mode");
     if (mode == '' || mode == null) {
@@ -34,7 +35,7 @@ function load() {
 
         modoClaro();
 
-    } else if (mode == 'oscuro' || hour == 18 ) {
+    } else if (mode == 'oscuro' || hour == 18) {
         modoOscuro();
     }
 
@@ -216,9 +217,20 @@ function showVideo4() {
 
 
 
+function clear() {
+
+    document.getElementById('nombre').value = "";
+    document.getElementById('comentarios').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('mensaje').value = "";
+
+}
+
 
 document.getElementById('save-form').addEventListener('submit', function (event) {
     //Se evita que se recargue la pagina
+    const boton = document.getElementById('enviar');
+    boton.disabled = true;
     event.preventDefault();
     fetch(API_CONTACTO + 'sendMail', {
         method: 'post',
@@ -230,12 +242,18 @@ document.getElementById('save-form').addEventListener('submit', function (event)
                 // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
                 if (response.status) {
                     sweetAlert(1, response.message, null);
-
-
-
+                    const boton = document.getElementById('enviar');
+                    boton.disabled = false;
+                    clear();
                 } else {
-                    sweetAlert(4, response.exception, null);
-
+                    // Se verifica si el token falló (ya sea por tiempo o por uso).
+                    if (response.recaptcha) {
+                        sweetAlert(2, response.exception, null);
+                    } else {
+                        sweetAlert(2, response.exception, null);
+                        // Se genera un nuevo token.
+                        reCAPTCHA();
+                    }
                 }
             });
         } else {
@@ -245,3 +263,16 @@ document.getElementById('save-form').addEventListener('submit', function (event)
         console.log(error);
     });
 });
+
+
+function reCAPTCHA() {
+    // Método para generar el token del reCAPTCHA.
+    grecaptcha.ready(function () {
+
+        // Se obtiene un token para la página web mediante la llave pública.
+        grecaptcha.execute('6Lf0cuAhAAAAAJIimQGNnPTNO5ww7TS9kkkQnvwm', { action: 'submit' }).then(function (token) {
+            // Se asigna el valor del token al campo oculto del formulario
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+}
