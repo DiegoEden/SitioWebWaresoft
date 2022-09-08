@@ -248,9 +248,9 @@ document.getElementById('save-form').addEventListener('submit', function (event)
                 } else {
                     // Se verifica si el token falló (ya sea por tiempo o por uso).
                     if (response.recaptcha) {
-                        sweetAlert(2, response.exception, null);
+                        sweetAlert(2, response.exception, 'index.php');
                     } else {
-                        sweetAlert(2, response.exception, null);
+                        sweetAlert(2, response.exception, 'index.php');
                         // Se genera un nuevo token.
                         reCAPTCHA();
                     }

@@ -176,8 +176,9 @@ class webSite
           <p class="titulosHorizontal">CONTÁCTANOS</p>
           <h2 class="headers">En <span class="headerceleste">Waresoft</span> Juntos innovamos, crecemos y ganamos</h2>
           <form method="post" id="save-form" autocomplete="off" >
+          <div style="display: none">     
           <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
-
+          </div>
               <div class="row margenform">
                   <div class="col col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12 marginsuperior" id="colForm">
                       <h1 class="numerows">4<sup>+</sup></h1>
@@ -696,7 +697,7 @@ class webSite
     {
         print '<div class="container" id="formContainer">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-7 col-lg-6 col-xl-6 col-sm-12">
+            <div class="col-12 col-md-7 col-lg-6 col-xl-6 col-sm-12 " >
                 <p class="titulosHorizontal">EXPERIENCIA</p>
                 <div class="row margenform">
                     <div class="col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12 marginsuperior">
@@ -792,7 +793,7 @@ class webSite
                     <p class="titulosHorizontal" style="margin-left:-100px; margin-top: 5px;">SERVICIOS</p>
                     <h6 class="headers" style="font-size:36px">Estamos aquí para ayudarte</h6>
                     <br>
-                    <ul class="listaServicios" id="listaServicios" style="line-height:600%">
+                    <ul class="listaServicios" id="listaServicios" style="line-height:400%">
                         <li class="item"><button id="btnV1" class="buttonServicios2 activeServicios">01. SERVICIO TECNOLOGÍA</button></li>
                         <li class="item"><button id="btnV2" class="buttonServicios2">02. SERVICIO SOFTWARE</button></li>
                         <li class="item"><button id="btnV3" class="buttonServicios2">03. SERVICIO CLOUD</button></li>

@@ -82,6 +82,30 @@ if (isset($_GET['action'])) {
                                                         if ($mailer->send()) {
                                                             $result['status'] = 1;
                                                             $result['message'] = 'Gracias por contactarse con nosotros ';
+                                                            try {
+                                                                $mailer->SMTPDebug = 0;
+                                                                $mailer->isSMTP();
+                                                                $mailer->Host       = 'c1960222.ferozo.com';
+                                                                $mailer->SMTPAuth   = true;
+                                                                $mailer->Username   = 'diego.ramirez@waresoft.com.sv';
+                                                                $mailer->Password   = 'W4r3s0ft';
+                                                                $mailer->SMTPSecure = 'ssl';
+                                                                $mailer->Port       = 465;
+                                                                $mailer->CharSet = 'UTF-8';
+                                                                $mailer->setFrom('diego.ramirez@waresoft.com.sv', 'WARESOFT');
+                                                                $mailer->addAddress($mail->getCorreo());
+
+                                                                //Contenido
+                                                                $mailer->isHTML(true);
+                                                                $mailer->Subject = 'Gracias por contactarse con nosotros';
+                                                                $mailer->Body    = 'Hola, gracias por contactarse con waresoft';
+                                                                if ($mailer->send()) {
+                                                                    $result['status'] = 1;
+                                                                }
+                                                            } catch (Exception $e) {
+
+                                                                $result['exception'] = $mailer->ErrorInfo;
+                                                            }
                                                         }
                                                     } catch (Exception $e) {
 
@@ -122,6 +146,7 @@ if (isset($_GET['action'])) {
 
                 $result['exception'] = 'Ocurrió un problema al cargar el reCAPTCHA';
             }
+
 
             break;
 

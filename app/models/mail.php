@@ -27,7 +27,7 @@ class Mail extends Validator
     public function setNombres($value)
     {
         if ($this->validateAlphabetic($value, 1, 25)) {
-            $this->nombre = $value;
+            $this->nombres = $value;
             return true;
         } else {
             return false;

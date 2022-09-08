@@ -49,7 +49,6 @@ function fillTable(dataset) {
         
                             <div class="col col-md-12 col-lg-6 col-xl-6 col-sm-12 col-12 colImg ">
                                 <img src="../../resources/img/projects/${row.imagen_principal}" class="img-fluid" alt="">
-                                img
         
                             </div>
         

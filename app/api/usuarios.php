@@ -24,6 +24,21 @@ if (isset($_GET['action'])) {
                 $result['message'] = 'Sesión eliminada correctamente';
                 break;
 
+            case 'readAll':
+                if ($result['dataset'] = $usuarios->readAll()) {
+                    $result['message'] = 'Ya hay un usuario existente.';
+
+                    $result['status'] = 1;
+                } else {
+                    // Se ejecuta si existe algun error en la base de datos 
+                    if (Database::getException()) {
+                        $result['exception'] = Database::getException();
+                    } else {
+                        $result['exception'] = 'No hay usuarios registrados, por favor regístrese';
+                    }
+                }
+                break;
+
             default:
                 $result['exception'] = 'Acción no disponible dentro de la sesión';
         }
@@ -65,7 +80,7 @@ if (isset($_GET['action'])) {
                                         }
                                     }
                                 } else {
-                                    $result['exception'] = 'Contraseña incorrecta';
+                                    $result['exception'] = 'La contraseña debe de contar con al menos 8 caracteres, entre ellos una mayúscula, un numero, y al menos un caracter especial';
                                 }
                             } else {
                                 $result['exception'] = 'Las contraseñas no coinciden';

@@ -96,16 +96,20 @@
     }
 
     .buttonServicios {
-        font-size: 12px !important;
+        font-size: 20px !important;
     }
 
     .buttonServicios2 {
-        font-size: 30px !important;
+        font-size: 20px !important;
 
     }
 
     .listaServicios {
         line-height: 150% !important;
+    }
+
+    .indicadores {
+        display: none;
     }
 
 
@@ -161,10 +165,6 @@
 
     .marginImg {
         margin-top: 50px !important;
-    }
-
-    .indicadores {
-        display: none;
     }
 
     .titulosExperiencia {
@@ -1013,7 +1013,7 @@ li.menu-item {
 .activeServicios {
     color: var(--colorLetra) !important;
     transition: .6s;
-    font-size: 36px !important;
+    font-size: 24px !important;
 
 }
 
@@ -1175,7 +1175,7 @@ li.menu-item {
 .buttonServicios2 {
     text-decoration: none;
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--colorPrev);
     transition: var(--animation);
