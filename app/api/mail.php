@@ -83,28 +83,30 @@ if (isset($_GET['action'])) {
                                                             $result['status'] = 1;
                                                             $result['message'] = 'Gracias por contactarse con nosotros ';
                                                             try {
-                                                                $mailer->SMTPDebug = 0;
-                                                                $mailer->isSMTP();
-                                                                $mailer->Host       = 'c1960222.ferozo.com';
-                                                                $mailer->SMTPAuth   = true;
-                                                                $mailer->Username   = 'diego.ramirez@waresoft.com.sv';
-                                                                $mailer->Password   = 'W4r3s0ft';
-                                                                $mailer->SMTPSecure = 'ssl';
-                                                                $mailer->Port       = 465;
-                                                                $mailer->CharSet = 'UTF-8';
-                                                                $mailer->setFrom('diego.ramirez@waresoft.com.sv', 'WARESOFT');
-                                                                $mailer->addAddress($mail->getCorreo());
+
+                                                                $responseMail = new PHPMailer(true);
+                                                                $responseMail->SMTPDebug = 0;
+                                                                $responseMail->isSMTP();
+                                                                $responseMail->Host       = 'c1960222.ferozo.com';
+                                                                $responseMail->SMTPAuth   = true;
+                                                                $responseMail->Username   = 'diego.ramirez@waresoft.com.sv';
+                                                                $responseMail->Password   = 'W4r3s0ft';
+                                                                $responseMail->SMTPSecure = 'ssl';
+                                                                $responseMail->Port       = 465;
+                                                                $responseMail->CharSet = 'UTF-8';
+                                                                $responseMail->setFrom('diego.ramirez@waresoft.com.sv', 'WARESOFT');
+                                                                $responseMail->addAddress($mail->getCorreo());
 
                                                                 //Contenido
-                                                                $mailer->isHTML(true);
-                                                                $mailer->Subject = 'Gracias por contactarse con nosotros';
-                                                                $mailer->Body    = 'Hola, gracias por contactarse con waresoft';
-                                                                if ($mailer->send()) {
+                                                                $responseMail->isHTML(true);
+                                                                $responseMail->Subject = 'Gracias por contactarse con nosotros';
+                                                                $responseMail->Body    = 'Hola, gracias por contactarse con waresoft';
+                                                                if ($responseMail->send()) {
                                                                     $result['status'] = 1;
                                                                 }
                                                             } catch (Exception $e) {
 
-                                                                $result['exception'] = $mailer->ErrorInfo;
+                                                                $result['exception'] = $responseMail->ErrorInfo;
                                                             }
                                                         }
                                                     } catch (Exception $e) {
