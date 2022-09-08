@@ -162,7 +162,7 @@ $(document).ready(function () {
 
 function showVideo1() {
 
-    document.getElementById('video1').className = "img-fluid animate__animated animate__slideInLeft";
+    document.getElementById('video1').className = "img-fluid";
     document.getElementById('video2').className = "d-none";
     document.getElementById('video3').className = "d-none";
     document.getElementById('video4').className = "d-none";
@@ -175,7 +175,7 @@ function showVideo1() {
 
 function showVideo2() {
 
-    document.getElementById('video2').className = "img-fluid animate__animated animate__slideInLeft";
+    document.getElementById('video2').className = "img-fluid";
     document.getElementById('video1').className = "d-none";
     document.getElementById('video3').className = "d-none";
     document.getElementById('video4').className = "d-none";
@@ -189,7 +189,7 @@ function showVideo2() {
 
 function showVideo3() {
 
-    document.getElementById('video3').className = "img-fluid animate__animated animate__slideInLeft";
+    document.getElementById('video3').className = "img-fluid";
     document.getElementById('video1').className = "d-none";
     document.getElementById('video2').className = "d-none";
     document.getElementById('video4').className = "d-none";
@@ -203,7 +203,7 @@ function showVideo3() {
 
 function showVideo4() {
 
-    document.getElementById('video4').className = "img-fluid animate__animated animate__slideInLeft";
+    document.getElementById('video4').className = "img-fluid";
     document.getElementById('video1').className = "d-none";
     document.getElementById('video3').className = "d-none";
     document.getElementById('video2').className = "d-none";
