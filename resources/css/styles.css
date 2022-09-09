@@ -1222,3 +1222,10 @@ li.menu-item {
 .grecaptcha-badge {
     visibility: hidden;
 }
+
+
+
+.loadingForm{
+    color: var(--color-spinner);
+    transition: .6s;
+}

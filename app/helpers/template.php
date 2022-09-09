@@ -203,6 +203,9 @@ class webSite
                       <br>
                       <div class="col-md-12 text-center">
                           <button type="submit" id="enviar" name="enviar"  class="btn btn-primary forms-button">Enviar</button>
+                          <div class="spinner-border m-3 d-none loadingForm" id="spinner"  role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
                       </div>
                   </div>
               </div>

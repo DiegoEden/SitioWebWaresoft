@@ -54,6 +54,8 @@ function modoOscuro() {
     document.documentElement.style.setProperty('--body-color', '#191B34');
     document.documentElement.style.setProperty('--color-fondo', '#191B34');
     document.documentElement.style.setProperty('--colorLetra', "#FFFFFF");
+    document.documentElement.style.setProperty('--color-spinner', '#FFFFFF');
+
     document.documentElement.style.setProperty('--bannerWs', 'linear-gradient(180deg, rgba(255,255,255,1) 23%, rgba(67,67,67,1) 23%)');
     document.getElementById('logoNav').src = "../../resources/img/logoOscuro.png";
     localStorage.setItem('mode', 'oscuro');
@@ -96,6 +98,8 @@ function modoClaro() {
 
     document.documentElement.style.setProperty('--color-fondo', '#FFFFFF');
     document.documentElement.style.setProperty('--body-color', '#FFFFFF');
+    document.documentElement.style.setProperty('--color-spinner', '#191B34');
+
     document.documentElement.style.setProperty('--colorLetra', "#000000");
     document.documentElement.style.setProperty('--bannerWs', 'linear-gradient(180deg, rgba(255, 255, 255, 1) 23%, rgba(25, 27, 52, 1) 23%)');
     document.getElementById('logoNav').src = "../../resources/img/logoClaro.png";
@@ -231,6 +235,8 @@ document.getElementById('save-form').addEventListener('submit', function (event)
     //Se evita que se recargue la pagina
     const boton = document.getElementById('enviar');
     boton.disabled = true;
+    var load = document.getElementById('spinner');
+    load.className="spinner-border m-3 loadingForm";
     event.preventDefault();
     fetch(API_CONTACTO + 'sendMail', {
         method: 'post',
@@ -244,6 +250,8 @@ document.getElementById('save-form').addEventListener('submit', function (event)
                     sweetAlert(1, response.message, null);
                     const boton = document.getElementById('enviar');
                     boton.disabled = false;
+                    var load = document.getElementById('spinner');
+                    load.className="d-none";
                     clear();
                 } else {
                     // Se verifica si el token falló (ya sea por tiempo o por uso).
