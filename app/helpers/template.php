@@ -867,7 +867,7 @@ class webSite
                         </p>
                     </div>
         
-                    <div class="indicadores" id="indicadores" style=" transform: rotate(-90deg);margin-left: 700px;margin-top: -300px;">
+                    <div class="indicadores" id="indicadores" style=" transform: rotate(-90deg);margin-left: 600px;margin-top: -300px;">
         
                         <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnOn"></button>
                         <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnNext"></button>
