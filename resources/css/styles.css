@@ -92,6 +92,12 @@
     }
 
 
+    .activeServicios {
+        background-position: 1px 2px !important;
+
+    }
+
+
 
 }
 
@@ -164,12 +170,6 @@
 
 
 
-}
-
-@media (max-width:1280px) {
-    .borderCol {
-        background-size: 85px !important;
-    }
 }
 
 
@@ -648,7 +648,7 @@ body {
 }
 
 .carousel-item {
-    height: calc(111vh - 73px);
+    height: calc(109vh - 73px);
     background: var(--color-fondo);
     transition: .6s;
 }
@@ -989,7 +989,7 @@ body {
 .buttonServicios {
     text-decoration: none;
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     color: #787878;
     transition: var(--animation);
@@ -1040,6 +1040,20 @@ li.menu-item {
     font-size: 24px !important;
 
 }
+
+
+
+.activeServicios2 {
+    color: var(--colorLetra) !important;
+    transition: .6s;
+    font-size: 24px !important;
+    background: url('../../resources/img/flecha.png');
+    background-repeat: no-repeat;
+    background-position: 1px 21px;
+    background-size: 15px;
+    padding-left: 20px
+}
+
 
 .marginVideo {
 
@@ -1170,7 +1184,6 @@ li.menu-item {
 
 
 .content {
-    background: var(--color-fondo);
     transition: .6s;
     cursor: pointer;
 
@@ -1184,6 +1197,8 @@ li.menu-item {
 
 .content:hover {
     transition: .6s;
+    background: var(--color-fondo) !important;
+
 
 
 }
@@ -1191,7 +1206,6 @@ li.menu-item {
 .content:hover .contenido {
     opacity: 1;
     transition: .6s;
-    backdrop-filter: blur(5px);
 
 }
 

@@ -7,9 +7,9 @@ var btns = btnContainer.getElementsByClassName("buttonServicios2");
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("activeServicios");
-        current[0].className = current[0].className.replace(" activeServicios", "");
-        this.className += " activeServicios";
+        var current = document.getElementsByClassName("activeServicios2");
+        current[0].className = current[0].className.replace(" activeServicios2", "");
+        this.className += " activeServicios2";
     });
 }
 
@@ -43,7 +43,7 @@ function services() {
 
 
     btnSoft.addEventListener('click', function () {
-        if (btnSoft.classList.contains("activeServicios")) {
+        if (btnSoft.classList.contains("activeServicios2")) {
 
             document.getElementById('software').className = 'animate__animated animate__fadeIn servicios';
             document.getElementById('tecnologia').className = 'd-none';
@@ -59,7 +59,7 @@ function services() {
 
 
     btnTec.addEventListener('click', function () {
-        if (btnTec.classList.contains("activeServicios")) {
+        if (btnTec.classList.contains("activeServicios2")) {
 
             document.getElementById('tecnologia').className = ' animate__animated animate__fadeIn servicios';
             document.getElementById('software').className = 'd-none';
@@ -75,7 +75,7 @@ function services() {
 
 
     btnCloud.addEventListener('click', function () {
-        if (btnCloud.classList.contains("activeServicios")) {
+        if (btnCloud.classList.contains("activeServicios2")) {
 
             document.getElementById('tecnologia').className = 'd-none ';
             document.getElementById('software').className = 'd-none';
@@ -90,7 +90,7 @@ function services() {
 
 
     btnUx.addEventListener('click', function () {
-        if (btnUx.classList.contains("activeServicios")) {
+        if (btnUx.classList.contains("activeServicios2")) {
 
             document.getElementById('tecnologia').className = 'd-none';
             document.getElementById('software').className = 'd-none';

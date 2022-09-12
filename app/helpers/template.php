@@ -195,7 +195,7 @@ class webSite
                       <br>
   
                       <label class="forms">CORREO ELECTRÓNICO</label>
-                      <input type="email" id="email" name="email" class="form-control forms-input" placeholder="Correo Electrónico" required>
+                      <input type="email" id="email" name="email" class="form-control forms-input" placeholder="Correo Electrónico" onchange="checkCorreo()" required>
                       <br>
 
                       <label class="forms">MENSAJE</label>
@@ -797,7 +797,7 @@ class webSite
                     <h6 class="headers" style="font-size:36px">Estamos aquí para ayudarte</h6>
                     <br>
                     <ul class="listaServicios" id="listaServicios" style="line-height:400%">
-                        <li class="item"><button id="btnV1" class="buttonServicios2 activeServicios">01. SERVICIO TECNOLOGÍA</button></li>
+                        <li class="item"><button id="btnV1" class="buttonServicios2 activeServicios2">01. SERVICIO TECNOLOGÍA</button></li>
                         <li class="item"><button id="btnV2" class="buttonServicios2">02. SERVICIO SOFTWARE</button></li>
                         <li class="item"><button id="btnV3" class="buttonServicios2">03. SERVICIO CLOUD</button></li>
                         <li class="item"><button id="btnV4" class="buttonServicios2">04. SERVICIO DIGITAL</button></li>
