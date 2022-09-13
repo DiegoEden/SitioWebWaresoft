@@ -53,6 +53,9 @@ webSite::teamSlider();
 
 webSite::wsacademyBanner();
 
+
+webSite::wsacademyMobile();
+
 ?>
 
 <br>

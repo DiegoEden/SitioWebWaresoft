@@ -66,6 +66,9 @@ function modoOscuro() {
     var footer = document.querySelector("footer");
     footer.style.setProperty("transition", ".6s");
 
+    document.documentElement.style.setProperty('--colorBanner', '#434343');
+
+
     document.getElementById("oscuro").style.setProperty("display", "none");
     document.getElementById("claro").style.setProperty("display", "block");
     document.getElementById("claro").style.setProperty("transition", ".6s");
@@ -112,6 +115,7 @@ function modoClaro() {
     document.documentElement.style.setProperty('--colorPrev', "#E0E0E0");
     document.documentElement.style.setProperty('--colorNext', "#E0E0E0");
     document.documentElement.style.setProperty('--colorOn', "#787878");
+    document.documentElement.style.setProperty('--colorBanner', '#191B34');
 
 
     document.documentElement.style.setProperty('--imgToggle', 'url("../../resources/img/menu.png")');

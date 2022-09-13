@@ -110,7 +110,7 @@ class webSite
     public static function footer($controller)
     {
 
-        print('
+        print'
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../../app/controllers/public/' . $controller . '"></script>
         <script type="text/javascript" src="../../app/controllers/public/template.js"></script>
@@ -163,14 +163,14 @@ class webSite
         
         </body>
         </html> 
-    ');
+    ';
     }
 
     /*template para formulario*/
     public static function formTemplate()
     {
 
-        print('<div class="container" id="formContainer">
+        print'<div class="container" id="formContainer">
       <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
           <p class="titulosHorizontal">CONTÁCTANOS</p>
@@ -214,7 +214,7 @@ class webSite
       </div>
   
   </div>
-  </div>');
+  </div>';
     }
 
 
@@ -223,7 +223,7 @@ class webSite
     public static function infiniteSlider()
     {
 
-        print('<div class="slider">
+        print'<div class="slider">
       <div class="slide-track">
           <div class="slide">
               <img src="../../resources/img/acsa.png" height="250" width="250" alt="" />
@@ -286,14 +286,14 @@ class webSite
           </div>
       
           </div>
-  </div>');
+  </div>';
     }
 
     /*template de banner ws academy*/
 
     public static function wsacademyBanner()
     {
-        print('<div class="wsacademy">
+        print'<div class="wsacademy">
                   <div class="row d-flex justify-content-center align-items-center h-100">
                       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
                           <div class="row ">
@@ -340,7 +340,69 @@ class webSite
                           </div>
                       </div>
                   </div>
-            </div>');
+            </div>
+            
+           ';
+    }
+
+    public static function wsacademyMobile(){
+
+        print' <div class="wsacademyMobile">
+
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-sm-12">
+                <div class="row ">
+                    <img src="../../resources/img/wsacademy.png" alt="" class="img-fluid" style="padding:40px 40px 0px 40px;">
+                    <br>
+                    <p class="mobileText">Empieza tu camino como profesional TI. JavaScript, Angular,
+                        Python,React, Base de Datos, Big Data, Business Inteligent
+                        y muchas más certificaciones que tu puedes tomar</p>
+    
+    
+                    <div class="col col-sm-12 col-12 text-center">
+                        <a class="btn botonwsacademy" style="margin-left:0px" href="https://waresoft.academy/contact/" target="_blank" role="button">¡Aplica a una beca!</a>
+                    </div>
+    
+                    <div class="col col-sm-12 col-12 links text-center">
+                        <span class="wsacademylinks">Encuentranos en:</span>
+    
+                        <a href="https://www.linkedin.com/company/waresoftsv" target="_blank" style="padding-right:5px;text-decoration:none;">
+                            <img src="../../resources/img/linkedin.png" width="20px" class="d-inline-block " alt="">
+    
+                        </a>
+    
+                        <a style="padding-right:5px;text-decoration:none;" href="https://www.facebook.com/waresoftsv" target="_blank">
+                            <img src="../../resources/img/Facebook.png" width="20px" class="d-inline-block " alt="">
+                        </a>
+    
+                        <a style="padding-right:5px;text-decoration:none;" target="_blank">
+                            <img src="../../resources/img/insta.png" width="20px" class="d-inline-block " alt="">
+    
+                        </a>
+                    </div>
+    
+                    <div class="row" style="margin-top : 20px;">
+                        <div class="col-sm-10 col-10">
+    
+                            <img src="../../resources/img/modelows.png" class="img-fluid" alt="">
+    
+    
+                        </div>
+                        <div class="col-sm-2 col-2">
+    
+                        <a class="btn wslink" href="https://waresoft.academy/" style="margin-left: -95px; margin-top: 50px;"target="_blank" role="button">Ir a página 〉</a>
+    
+    
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+        </div>
+    
+    
+    </div>';
     }
 
     /*template carousel*/
@@ -457,7 +519,7 @@ class webSite
     public static function projectSlider()
     {
 
-        print('
+        print'
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators" id="indicators">
                 
@@ -468,13 +530,13 @@ class webSite
                
             </div>
         </div>
-        ');
+        ';
     }
 
     /*template secccion de servicios*/
     public static function serviceSlider()
     {
-        print('
+        print'
         <div class="container d-flex flex-column justify-content-center h-100" style="top: 0">
             <div class="row">
                 <div class="col marginVideo col-md-7 col-lg-6 col-xl-6 col-sm-12 col-12 ">
@@ -501,13 +563,13 @@ class webSite
                 </div>
         
             </div>
-        </div>');
+        </div>';
     }
 
     /*slider equipo waresoft*/
     public static function teamSlider()
     {
-        print('
+        print'
         <div id="carouselTeam" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -551,7 +613,7 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col decoracion">
+                            <div class="col decoracion col2">
                                 <div class="p-3 layout">
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
     
@@ -609,7 +671,7 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col decoracion ">
+                            <div class="col decoracion col2 ">
                                 <div class="p-3 layout">
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
     
@@ -664,7 +726,7 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col decoracion ">
+                            <div class="col decoracion col2 ">
                                 <div class="p-3 layout">
                                     <img src="../../resources/img/marco.png" class="profile" alt="">
     
@@ -692,7 +754,7 @@ class webSite
             </div>
     
         </div>
-    </div>');
+    </div>';
     }
 
     /*template detalle de proyecto seleccionado*/

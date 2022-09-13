@@ -21,7 +21,7 @@
 }
 
 
-@media(max-width:992px) {
+@media (max-width:992px) {
 
     #linkedin {
         display: none;
@@ -87,9 +87,7 @@
         background-size: 85px !important;
     }
 
-    .colImg {
-        display: none !important;
-    }
+
 
 
     .activeServicios2 {
@@ -97,6 +95,47 @@
 
     }
 
+    .colImg {
+        background-size: 80px !important;
+        background-position: right 120% !important;
+    }
+
+    .col2 {
+        display: none;
+    }
+
+
+    .decoracion .profile {
+        width: 100px;
+        height: 100px;
+        margin-left: -110px;
+    }
+
+
+    .wsacademy {
+        display: none;
+    }
+
+    .wsacademyMobile{
+
+        display: inline-block !important;
+    }
+
+
+    #formContainer .titulosHorizontal {
+
+        margin-left: -47px;
+
+    }
+
+
+    #formContainer .headers {
+
+        margin-left: 60px;
+
+    }
+
+    
 
 
 }
@@ -105,7 +144,7 @@
 
     background-image: url("../../resources/img/Group6.png");
     background-repeat: no-repeat;
-    background-position: right 105% !important;
+    background-position: right 105%;
     background-size: 130px;
     transition: .6s;
 }
@@ -115,12 +154,12 @@
         font-size: 35px !important;
     }
 
-    .buttonServicios {
-        font-size: 20px !important;
+    .item .buttonServicios {
+        font-size: 20px;
     }
 
-    .buttonServicios2 {
-        font-size: 20px !important;
+    .item .buttonServicios2 {
+        font-size: 20px;
 
     }
 
@@ -136,14 +175,14 @@
 }
 
 
-@media(max-width:1024px) {
+@media (max-width:1024px) {
     .borderCol {
         background-size: 85px !important;
     }
 }
 
 
-@media(max-width:349px) {
+@media (max-width:349px) {
 
     .nav-justified>li>a {
         font-size: 30px !important;
@@ -168,6 +207,29 @@
         max-width: 90% !important;
     }
 
+    .item .buttonServicios2 {
+        font-size: 14px;
+    }
+
+
+    .item .buttonServicios {
+        font-size: 14px;
+    }
+
+    .buttonServicios2.activeServicios2 {
+        font-size: 16px !important;
+    }
+
+    .buttonServicios.activeServicios {
+        font-size: 16px !important;
+
+    }
+
+
+    .colImg {
+        background-size: 80px !important;
+        background-position: right 110% !important;
+    }
 
 
 }
@@ -455,6 +517,11 @@ footer {
     margin-left: -250px
 }
 
+.mobileText{
+    color: white;
+    font-family: 'work sans', serif;
+    padding:40px;
+}
 
 .botonwsacademy {
 
@@ -555,6 +622,18 @@ footer {
 .links {
     border-top: 50px;
     padding-top: 20px
+}
+
+
+.wsacademyMobile {
+
+    background: var(--colorBanner);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    display: none;
+  
+
 }
 
 /*fin estilos banner wscademy*/
@@ -1043,10 +1122,10 @@ li.menu-item {
 
 
 
-.activeServicios2 {
+.buttonServicios2.activeServicios2 {
     color: var(--colorLetra) !important;
     transition: .6s;
-    font-size: 24px !important;
+    font-size: 24px;
     background: url('../../resources/img/flecha.png');
     background-repeat: no-repeat;
     background-position: 1px 21px;
