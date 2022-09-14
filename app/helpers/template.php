@@ -208,6 +208,19 @@ class webSite
                           </div>
                       </div>
                   </div>
+                  <div class="row" id="badgeMobile">
+                  
+                  <div class="col-6 col-sm-6 md-7">
+                  <h1 class="numerows">4<sup>+</sup></h1>
+                  </div>
+
+                  <div class="col-6 col-sm-6 mt-5">
+                  <h5 class="headers">AÑOS</h5>
+                      <h5 class="headers">EXPERIENCIA</h5>
+                      <h5 class="headers">LABORAL</h5>
+                  <div/>
+                  
+                  </div>
               </div>
           </form>
   
@@ -390,7 +403,7 @@ class webSite
                         </div>
                         <div class="col-sm-2 col-2">
     
-                        <a class="btn wslink" href="https://waresoft.academy/" style="margin-left: -95px; margin-top: 50px;"target="_blank" role="button">Ir a página 〉</a>
+                        <a class="btn wslink" href="https://waresoft.academy/" style="margin-left: -95px; margin-top: 50px; font-size: 20px;"target="_blank" role="button">Ir a página 〉</a>
     
     
                         </div>
@@ -854,7 +867,7 @@ class webSite
         
         <div class="container d-flex flex-column justify-content-center marginsuperior ">
             <div class="row ">
-                <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12 " style="margin-left:40px;">
+                <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12">
                     <p class="titulosHorizontal" style="margin-left:-100px; margin-top: 5px;">SERVICIOS</p>
                     <h6 class="headers" style="font-size:36px">Estamos aquí para ayudarte</h6>
                     <br>

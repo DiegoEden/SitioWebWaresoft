@@ -54,9 +54,11 @@ function modoOscuro() {
     document.documentElement.style.setProperty('--body-color', '#191B34');
     document.documentElement.style.setProperty('--color-fondo', '#191B34');
     document.documentElement.style.setProperty('--colorLetra', "#FFFFFF");
+    document.documentElement.style.setProperty('--colorTexto', "#000000");
+
     document.documentElement.style.setProperty('--color-spinner', '#FFFFFF');
 
-    document.documentElement.style.setProperty('--bannerWs', 'linear-gradient(180deg, rgba(255,255,255,1) 23%, rgba(67,67,67,1) 23%)');
+    document.documentElement.style.setProperty('--bannerWs', 'rgba(255,255,255,1) ');
     document.getElementById('logoNav').src = "../../resources/img/logoOscuro.png";
     localStorage.setItem('mode', 'oscuro');
     document.documentElement.style.setProperty('--colorSlider', '#FFFFFF');
@@ -66,7 +68,7 @@ function modoOscuro() {
     var footer = document.querySelector("footer");
     footer.style.setProperty("transition", ".6s");
 
-    document.documentElement.style.setProperty('--colorBanner', '#434343');
+    document.documentElement.style.setProperty('--colorBanner', '#FFFFFF');
 
 
     document.getElementById("oscuro").style.setProperty("display", "none");
@@ -102,6 +104,8 @@ function modoClaro() {
     document.documentElement.style.setProperty('--color-fondo', '#FFFFFF');
     document.documentElement.style.setProperty('--body-color', '#FFFFFF');
     document.documentElement.style.setProperty('--color-spinner', '#191B34');
+
+    document.documentElement.style.setProperty('--colorTexto', "#FFFFFF");
 
     document.documentElement.style.setProperty('--colorLetra', "#000000");
     document.documentElement.style.setProperty('--bannerWs', 'linear-gradient(180deg, rgba(255, 255, 255, 1) 23%, rgba(25, 27, 52, 1) 23%)');

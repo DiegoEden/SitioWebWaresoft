@@ -25,7 +25,7 @@ function fillTable(dataset) {
     dataset.map(function (row) {
         // Se crean y concatenan las filas de la tabla con los datos de cada registro.
         var resolucion = screen.width;
-        if (resolucion <= 991) {
+        if (resolucion <= 992) {
 
             if (row.index_proyecto == 0) {
                 content += `
@@ -115,7 +115,7 @@ function fillTable(dataset) {
             }
 
 
-        } else if(resolucion > 991) {
+        } else if(resolucion > 992) {
 
             if (row.index_proyecto == 0) {
                 content += `

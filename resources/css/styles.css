@@ -119,21 +119,12 @@
     .wsacademyMobile{
 
         display: inline-block !important;
-    }
-
-
-    #formContainer .titulosHorizontal {
-
-        margin-left: -47px;
 
     }
 
 
-    #formContainer .headers {
+   
 
-        margin-left: 60px;
-
-    }
 
     
 
@@ -232,6 +223,13 @@
     }
 
 
+    #badgeMobile .numerows{
+
+        margin-top: 20px;
+        font-size: 120px;
+    }
+
+
 }
 
 
@@ -255,6 +253,10 @@
 
     .titulosExperiencia {
         font-size: 28px !important;
+    }
+
+    .margenform #badgeMobile{
+        display: flex;
     }
 
 }
@@ -304,7 +306,9 @@ footer {
 
 }
 
-
+#badgeMobile{
+    display: none;
+}
 
 .forms-input {
 
@@ -512,15 +516,18 @@ footer {
 }
 
 .textowsacademy {
-    color: white;
+    color: var(--colorTexto);
     font-family: 'work sans', serif;
-    margin-left: -250px
+    margin-left: -250px;
+    transition:.6s;
 }
 
 .mobileText{
-    color: white;
+    color: var(--colorTexto);
     font-family: 'work sans', serif;
     padding:40px;
+    transition:.6s;
+
 }
 
 .botonwsacademy {
@@ -613,9 +620,10 @@ footer {
 .wsacademylinks {
 
     font-family: 'work sans', serif;
-    color: white;
+    color: var(--colorTexto);
     font-size: 12px;
     font-weight: 400;
+    transform: .6s;
 }
 
 
@@ -632,6 +640,7 @@ footer {
     overflow: hidden;
     position: relative;
     display: none;
+    transition:var(--animation)
   
 
 }
@@ -727,7 +736,7 @@ body {
 }
 
 .carousel-item {
-    height: calc(109vh - 73px);
+    height: calc(100vh - 73px);
     background: var(--color-fondo);
     transition: .6s;
 }

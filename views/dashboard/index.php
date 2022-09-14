@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="../../resources/img/iconows.png" />
 
 
-    <title>Inicio de sesión</title>
+    <title>Waresoft | Inicio de sesión</title>
 </head>
 
 <body>
@@ -25,8 +25,8 @@
 
             <!-- Login Form -->
             <form id="loginForm" method="post" autocomplete="on">
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario">
-                <input type="password" id="password" class="fadeIn third" name="password" autocomplete="current-password" placeholder="Contraseña">
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nombre de usuario" required>
+                <input type="password" id="password" class="fadeIn third" name="password" autocomplete="current-password" placeholder="Contraseña" required>
                 <input type="submit" class="fadeIn fourth" value="Iniciar sesión">
             </form>
 
