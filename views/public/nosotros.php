@@ -6,12 +6,14 @@ webSite::header('Nosotros');
 ?>
 
 
+<?php
+
+webSite::getTeamInfo();
+
+?>
 
 
 
-<br>
-<br>
-<br>
 
 <?php
 
@@ -26,5 +28,5 @@ webSite::formTemplate();
 <?php
 //Se imprime la plantilla del footer y se envía el controlador a usar
 
-webSite::footer('contact.js');
+webSite::footer('team.js');
 ?>

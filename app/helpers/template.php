@@ -110,7 +110,7 @@ class webSite
     public static function footer($controller)
     {
 
-        print'
+        print '
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../../app/controllers/public/' . $controller . '"></script>
         <script type="text/javascript" src="../../app/controllers/public/template.js"></script>
@@ -170,7 +170,7 @@ class webSite
     public static function formTemplate()
     {
 
-        print'<div class="container" id="formContainer">
+        print '<div class="container" id="formContainer">
       <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
           <p class="titulosHorizontal">CONTÁCTANOS</p>
@@ -236,7 +236,7 @@ class webSite
     public static function infiniteSlider()
     {
 
-        print'<div class="slider">
+        print '<div class="slider">
       <div class="slide-track">
           <div class="slide">
               <img src="../../resources/img/acsa.png" height="250" width="250" alt="" />
@@ -306,7 +306,7 @@ class webSite
 
     public static function wsacademyBanner()
     {
-        print'<div class="wsacademy">
+        print '<div class="wsacademy">
                   <div class="row d-flex justify-content-center align-items-center h-100">
                       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
                           <div class="row ">
@@ -358,9 +358,10 @@ class webSite
            ';
     }
 
-    public static function wsacademyMobile(){
+    public static function wsacademyMobile()
+    {
 
-        print' <div class="wsacademyMobile">
+        print ' <div class="wsacademyMobile">
 
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-sm-12">
@@ -532,7 +533,7 @@ class webSite
     public static function projectSlider()
     {
 
-        print'
+        print '
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators" id="indicators">
                 
@@ -549,7 +550,7 @@ class webSite
     /*template secccion de servicios*/
     public static function serviceSlider()
     {
-        print'
+        print '
         <div class="container d-flex flex-column justify-content-center h-100" style="top: 0">
             <div class="row">
                 <div class="col marginVideo col-md-7 col-lg-6 col-xl-6 col-sm-12 col-12 ">
@@ -582,7 +583,7 @@ class webSite
     /*slider equipo waresoft*/
     public static function teamSlider()
     {
-        print'
+        print '
         <div id="carouselTeam" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -774,7 +775,7 @@ class webSite
     public static function projectTemplate()
     {
         print '<div class="container" id="formContainer">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="row d-flex justify-content-center align-items-center animate__animated animate__fadeInLeft h-100">
             <div class="col-12 col-md-7 col-lg-6 col-xl-6 col-sm-12 " >
                 <p class="titulosHorizontal">EXPERIENCIA</p>
                 <div class="row margenform">
@@ -966,5 +967,169 @@ class webSite
         <br>
         <br>
         ';
+    }
+
+    public static function getTeamInfo()
+    {
+
+            print '
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <div class="container d-flex flex-column justify-content-center marginsuperior ">
+        <h1 class="headers margin-left">Tu mejor aliado estratégico</h1>
+        <h5 class="subtitulo">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
+        <div class="row ">
+
+            <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12">
+                <p class="titulosHorizontal" style="margin-left:-70px; margin-top: -75px;">NOSOTROS</p>
+
+                <div class="info">
+                    <h1 class="margin-left titleTeam">ACERCA DE WARESOFT</h1>
+
+                </div>
+
+                
+                <p class="margin-left parrafoExperiencia2 on">WARESOFT S.A DE C.V. Es una empresa constituida en El Salvador ,
+                    el 4 de abril del 2019, enfocada en la asesoría de soluciones tecnológicas
+                    empresariales. con clientes en gran parte de latinoamérica incluido
+                    Chile, El Salvador, Panamá, Perú, Argentina y Costa Rica, con experiencia
+                    de más de años en mejora de procesos, implementación de arquitecturas
+                    empresariales, Arquitecturas de sistemas expertos en el área de procesos
+                    industriales, financieros, contables, gestión de personas, gestión médica,
+                    procesos de medios electrónicos, facturación electrónica, e-commerce,
+                    desarrollo de soluciones móviles entre otros.
+                </p>
+
+            </div>
+            <div class="col  col-md-12 col-lg-5 col-xl-6 col-sm-12 col-12 catalogo ">
+
+
+
+
+
+
+                <!--  <div class="indicadores" id="indicadores" style=" transform: rotate(-90deg);margin-left: 600px;margin-top: -300px;">
+
+                    <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnOn"></button>
+                    <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnNext"></button>
+                    <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnNext2"></button>
+                    <button type="button" style="pointer-events:none;" class="botonesindicador activeIndicador" id="btnPrev"></button>
+
+
+                </div> -->
+
+
+            </div>
+
+
+        </div>
+
+
+        <br>
+        <h1 class="headers margin-left">PERSONALIDAD DE LA MARCA</h1>
+        <div class="row justify-content-center animate__animated animate__fadeInLeft" id="personalidad">
+            <div class="col col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
+                <div class="tarjeta content selectedCard" id="tarjeta1" style="width:400px">
+                    <!-- Fila para Información -->
+                    <div class="row">
+                        <div class="col-12 contenido text-center" style="opacity: 1;">
+                            <img src="../../resources/img/avionPapel.png" style="margin-top:85px" class="img-fluid" alt="">
+                            <h1 class="headersTarjeta" style="margin-top:30px">Innovadora</h1>
+                            <p class="parrafoCard" style="text-align: center;">Buscando siempre pensar fuera de la caja. </p>
+
+                        </div>
+                    </div>
+                    <!-- Fin de Tarjeta -->
+                </div>
+            </div>
+
+            <div class="col col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
+                <div class="tarjeta content nextCard" id="tarjeta2" style="width:400px">
+                    <!-- Fila para Información -->
+                    <div class="row">
+                        <div class="col-12 contenido text-center" style="opacity: 1;">
+                            <img src="../../resources/img/persona.png" style="margin-top:85px" class="img-fluid" alt="">
+                            <h1 class="headersTarjeta" style="margin-top:30px">Orientada al cliente</h1>
+                            <p class="parrafoCard" style="text-align: center;">Escuchando y brindando orientación y soluciones personalizada.&nbsp;</p>
+
+                        </div>
+                    </div>
+                    <!-- Fin de Tarjeta -->
+                </div>
+            </div>
+            <div class="col col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
+                <div class="tarjeta content prevCard" id="tarjeta3" style="width:400px">
+                    <!-- Fila para Información -->
+                    <div class="row">
+                        <div class="col-12 contenido text-center" style="opacity: 1;">
+                            <img src="../../resources/img/like.png" style="margin-top:85px" class="img-fluid" alt="">
+                            <h1 class="headersTarjeta" style="margin-top:30px">Calidad</h1>
+                            <p class="parrafoCard" style="text-align: center;">Con un estándar establecido y llevado al detalle&nbsp;</p>
+
+                        </div>
+                    </div>
+                    <!-- Fin de Tarjeta -->
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <h1 class="headers">Nuestras Características</h1>
+        <div class="row " style="margin-top:50px">
+
+            <div class="col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12">
+
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <img src="../../resources/img/location.png" alt="" class="img-fluid">
+                        <h3 class="headers" style="margin-top:15px">9 Países</h3>
+                        <p class="parrafoEquipo">Nos enorgullece ser líderes en el desarrollo con presencia en 9 países brindando soluciones innovadoras con ubicaciones en zonas estratégicas.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="../../resources/img/enterprise.png" alt="" class="img-fluid">
+                        <h3 class="headers" style="margin-top:15px">15 Empresas</h3>
+                        <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenemos presencia.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="../../resources/img/crown.png" alt="" class="img-fluid">
+                        <h3 class="headers" style="margin-top:15px">40 Certificaciones</h3>
+                        <p class="parrafoEquipo">Con un conocimiento respaldado por más de 40 certificaciones tanto nacionales como internacionales en el ambiente tecnológico y de innovación.
+                        </p>
+                    </div>
+                    <div class="col ">
+                        <img src="../../resources/img/person.png" alt="" class="img-fluid">
+                        <h3 class="headers" style="margin-top:15px">200 Profesionales</h3>
+                        <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenesmos presencia.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <br>
+    <br>
+    <br>';
     }
 }

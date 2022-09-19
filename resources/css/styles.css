@@ -116,17 +116,17 @@
         display: none;
     }
 
-    .wsacademyMobile{
+    .wsacademyMobile {
 
         display: inline-block !important;
 
     }
 
 
-   
 
 
-    
+
+
 
 
 }
@@ -223,7 +223,7 @@
     }
 
 
-    #badgeMobile .numerows{
+    #badgeMobile .numerows {
 
         margin-top: 20px;
         font-size: 120px;
@@ -255,7 +255,7 @@
         font-size: 28px !important;
     }
 
-    .margenform #badgeMobile{
+    .margenform #badgeMobile {
         display: flex;
     }
 
@@ -306,7 +306,7 @@ footer {
 
 }
 
-#badgeMobile{
+#badgeMobile {
     display: none;
 }
 
@@ -519,14 +519,14 @@ footer {
     color: var(--colorTexto);
     font-family: 'work sans', serif;
     margin-left: -250px;
-    transition:.6s;
+    transition: .6s;
 }
 
-.mobileText{
+.mobileText {
     color: var(--colorTexto);
     font-family: 'work sans', serif;
-    padding:40px;
-    transition:.6s;
+    padding: 40px;
+    transition: .6s;
 
 }
 
@@ -640,9 +640,7 @@ footer {
     overflow: hidden;
     position: relative;
     display: none;
-    transition:var(--animation)
-  
-
+    transition: var(--animation)
 }
 
 /*fin estilos banner wscademy*/
@@ -1146,6 +1144,7 @@ li.menu-item {
 .marginVideo {
 
     margin-top: 50px;
+    transition: .6s;
 }
 
 /*fin slider servicios*/
@@ -1354,4 +1353,61 @@ li.menu-item {
 .loadingForm {
     color: var(--color-spinner);
     transition: .6s;
+}
+
+.marginsuperior .subtitulo {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: var(--colorLetra);
+    margin-left: 50px;
+    transition: .6s;
+
+}
+
+.margin-left {
+
+    margin-left: 50px
+}
+
+
+.selectedCard {
+    opacity: 1;
+}
+
+.nextCard {
+    opacity: 0.3;
+}
+
+
+.prevCard {
+    opacity: 0.2;
+}
+
+
+.titleTeam {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100px;
+    /* or 392% */
+
+    text-transform: uppercase;
+
+    color: var(--colorLetra);
+    transition: .6s;
+   
+}
+
+.info{
+    background: url('../../resources/img/flecha.png');
+    background-repeat: no-repeat;
+    background-position: -1px 35px;
+    background-size: 20px;
+
 }
