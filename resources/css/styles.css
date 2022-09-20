@@ -1140,7 +1140,7 @@ li.menu-item {
 .activeServicios {
     color: var(--colorLetra) !important;
     transition: .6s;
-    font-size: 24px !important;
+    font-size: 22px !important;
 
 }
 
@@ -1149,7 +1149,7 @@ li.menu-item {
 .buttonServicios2.activeServicios2 {
     color: var(--colorLetra) !important;
     transition: .6s;
-    font-size: 24px;
+    font-size: 22px;
     background: url('../../resources/img/flecha.png');
     background-repeat: no-repeat;
     background-position: 1px 21px;

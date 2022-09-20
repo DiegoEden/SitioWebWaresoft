@@ -170,7 +170,7 @@ class webSite
     public static function formTemplate()
     {
 
-        print '<div class="container" id="formContainer">
+        print '<div class="container animate__animated animate__fadeInLeft" id="formContainer ">
       <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
           <p class="titulosHorizontal">CONTÁCTANOS</p>
@@ -866,7 +866,7 @@ class webSite
         <br>
         <br>
         
-        <div class="container d-flex flex-column justify-content-center marginsuperior ">
+        <div class="container d-flex flex-column justify-content-center marginsuperior  animate__animated animate__fadeInLeft">
             <div class="row ">
                 <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12">
                     <p class="titulosHorizontal" style="margin-left:-100px; margin-top: 5px;">SERVICIOS</p>
@@ -980,7 +980,7 @@ class webSite
         <br>
         <br>
 
-    <div class="container d-flex flex-column justify-content-center marginsuperior ">
+    <div class="container d-flex flex-column justify-content-center marginsuperior  animate__animated animate__fadeInLeft">
         <h1 class="headers margin-left">Tu mejor aliado estratégico</h1>
         <h5 class="subtitulo margin-left">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
         <div class="row ">
