@@ -122,6 +122,14 @@
 
     }
 
+    .marginsuperior .margin-left{
+        margin-left: 0px;
+    }
+
+    .info .margin-left{
+        margin-left: 40px ;
+    }
+
 
 
 
@@ -258,6 +266,14 @@
     .margenform #badgeMobile {
         display: flex;
     }
+
+   
+    .row-cols-2>* {
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+
+   
 
 }
 
@@ -513,6 +529,7 @@ footer {
 
     margin-top: 110px;
     margin-left: -270px;
+   
 }
 
 .textowsacademy {
@@ -963,7 +980,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     color: var(--colorLetra);
-    text-align: left;
+    text-align: justify;
     transition: .6s;
     cursor: pointer;
 
@@ -1233,6 +1250,7 @@ li.menu-item {
     text-align: right;
     color: #35A8E0;
 
+    
 
 
 }
@@ -1363,7 +1381,6 @@ li.menu-item {
     line-height: 20px;
     text-transform: uppercase;
     color: var(--colorLetra);
-    margin-left: 50px;
     transition: .6s;
 
 }
@@ -1394,20 +1411,19 @@ li.menu-item {
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    line-height: 100px;
-    /* or 392% */
+
 
     text-transform: uppercase;
 
     color: var(--colorLetra);
     transition: .6s;
-   
+
 }
 
-.info{
+.info {
     background: url('../../resources/img/flecha.png');
     background-repeat: no-repeat;
-    background-position: -1px 35px;
+    background-position: -1px 5px;
     background-size: 20px;
 
 }

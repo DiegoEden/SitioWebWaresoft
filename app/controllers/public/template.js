@@ -60,6 +60,8 @@ function modoOscuro() {
 
     document.documentElement.style.setProperty('--bannerWs', 'rgba(255,255,255,1) ');
     document.getElementById('logoNav').src = "../../resources/img/logoOscuro.png";
+   
+
     localStorage.setItem('mode', 'oscuro');
     document.documentElement.style.setProperty('--colorSlider', '#FFFFFF');
     var navbar = document.getElementById("navbar");
@@ -81,7 +83,7 @@ function modoOscuro() {
     document.documentElement.style.setProperty('--dot-colors', "#FFFFFF");
     document.documentElement.style.setProperty('--opacity', "initial");
     document.documentElement.style.setProperty('--colorPrev', "#787878");
-    document.documentElement.style.setProperty('--colorNext', "#787878");
+    document.documentElement.style.setProperty('--colorNext', "#A1A1A1");
     document.documentElement.style.setProperty('--colorOn', "#E0E0E0");
     let current_url = document.location;
 
@@ -91,6 +93,11 @@ function modoOscuro() {
     }
 
 
+    if (current_url == 'http://localhost/sitioWebWaresoft/views/public/' || current_url == 'http://localhost/sitioWebWaresoft/views/public/#' || current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php#' | current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php')  {
+        document.getElementById('imgwsacademy').src = "../../resources/img/wsacademyOscuro.png";
+        document.getElementById('bannerMobile').src = "../../resources/img/wsacademyOscuro.png";
+    
+    }
 
 
 
@@ -110,6 +117,9 @@ function modoClaro() {
     document.documentElement.style.setProperty('--colorLetra', "#000000");
     document.documentElement.style.setProperty('--bannerWs', 'linear-gradient(180deg, rgba(255, 255, 255, 1) 23%, rgba(25, 27, 52, 1) 23%)');
     document.getElementById('logoNav').src = "../../resources/img/logoClaro.png";
+
+
+
     localStorage.setItem('mode', 'claro');
     document.documentElement.style.setProperty('--colorSlider', '#F2F2F2');
     document.getElementById("claro").style.setProperty("display", "none");
@@ -117,7 +127,7 @@ function modoClaro() {
     document.getElementById("claro").style.setProperty("transition", ".6s");
     document.getElementById("oscuro").style.setProperty("transition", ".6s");
     document.documentElement.style.setProperty('--colorPrev', "#E0E0E0");
-    document.documentElement.style.setProperty('--colorNext', "#E0E0E0");
+    document.documentElement.style.setProperty('--colorNext', "#A1A1A1");
     document.documentElement.style.setProperty('--colorOn', "#787878");
     document.documentElement.style.setProperty('--colorBanner', '#191B34');
 
@@ -135,6 +145,12 @@ function modoClaro() {
         document.getElementById('proyectos2').className = "d-none";
         document.getElementById('proyectos').className = "row justify-content-center animate__animated animate__backInUp";
     }
+
+    if (current_url == 'http://localhost/sitioWebWaresoft/views/public/' || current_url == 'http://localhost/sitioWebWaresoft/views/public/#' || current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php#' | current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php')  {
+        document.getElementById('imgwsacademy').src = "../../resources/img/wsacademy.png";
+        document.getElementById('bannerMobile').src = "../../resources/img/wsacademy.png";
+    }
+
 
 
 
@@ -244,7 +260,7 @@ document.getElementById('save-form').addEventListener('submit', function (event)
     const boton = document.getElementById('enviar');
     boton.disabled = true;
     var load = document.getElementById('spinner');
-    load.className="spinner-border m-3 loadingForm";
+    load.className = "spinner-border m-3 loadingForm";
     event.preventDefault();
     fetch(API_CONTACTO + 'sendMail', {
         method: 'post',
@@ -259,7 +275,7 @@ document.getElementById('save-form').addEventListener('submit', function (event)
                     const boton = document.getElementById('enviar');
                     boton.disabled = false;
                     var load = document.getElementById('spinner');
-                    load.className="d-none";
+                    load.className = "d-none";
                     clear();
                 } else {
                     // Se verifica si el token falló (ya sea por tiempo o por uso).

@@ -195,7 +195,7 @@ class webSite
                       <br>
   
                       <label class="forms">CORREO ELECTRÓNICO</label>
-                      <input type="email" id="email" name="email" class="form-control forms-input" placeholder="Correo Electrónico" onchange="checkCorreo()" required>
+                      <input type="email" id="email" name="email" class="form-control forms-input" placeholder="Correo Electrónico" required>
                       <br>
 
                       <label class="forms">MENSAJE</label>
@@ -311,7 +311,7 @@ class webSite
                       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
                           <div class="row ">
                               <div class="col col col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12">
-                                  <img src="../../resources/img/wsacademy.png" alt="" class="imgwsacademy">
+                                  <img src="../../resources/img/wsacademy.png" alt="" id="imgwsacademy" class="imgwsacademy">
                                   <p class="textowsacademy">Empieza tu camino como profesional TI. JavaScript, Angular,
                                       Python,React, Base de Datos, Big Data, Business Inteligent
                                       y muchas más certificaciones que tu puedes tomar</p>
@@ -366,7 +366,7 @@ class webSite
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-sm-12">
                 <div class="row ">
-                    <img src="../../resources/img/wsacademy.png" alt="" class="img-fluid" style="padding:40px 40px 0px 40px;">
+                    <img src="../../resources/img/wsacademy.png" alt="" id="bannerMobile" class="img-fluid" style="padding:40px 40px 0px 40px;">
                     <br>
                     <p class="mobileText">Empieza tu camino como profesional TI. JavaScript, Angular,
                         Python,React, Base de Datos, Big Data, Business Inteligent
@@ -982,16 +982,18 @@ class webSite
 
     <div class="container d-flex flex-column justify-content-center marginsuperior ">
         <h1 class="headers margin-left">Tu mejor aliado estratégico</h1>
-        <h5 class="subtitulo">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
+        <h5 class="subtitulo margin-left">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
         <div class="row ">
 
             <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12">
                 <p class="titulosHorizontal" style="margin-left:-70px; margin-top: -75px;">NOSOTROS</p>
 
+                <br>
                 <div class="info">
                     <h1 class="margin-left titleTeam">ACERCA DE WARESOFT</h1>
 
                 </div>
+                <br>
 
                 
                 <p class="margin-left parrafoExperiencia2 on">WARESOFT S.A DE C.V. Es una empresa constituida en El Salvador ,
@@ -1007,7 +1009,7 @@ class webSite
 
             </div>
             <div class="col  col-md-12 col-lg-5 col-xl-6 col-sm-12 col-12 catalogo ">
-
+    
 
 
 
@@ -1084,10 +1086,10 @@ class webSite
         <br>
         <br>
         <br>
-        <h1 class="headers">Nuestras Características</h1>
+        <h1 class="headers margin-left">Nuestras Características</h1>
         <div class="row " style="margin-top:50px">
 
-            <div class="col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12">
+            <div class="col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12  margin-left">
 
                 <div class="row row-cols-2">
                     <div class="col">
