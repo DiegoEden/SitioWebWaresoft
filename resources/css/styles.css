@@ -98,6 +98,7 @@
     .colImg {
         background-size: 80px !important;
         background-position: right 120% !important;
+        display: none !important;
     }
 
     .col2 {
@@ -397,7 +398,9 @@ footer {
         font-size: 14px !important;
     }
 
+
 }
+
 
 .marginsuperior {
     margin-top: -30px;
@@ -1189,7 +1192,7 @@ li.menu-item {
     height: 80px;
     margin-top: -60px;
     border-radius: 50%;
-    margin-left: -350px;
+    margin-left: -870px;
 
 }
 
@@ -1377,7 +1380,7 @@ li.menu-item {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
     color: var(--colorLetra);

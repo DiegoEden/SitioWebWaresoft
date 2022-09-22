@@ -605,7 +605,7 @@ class webSite
                         <br>
                         <br>
     
-                        <div class="row gx-5">
+                        <div class="row ">
                             <div class="col decoracion">
                                 <div class="p-3 layout">
     
@@ -614,7 +614,7 @@ class webSite
     
                                     <br>
                                     <br>
-                                    <h1 class="nombres">Marco</h1>
+                                    <h1 class="nombres">Marco Arévalo</h1>
     
                                     <h3 class="rol">Director</h3>
     
@@ -627,29 +627,12 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col decoracion col2">
-                                <div class="p-3 layout">
-                                    <img src="../../resources/img/marco.png" class="profile" alt="">
-    
-    
-                                    <br>
-                                    <br>
-                                    <h1 class="nombres">Marco</h1>
-    
-                                    <h3 class="rol">Director</h3>
-    
-                                    <br>
-                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
-                                    </p>
-    
-    
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <br>
                     <br>
-                    <a href="#" class="btn btnTeam" role="button">Ver Team 〉</a>
+                    <a href="nosotros.php" class="btn btnTeam" role="button">Ver Team 〉</a>
     
     
                 </div>
@@ -663,18 +646,18 @@ class webSite
                         <br>
                         <br>
     
-                        <div class="row gx-5">
+                        <div class="row">
                             <div class="col decoracion">
                                 <div class="p-3 layout">
     
-                                    <img src="../../resources/img/marco.png" class="profile" alt="">
+                                    <img src="../../resources/img/kath.png" class="profile" alt="">
     
     
                                     <br>
                                     <br>
-                                    <h1 class="nombres">Marco</h1>
+                                    <h1 class="nombres">Katherinne Márquez</h1>
     
-                                    <h3 class="rol">Director</h3>
+                                    <h3 class="rol">Project Manager</h3>
     
                                     <br>
                                     <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
@@ -685,28 +668,12 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col decoracion col2 ">
-                                <div class="p-3 layout">
-                                    <img src="../../resources/img/marco.png" class="profile" alt="">
-    
-    
-                                    <br>
-                                    <br>
-                                    <h1 class="nombres">Marco</h1>
-    
-                                    <h3 class="rol">Director</h3>
-    
-                                    <br>
-                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
-                                    </p>
-    
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <br>
                     <br>
-                    <a href="#" class="btn btnTeam" role="button">Ver Team 〉</a>
+                    <a href="nosotros.php" class="btn btnTeam" role="button">Ver Team 〉</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -718,7 +685,7 @@ class webSite
                         <br>
                         <br>
     
-                        <div class="row gx-5">
+                        <div class="row ">
                             <div class="col decoracion">
                                 <div class="p-3 layout">
     
@@ -740,29 +707,12 @@ class webSite
     
                                 </div>
                             </div>
-                            <div class="col decoracion col2 ">
-                                <div class="p-3 layout">
-                                    <img src="../../resources/img/marco.png" class="profile" alt="">
-    
-    
-                                    <br>
-                                    <br>
-                                    <h1 class="nombres">Marco</h1>
-    
-                                    <h3 class="rol">Director</h3>
-    
-                                    <br>
-                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
-                                    </p>
-    
-    
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                     <br>
                     <br>
-                    <a href="#" class="btn btnTeam" role="button">Ver Team 〉</a>
+                    <a href="nosotros.php" class="btn btnTeam" role="button">Ver Team 〉</a>
                 </div>
     
             </div>
