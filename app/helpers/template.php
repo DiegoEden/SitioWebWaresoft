@@ -251,7 +251,7 @@ class webSite
               <img src="../../resources/img/mterrenos.png" height="250" width="250" alt="" />
           </div>
           <div class="slide">
-              <img src="../../resources/img/udb.png" height="200" width="250" alt="" />
+              <img src="../../resources/img/udb.png" height="250" width="250" alt="" />
           </div>
           <div class="slide">
               <img src="../../resources/img/acsa.png" height="250" width="250" alt="" />
