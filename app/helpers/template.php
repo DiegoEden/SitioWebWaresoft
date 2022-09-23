@@ -426,7 +426,7 @@ class webSite
         print '<div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <video class="" autoplay loop muted src="../../resources/video/Waves.mp4"></video>
+                <video class="" width="1920" height="1080" autoplay loop muted src="../../resources/video/pexels-tea-oebel-6804109.mp4"></video>
                 <div class="carousel-caption d-flex flex-column justify-content-center " style="top: 0">
                     <div class="row">
                         <div class="col borderCol">
@@ -468,7 +468,7 @@ class webSite
                 </div>
             </div>
             <div class="carousel-item">
-                <video class="" autoplay loop muted src="../../resources/video/forest.mp4"></video>
+                <video class="" autoplay loop muted src="../../resources/video/Red - 14900.mp4"></video>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
                     <div class="row">
                         <div class="col borderCol">
@@ -489,7 +489,7 @@ class webSite
                 </div>
             </div>
             <div class="carousel-item">
-                <video class="" autoplay loop muted src="../../resources/video/Tropical.mp4"></video>
+                <video class="" autoplay loop muted src="../../resources/video/Falla - 27706.mp4"></video>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
                     <div class="row">
                         <div class="col borderCol">
@@ -554,10 +554,10 @@ class webSite
         <div class="container d-flex flex-column justify-content-center h-100" style="top: 0">
             <div class="row">
                 <div class="col marginVideo col-md-7 col-lg-6 col-xl-6 col-sm-12 col-12 ">
-                    <video class="img-fluid" id="video1" autoplay loop muted src="../../resources/video/forest.mp4"></video>
-                    <video class="img-fluid d-none" id="video2" autoplay loop muted src="../../resources/video/Agua-natural.mp4"></video>
-                    <video class="img-fluid d-none" id="video3" autoplay loop muted src="../../resources/video/Tropical.mp4"></video>
-                    <video class="img-fluid d-none" id="video4" autoplay loop muted src="../../resources/video/Waves.mp4"></video>
+                    <video class="img-fluid" id="video1" autoplay loop muted src="../../resources/video/coding.mp4"></video>
+                    <video class="img-fluid d-none" id="video2" autoplay loop muted src="../../resources/video/pexels-tea-oebel-6804109.mp4"></video>
+                    <video class="img-fluid d-none" id="video3" autoplay loop muted src="../../resources/video/Red - 14900.mp4"></video>
+                    <video class="img-fluid d-none" id="video4" autoplay loop muted src="../../resources/video/Electronica - 5364.mp4"></video>
         
         
                 </div>
