@@ -18,7 +18,7 @@ class Database
         $server = 'localhost';
         $database = 'waresoft_web';
         $username = 'root';
-        $password = ' ';
+        $password = '';
 
         // Se crea la conexión mediante la extensión PDO y el controlador para MYSQL.
         self::$connection = new PDO('mysql:host='.$server.';dbname='.$database.';port=3306', $username, $password);
