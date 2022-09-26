@@ -426,7 +426,7 @@ class webSite
         print '<div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <video class="" width="1920" height="1080" autoplay loop muted src="../../resources/video/pexels-tea-oebel-6804109.mp4"></video>
+                <video class="" width="1920" height="1080" autoplay loop muted src="../../resources/video/programming.mp4"></video>
                 <div class="carousel-caption d-flex flex-column justify-content-center " style="top: 0">
                     <div class="row">
                         <div class="col borderCol">
@@ -468,7 +468,7 @@ class webSite
                 </div>
             </div>
             <div class="carousel-item">
-                <video class="" autoplay loop muted src="../../resources/video/Red - 14900.mp4"></video>
+                <video class="" autoplay loop muted src="../../resources/video/Red.mp4"></video>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
                     <div class="row">
                         <div class="col borderCol">
@@ -555,9 +555,9 @@ class webSite
             <div class="row">
                 <div class="col marginVideo col-md-7 col-lg-6 col-xl-6 col-sm-12 col-12 ">
                     <video class="img-fluid" id="video1" autoplay loop muted src="../../resources/video/coding.mp4"></video>
-                    <video class="img-fluid d-none" id="video2" autoplay loop muted src="../../resources/video/pexels-tea-oebel-6804109.mp4"></video>
-                    <video class="img-fluid d-none" id="video3" autoplay loop muted src="../../resources/video/Red - 14900.mp4"></video>
-                    <video class="img-fluid d-none" id="video4" autoplay loop muted src="../../resources/video/Electronica - 5364.mp4"></video>
+                    <video class="img-fluid d-none" id="video2" autoplay loop muted src="../../resources/video/programming.mp4"></video>
+                    <video class="img-fluid d-none" id="video3" autoplay loop muted src="../../resources/video/Red.mp4"></video>
+                    <video class="img-fluid d-none" id="video4" autoplay loop muted src="../../resources/video/Electronica.mp4"></video>
         
         
                 </div>
@@ -584,7 +584,8 @@ class webSite
     public static function teamSlider()
     {
         print '
-        <div id="carouselTeam" class="carousel slide" data-bs-ride="carousel">
+        
+        <div id="carouselTeam" class="carousel slide vertical" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -619,7 +620,7 @@ class webSite
                                     <h3 class="rol">Director</h3>
     
                                     <br>
-                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
+                                    <p class="parrafoEquipo">Ingeniero en Gestión e Informática, titulado con honores en el 2006, especialista en evaluación, implementación y de proyectos IT, arquitectura de software,infraestructura, automatización de inteligencia de negocios a nivel nacional e internacional. Vasta experiencia como consultor senior en proyectos de infraestructura, salud, finanzas, banca, software, factory, business intelligence,integración,ERP, facturación electrónica, PaaS y SaaS, servicios de integración, interrelacionado con diversas plataformas de desarrollo y procesos de negocio local y latinoamericano. Con estudios certificados en Ingeniería del Software y Gestión de Proyectos.
                                     </p>
     
     
@@ -660,7 +661,7 @@ class webSite
                                     <h3 class="rol">Project Manager</h3>
     
                                     <br>
-                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
+                                    <p class="parrafoEquipo">Mi función dentro de la empresa Waresoft SA. De C.V. es gestionar los proyectos, planificar, definir recursos, coordinar y supervisar el desarrollo del proyecto, con el objetivo de cumplir con las fechas y alcances propuestos inicialmente y con la mejor calidad posible. Poder trabajar con profesionales de distintas áreas ha sido una de las mejores experiencias.
                                     </p>
     
     
