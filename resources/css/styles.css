@@ -1471,3 +1471,87 @@ li.menu-item {
     top: unset;
     bottom: 0;
 }
+
+.owl-carousel .owl-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item .card {
+    padding: 30px;
+    position: relative;
+    background-color: var(--color-fondo);
+    border: none;
+    border: 4px solid #35A8E0;
+
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow-y: auto !important;
+    padding-bottom: 40px;
+}
+
+.owl-carousel .owl-item img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.owl-carousel .owl-item .card {
+    opacity: 0.2;
+    transform: scale3d(0.8, 0.8, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item .card .testimonial {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--colorLetra);
+    text-align: left;
+}
+
+.owl-carousel .owl-item.active.center .card {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    background: var(--dot-colors) !important;
+    border-radius: 50% !important;
+
+    opacity: 0.8;
+}
+
+.owl-carousel .owl-dots.disabled {
+    display: inline-block !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+   
+    opacity: 1;
+    background: #35A8E0 !important;
+    border-radius: 50%;
+}
+
+@media(min-width: 480.6px) and (max-width: 575.5px) {
+    .owl-carousel .owl-item .card .name {
+        left: 24%;
+    }
+}
+
+@media(max-width: 360px) {
+    .owl-carousel .owl-item .card .name {
+        left: 30%;
+    }
+}
+
