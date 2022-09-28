@@ -928,17 +928,22 @@ class webSite
         <br>
         <br>
         <br>
+       
+
+<div class="nosotros animate__animated animate__fadeInLeft">
+    <h1 class="headers margin-left">Tu mejor aliado estratégico</h1>
+    <h5 class="subtitulo margin-left">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
+
+</div>
         <br>
         <br>
-        <br>
+     
 
     <div class="container d-flex flex-column justify-content-center marginsuperior  animate__animated animate__fadeInLeft">
-        <h1 class="headers margin-left">Tu mejor aliado estratégico</h1>
-        <h5 class="subtitulo margin-left">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
+       
         <div class="row ">
 
             <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12">
-                <p class="titulosHorizontal" style="margin-left:-70px; margin-top: -75px;">NOSOTROS</p>
 
                 <br>
                 <div class="info">
@@ -962,20 +967,31 @@ class webSite
             </div>
             <div class="col  col-md-12 col-lg-5 col-xl-6 col-sm-12 col-12 catalogo ">
     
+            
 
+            <div id="carouselEquipo" class="margin-left vertical carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselEquipo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselEquipo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselEquipo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../resources/img/img1.png" alt="" class="img-fluid">
+        
+                </div>
+                <div class="carousel-item">
+                    <img src="../../resources/img/img2.png" alt="" class="img-fluid">
+        
+                </div>
+                <div class="carousel-item">
+                    <img src="../../resources/img/img3.png" alt="" class="img-fluid">
+        
+                </div>
+            </div>
+            
+        </div>
 
-
-
-
-                <!--  <div class="indicadores" id="indicadores" style=" transform: rotate(-90deg);margin-left: 600px;margin-top: -300px;">
-
-                    <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnOn"></button>
-                    <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnNext"></button>
-                    <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnNext2"></button>
-                    <button type="button" style="pointer-events:none;" class="botonesindicador activeIndicador" id="btnPrev"></button>
-
-
-                </div> -->
 
 
             </div>
