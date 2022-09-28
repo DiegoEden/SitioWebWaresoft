@@ -71,7 +71,7 @@ function modoOscuro() {
 
     document.documentElement.style.setProperty('--color-spinner', '#FFFFFF');
 
-    document.documentElement.style.setProperty('--bannerWs', 'rgba(255,255,255,1) ');
+    document.documentElement.style.setProperty('--bannerWs', 'linear-gradient(180deg, rgba(25, 27, 52, 1 ) 23%, rgba(255, 255, 255, 1) 23%)');
     document.getElementById('logoNav').src = "../../resources/img/logoOscuro.png";
 
 

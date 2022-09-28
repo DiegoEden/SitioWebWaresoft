@@ -286,6 +286,17 @@
         left: 0 !important;
     }
 
+    .vertical.carousel .carousel-item-next:not(.carousel-item-start),
+    .vertical.carousel .active.carousel-item-end {
+        transform: translateX(100%) !important;
+    }
+
+    .vertical.carousel .carousel-item-prev:not(.carousel-item-end),
+    .vertical.carousel .active.carousel-item-start {
+        transform: translateX(-100%) !important;
+    }
+
+
 
 }
 
@@ -543,7 +554,8 @@ footer {
 
     margin-top: 110px;
     margin-left: -270px;
-
+    width: 540px;
+    height: 170px
 }
 
 .textowsacademy {
@@ -660,7 +672,7 @@ footer {
 
 .links {
     border-top: 50px;
-    padding-top: 20px
+    padding-top: 10px
 }
 
 

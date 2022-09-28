@@ -43,7 +43,7 @@ class webSite
         
         <nav class="navbar navbar-expand-lg fixed-top" id="navbar" role="navigation" >
             <a class="navbar-brand" href="index.php">
-            <img src="../../resources/img/LogoClaro.png" width="117px" height="47px" class="d-inline-block align-top" alt="" id="logoNav">
+            <img src="../../resources/img/LogoClaro.png" width="140px" height="47px" class="d-inline-block align-top" alt="" id="logoNav">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -317,10 +317,10 @@ class webSite
                                       Python,React, Base de Datos, Big Data, Business Inteligent
                                       y muchas más certificaciones que tu puedes tomar</p>
                                   <div class="row">
-                                      <div class="col col-md-4 col-lg-4 col-xl-4 col-sm-12 col-12">
+                                      <div class="col col-md-1 col-lg-1 col-xl-1 col-sm-12 col-12">
                                           <a class="btn botonwsacademy" href="https://waresoft.academy/contact/" target="_blank" role="button">¡Aplica a una beca!</a>
                                       </div>
-                                      <div class="col col-md-8 col-lg-8 col-xl-8 col-sm-12 col-12 links">
+                                      <div class="col col-md-11 col-lg-11 col-xl-11 col-sm-12 col-12 links">
                                           <span class="wsacademylinks">Encuentranos en:</span>
 
                                           <a href="https://www.linkedin.com/company/waresoftsv" target="_blank" style="padding-right:5px;text-decoration:none;">
@@ -586,154 +586,21 @@ class webSite
     {
         print '
         
-        <div id="carouselTeam" class="carousel slide vertical" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="2" aria-label="Slide 3"></button>
-
-
-            </div>
-        <div class="carousel-inner">
-    
-    
-            <div class="carousel-item active">
-                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
-    
-                    <div class="container overflow-hidden">
-                        <p class="tituloExperiencia">NOSOTROS</p>
-    
-                        <br>
-                        <br>
-                        <br>
-    
-                        <div class="row ">
-                            <div class="col decoracion">
-                                <div class="p-3 layout">
-    
-                                    <img src="../../resources/img/marco.png" class="profile" alt="">
-    
-    
-                                    <br>
-                                    <br>
-                                    <h1 class="nombres">Marco Arévalo</h1>
-    
-                                    <h3 class="rol">Director</h3>
-    
-                                    <br>
-                                    <p class="parrafoEquipo">Ingeniero en Gestión e Informática, titulado con honores en el 2006, especialista en evaluación, implementación y de proyectos IT, arquitectura de software,infraestructura, automatización de inteligencia de negocios a nivel nacional e internacional. Vasta experiencia como consultor senior en proyectos de infraestructura, salud, finanzas, banca, software, factory, business intelligence,integración,ERP, facturación electrónica, PaaS y SaaS, servicios de integración, interrelacionado con diversas plataformas de desarrollo y procesos de negocio local y latinoamericano. Con estudios certificados en Ingeniería del Software y Gestión de Proyectos.
-                                    </p>
-    
-    
-    
-    
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <a href="nosotros.php" class="btn btnTeam" role="button">Ver Team 〉</a>
-    
-    
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
-                    <div class="container overflow-hidden">
-                        <p class="tituloExperiencia">NOSOTROS</p>
-    
-                        <br>
-                        <br>
-                        <br>
-    
-                        <div class="row">
-                            <div class="col decoracion">
-                                <div class="p-3 layout">
-    
-                                    <img src="../../resources/img/kath.png" class="profile" alt="">
-    
-    
-                                    <br>
-                                    <br>
-                                    <h1 class="nombres">Katherinne Márquez</h1>
-    
-                                    <h3 class="rol">Project Manager</h3>
-    
-                                    <br>
-                                    <p class="parrafoEquipo">Mi función dentro de la empresa Waresoft SA. De C.V. es gestionar los proyectos, planificar, definir recursos, coordinar y supervisar el desarrollo del proyecto, con el objetivo de cumplir con las fechas y alcances propuestos inicialmente y con la mejor calidad posible. Poder trabajar con profesionales de distintas áreas ha sido una de las mejores experiencias.
-                                    </p>
-    
-    
-    
-    
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <a href="nosotros.php" class="btn btnTeam" role="button">Ver Team 〉</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0">
-                    <div class="container overflow-hidden">
-                        <p class="tituloExperiencia">NOSOTROS</p>
-                        <br>
-    
-                        <br>
-                        <br>
-    
-                        <div class="row ">
-                            <div class="col decoracion">
-                                <div class="p-3 layout">
-    
-                                    <img src="../../resources/img/cesar.png" class="profile" alt="">
-    
-    
-                                    <br>
-                                    <br>
-                                    <h1 class="nombres">César Quintanilla</h1>
-    
-                                    <h3 class="rol">Director</h3>
-    
-                                    <br>
-                                    <p class="parrafoEquipo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit ante interdum tincidunt. Rhoncus ac magna vestibulum sit hendrerit.
-                                    </p>
-    
-    
-    
-    
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <a href="nosotros.php" class="btn btnTeam" role="button">Ver Team 〉</a>
-                </div>
-    
-            </div>
-    
-        </div>
-    </div>';
+    ';
     }
 
     /*template detalle de proyecto seleccionado*/
     public static function projectTemplate()
     {
         print '<div class="container" id="formContainer">
+
         <div class="row d-flex justify-content-center align-items-center animate__animated animate__fadeInLeft h-100">
             <div class="col-12 col-md-7 col-lg-6 col-xl-6 col-sm-12 " >
                 <p class="titulosHorizontal">EXPERIENCIA</p>
                 <div class="row margenform">
                     <div class="col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12 marginsuperior">
                         <h2 class="titulosExperiencia" id="tituloProyecto"></h2>
-    
+
     
                         <p class="parrafoExperiencia2" id="parrafoPrincipal"></p>
                     </div>
@@ -1001,56 +868,6 @@ class webSite
 
 
         <br>
-        <h1 class="headers margin-left">PERSONALIDAD DE LA MARCA</h1>
-        <div class="row justify-content-center animate__animated animate__fadeInLeft" id="personalidad">
-            <div class="col col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
-                <div class="tarjeta content selectedCard" id="tarjeta1" style="width:400px">
-                    <!-- Fila para Información -->
-                    <div class="row">
-                        <div class="col-12 contenido text-center" style="opacity: 1;">
-                            <img src="../../resources/img/avionPapel.png" style="margin-top:85px" class="img-fluid" alt="">
-                            <h1 class="headersTarjeta" style="margin-top:30px">Innovadora</h1>
-                            <p class="parrafoCard" style="text-align: center;">Buscando siempre pensar fuera de la caja. </p>
-
-                        </div>
-                    </div>
-                    <!-- Fin de Tarjeta -->
-                </div>
-            </div>
-
-            <div class="col col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
-                <div class="tarjeta content nextCard" id="tarjeta2" style="width:400px">
-                    <!-- Fila para Información -->
-                    <div class="row">
-                        <div class="col-12 contenido text-center" style="opacity: 1;">
-                            <img src="../../resources/img/persona.png" style="margin-top:85px" class="img-fluid" alt="">
-                            <h1 class="headersTarjeta" style="margin-top:30px">Orientada al cliente</h1>
-                            <p class="parrafoCard" style="text-align: center;">Escuchando y brindando orientación y soluciones personalizada.&nbsp;</p>
-
-                        </div>
-                    </div>
-                    <!-- Fin de Tarjeta -->
-                </div>
-            </div>
-            <div class="col col-lg-4 col-xl-4 col-md-6 col-sm-12 col-xs-12 col-12 mt-4 d-flex justify-content-center align-items-center">
-                <div class="tarjeta content prevCard" id="tarjeta3" style="width:400px">
-                    <!-- Fila para Información -->
-                    <div class="row">
-                        <div class="col-12 contenido text-center" style="opacity: 1;">
-                            <img src="../../resources/img/like.png" style="margin-top:85px" class="img-fluid" alt="">
-                            <h1 class="headersTarjeta" style="margin-top:30px">Calidad</h1>
-                            <p class="parrafoCard" style="text-align: center;">Con un estándar establecido y llevado al detalle&nbsp;</p>
-
-                        </div>
-                    </div>
-                    <!-- Fin de Tarjeta -->
-                </div>
-            </div>
-
-
-
-
-        </div>
         <br>
         <br>
         <br>
