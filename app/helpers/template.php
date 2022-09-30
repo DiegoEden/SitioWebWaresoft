@@ -585,6 +585,55 @@ class webSite
     public static function teamSlider()
     {
         print '
+        <div class="container__slider">
+
+    <div class="container">
+    <p class="tituloExperiencia">NOSOTROS</p>
+
+        <input type="radio" name="slider" class="d-none" id="item-1" checked>
+        <input type="radio" name="slider" class="d-none" id="item-2">
+        <input type="radio" name="slider"class="d-none"  id="item-3">
+
+        <div class="cards">
+            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-1" id="selector-1">
+                <img src="../../resources/img/marco.png" class="profile" alt="">
+                <h1 class="nombres item-padding">Marco Arévalo</h1>
+
+                <h3 class="rol item-padding">Director</h3>
+
+                <p class="parrafoEquipo item-padding">Ingeniero en Gestión e Informática, titulado con honores en el 2006, especialista en evaluación, implementación y de proyectos IT, arquitectura de software,infraestructura, automatización de inteligencia de negocios a nivel nacional e internacional. 
+                </p>
+
+            </div>
+            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-2" id="selector-2">
+                <img src="../../resources/img/cesar.png" class="profile" alt="">
+
+
+
+                <h1 class="nombres item-padding">Cesar Quintanilla</h1>
+
+                <h3 class="rol item-padding">Jefa de Proyecto </h3>
+
+                <p class="parrafoEquipo item-padding">Mi función dentro de la empresa Waresoft SA. De C.V. es gestionar los proyectos, planificar, definir recursos, coordinar y supervisar el desarrollo del proyecto, con el objetivo de cumplir con las fechas y alcances propuestos inicialmente y con la mejor calidad posible.
+                </p>
+            </div>
+            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-3" id="selector-3">
+                <img src="../../resources/img/kath.png" class="profile" alt="">
+
+
+
+                <h1 class="nombres item-padding">Katherinne Márquez</h1>
+
+                <h3 class="rol item-padding">Jefa de Proyecto </h3>
+
+                <p class="parrafoEquipo item-padding">Mi función dentro de la empresa Waresoft SA. De C.V. es gestionar los proyectos, planificar, definir recursos, coordinar y supervisar el desarrollo del proyecto, con el objetivo de cumplir con las fechas y alcances propuestos inicialmente y con la mejor calidad posible.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
         
     ';
     }
@@ -872,51 +921,63 @@ class webSite
         <br>
         <br>
         <h1 class="headers margin-left">Nuestras Características</h1>
-        <div class="row " style="margin-top:50px">
 
-            <div class="col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12  margin-left">
-
-                <div class="row row-cols-2">
-                    <div class="col">
-                        <img src="../../resources/img/location.png" alt="" class="img-fluid">
-                        <h3 class="headers" style="margin-top:15px">9 Países</h3>
-                        <p class="parrafoEquipo">Nos enorgullece ser líderes en el desarrollo con presencia en 9 países brindando soluciones innovadoras con ubicaciones en zonas estratégicas.
-                        </p>
-                    </div>
-                    <div class="col">
-                        <img src="../../resources/img/enterprise.png" alt="" class="img-fluid">
-                        <h3 class="headers" style="margin-top:15px">15 Empresas</h3>
-                        <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenemos presencia.
-                        </p>
-                    </div>
-                    <div class="col">
-                        <img src="../../resources/img/crown.png" alt="" class="img-fluid">
-                        <h3 class="headers" style="margin-top:15px">40 Certificaciones</h3>
-                        <p class="parrafoEquipo">Con un conocimiento respaldado por más de 40 certificaciones tanto nacionales como internacionales en el ambiente tecnológico y de innovación.
-                        </p>
-                    </div>
-                    <div class="col ">
-                        <img src="../../resources/img/person.png" alt="" class="img-fluid">
-                        <h3 class="headers" style="margin-top:15px">200 Profesionales</h3>
-                        <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenesmos presencia.
-                        </p>
-                    </div>
-                </div>
-
+        <div class="wrapper row margin-left" id="wrapper" style="margin-top:50px">
+            <div class="item col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion">
+            <img src="../../resources/img/location.png" alt="" class="img-fluid">
+            <h3 class="headers" style="margin-top:15px">9 Países</h3>
+            <p class="parrafoEquipo">Nos enorgullece ser líderes en el desarrollo con presencia en 9 países brindando soluciones innovadoras con ubicaciones en zonas estratégicas.
+            </p>          
             </div>
 
+            <div class="item col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion">
+            <img src="../../resources/img/enterprise.png" alt="" class="img-fluid">
+            <h3 class="headers" style="margin-top:15px">15 Empresas</h3>
+            <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenemos presencia.
+            </p>        
+            </div>
 
+            <button class="btn btnScroll" id="btnScroll" onclick="clicked()";> </button>
+
+            <button class="btn btnScroll2" id="btnScroll2" onclick="clicked2()";> </button>
+
+
+            <div class="item col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion">
+            <img src="../../resources/img/crown.png" alt="" class="img-fluid">
+            <h3 class="headers" style="margin-top:15px">40 Certificaciones</h3>
+            <p class="parrafoEquipo">Con un conocimiento respaldado por más de 40 certificaciones tanto nacionales como internacionales en el ambiente tecnológico y de innovación.
+            </p>     
+            </div>
+
+            <div class="item col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion">
+            <img src="../../resources/img/person.png" alt="" class="img-fluid">
+            <h3 class="headers" style="margin-top:15px">200 Profesionales</h3>
+            <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenesmos presencia.
+            </p>     
+            </div>
+
+            
         </div>
 
 
-    </div>
+       <!--   <div class="col-12 text-center botonesMobile">
+        <button class="btn btnScrollMobile" id="btnScrollMobile1" onclick="clicked3()";> </button>
+        <button class="btn btnScrollMobile2" id="btnScrollMobile2" onclick="clicked4()";> </button>
+
+
+        </div>  -->
+
+
+
+               
 
 
 
 
 
-    <br>
-    <br>
-    <br>';
+
+
+
+';
     }
 }

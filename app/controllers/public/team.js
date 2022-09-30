@@ -34,3 +34,41 @@ $(document).ready(function () {
 
 
 });
+
+
+ function clicked() {
+    document.getElementById('wrapper').scrollBy(1500, 0);
+}
+
+
+function clicked2() {
+    document.getElementById('wrapper').scrollBy(-1500, 0);
+}
+
+/*var a = 0;
+
+function clicked3() {
+    a += 1;
+    document.getElementById('wrapper').scrollBy(430, 0);
+    if (a == 3) {
+        document.getElementById('btnScrollMobile1').style.setProperty("display", "none");
+        document.getElementById('btnScrollMobile2').style.setProperty ( "display","inline-block");
+
+        a = 0;
+    }
+}
+
+
+function clicked4() {
+    a += 1;
+    document.getElementById('wrapper').scrollBy(-430, 0);
+
+    if (a == 3) {
+        document.getElementById('btnScrollMobile2').style.setProperty("display", "none");
+        document.getElementById('btnScrollMobile1').style.setProperty ( "display","inline-block")
+
+        a = 0;
+
+    }
+
+} */
