@@ -5,6 +5,19 @@ include('../../app/helpers/template.php');
 webSite::header('Nosotros');
 ?>
 
+<?php
+
+webSite::getBanner();
+
+?>
+
+
+<?php
+
+webSite::teamSlider();
+
+?>
+
 
 <?php
 
@@ -12,8 +25,6 @@ webSite::getTeamInfo();
 
 ?>
 
-<br>
-<br><br>
 
 
 

@@ -109,9 +109,13 @@
     .decoracion .profile {
         width: 100px;
         height: 100px;
-        margin-left: -110px;
+        margin-left: -10px;
     }
 
+    .cards{
+        margin-top: 60px;
+        
+    }
 
     .wsacademy {
         display: none;
@@ -159,7 +163,39 @@
         display: inline-block !important;
     }
 
+    #item-3:checked~.cards #selector-1,
+    #item-1:checked~.cards #selector-2,
+    #item-2:checked~.cards #selector-3 {
+        transform: translateX(0%) scale(0.8) !important;
+        opacity: 0.6;
+        z-index: 0;
+    }
 
+    .container__slider {
+        margin-bottom: 480px !important;
+    }
+
+    .container__slider2 {
+        margin-top: -50px !important;
+    }
+
+    #item-8:checked~.cards #selector-5,
+    #item-5:checked~.cards #selector-6,
+    #item-6:checked~.cards #selector-7,
+    #item-7:checked~.cards #selector-8 {
+        transform: translateX(0%) scale(0.8) !important;
+        opacity: 0.6;
+        z-index: 0;
+    }
+
+    #item-7:checked~.cards #selector-5,
+    #item-8:checked~.cards #selector-6,
+    #item-6:checked~.cards #selector-8,
+    #item-5:checked~.cards #selector-7 {
+        transform: translateX(0%) scale(0.8) !important;
+        opacity: 0;
+        z-index: 0;
+    }
 
 }
 
@@ -1714,6 +1750,7 @@ li.menu-item {
     border: none;
 }
 
+/*Estilos comentariados para uso posible en un futuro */
 /* .btnScrollMobile {
     margin-top: 20px;
     background-color: transparent;
@@ -1775,31 +1812,31 @@ li.menu-item {
  */
 
 
- #item-2:checked ~ .cards #selector-1,
-#item-1:checked ~ .cards #selector-3,
-#item-3:checked ~ .cards #selector-2{
+#item-2:checked~.cards #selector-1,
+#item-1:checked~.cards #selector-3,
+#item-3:checked~.cards #selector-2 {
     transform: translateX(-40%) scale(0.8);
     opacity: 0.6;
     z-index: 0;
 }
 
-#item-3:checked ~ .cards #selector-1,
-#item-1:checked ~ .cards #selector-2,
-#item-2:checked ~ .cards #selector-3{
+#item-3:checked~.cards #selector-1,
+#item-1:checked~.cards #selector-2,
+#item-2:checked~.cards #selector-3 {
     transform: translateX(40%) scale(0.8);
     opacity: 0.6;
     z-index: 0;
 }
 
-#item-1:checked ~ .cards #selector-1,
-#item-2:checked ~ .cards #selector-2,
-#item-3:checked ~ .cards #selector-3{
+#item-1:checked~.cards #selector-1,
+#item-2:checked~.cards #selector-2,
+#item-3:checked~.cards #selector-3 {
     transform: translateX(0) scale(1);
     z-index: 1;
 }
 
 
-.card{
+.card {
     position: absolute;
     left: 0;
     right: 0;
@@ -1812,10 +1849,54 @@ li.menu-item {
     transition: .6s;
 }
 
-.container__slider{
+.container__slider {
 
     margin-top: 90px;
 
     margin-bottom: 360px;
 
+}
+
+
+.container__slider2{
+    margin-top: 10px;
+
+    margin-bottom: 360px;
+}
+
+
+
+#item-6:checked~.cards #selector-5,
+#item-5:checked~.cards #selector-8,
+#item-7:checked~.cards #selector-6,
+#item-8:checked~.cards #selector-7 {
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-8:checked~.cards #selector-5,
+#item-5:checked~.cards #selector-6,
+#item-6:checked~.cards #selector-7,
+#item-7:checked~.cards #selector-8 {
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-5:checked~.cards #selector-5,
+#item-6:checked~.cards #selector-6,
+#item-7:checked~.cards #selector-7,
+#item-8:checked~.cards #selector-8 {
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+
+#item-7:checked~.cards #selector-5,
+#item-8:checked~.cards #selector-6,
+#item-6:checked~.cards #selector-8,
+#item-5:checked~.cards #selector-7 {
+    transform: translateX(40%) scale(0.8);
+    opacity: 0;
+    z-index: 0;
 }

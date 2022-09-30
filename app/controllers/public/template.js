@@ -325,7 +325,6 @@ function reCAPTCHA() {
 
 $(document).ready(function() {
     var rdoIndex = 0;    
-    /* Every 2 seconds, click each radio button */
     var rollDemRadios = setInterval(function() {
         var rdoCount = $('input[name="slider"]').length;
         $('input[name="slider"]:eq(' + rdoIndex%rdoCount + ')').click();

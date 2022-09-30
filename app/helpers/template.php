@@ -26,8 +26,8 @@ class webSite
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+               <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
                 <!--Se informa al navegador que el sitio web está optimizado para dispositivos móviles-->
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <!--Título del documento-->
@@ -118,8 +118,8 @@ class webSite
         <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
         <script src="../../app/helpers/components.js"></script>
         <script src="https://www.google.com/recaptcha/api.js?render=6Lf0cuAhAAAAAJIimQGNnPTNO5ww7TS9kkkQnvwm"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-
+<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+ -->
 
 
         <div class="container" id="container">
@@ -582,7 +582,7 @@ class webSite
     }
 
     /*slider equipo waresoft*/
-    public static function teamSlider()
+    public static function  teamSlider()
     {
         print '
         <div class="container__slider">
@@ -837,20 +837,25 @@ class webSite
         ';
     }
 
-    public static function getTeamInfo()
+    public static function getBanner()
     {
-
-        print '
-        <br>
+        print'<br>
         <br>
         <br>
        
 
-<div class="nosotros animate__animated animate__fadeInLeft">
-    <h1 class="headers margin-left">Tu mejor aliado estratégico</h1>
-    <h5 class="subtitulo margin-left">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
+        <div class="nosotros animate__animated animate__fadeInLeft">
+            <h1 class="headers margin-left">Tu mejor aliado estratégico</h1>
+            <h5 class="subtitulo margin-left">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
 
-</div>
+        </div>';
+    }   
+
+    public static function getTeamInfo()
+    {
+
+        print '
+        
         <br>
         <br>
      
@@ -920,9 +925,53 @@ class webSite
         <br>
         <br>
         <br>
-        <h1 class="headers margin-left">Nuestras Características</h1>
 
-        <div class="wrapper row margin-left" id="wrapper" style="margin-top:50px">
+        <div class="container__slider2">
+        <h1 class="headers margin-left">Nuestras Características</h1>
+        <br>
+
+    <div class="container">
+
+        <input type="radio" name="slider2" class="d-none" id="item-5" checked>
+        <input type="radio" name="slider2" class="d-none" id="item-6">
+        <input type="radio" name="slider2" class="d-none" id="item-7">
+        <input type="radio" name="slider2" class="d-none" id="item-8">
+
+
+        <div class="cards">
+            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-5" id="selector-5">
+                <img src="../../resources/img/location.png" height="45" width="34" alt="">
+                <h3 class="headers" style="margin-top:15px">9 Países</h3>
+                <p class="parrafoEquipo">Nos enorgullece ser líderes en el desarrollo con presencia en 9 países brindando soluciones innovadoras con ubicaciones en zonas estratégicas.
+                </p>
+
+            </div>
+            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-6" id="selector-6">
+                <img src="../../resources/img/enterprise.png" height="40" width="40" alt="">
+                <h3 class="headers" style="margin-top:15px">15 Empresas</h3>
+                <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenemos presencia.
+                </p>
+            </div>
+            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-7" id="selector-7">
+                <img src="../../resources/img/crown.png" height="38" width="35" alt="">
+                <h3 class="headers" style="margin-top:15px">40 Certificaciones</h3>
+                <p class="parrafoEquipo">Con un conocimiento respaldado por más de 40 certificaciones tanto nacionales como internacionales en el ambiente tecnológico y de innovación.
+                </p>
+            </div>
+
+            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-8" id="selector-8">
+                <img src="../../resources/img/person.png"  height="36" width="37" alt="">
+                <h3 class="headers" style="margin-top:15px">200 Profesionales</h3>
+                <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenesmos presencia.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+        
+        <!-- <div class="wrapper row margin-left" id="wrapper" style="margin-top:50px">
             <div class="item col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion">
             <img src="../../resources/img/location.png" alt="" class="img-fluid">
             <h3 class="headers" style="margin-top:15px">9 Países</h3>
@@ -937,9 +986,9 @@ class webSite
             </p>        
             </div>
 
-            <button class="btn btnScroll" id="btnScroll" onclick="clicked()";> </button>
+           <button class="btn btnScroll" id="btnScroll" onclick="clicked()";> </button>
 
-            <button class="btn btnScroll2" id="btnScroll2" onclick="clicked2()";> </button>
+            <button class="btn btnScroll2" id="btnScroll2" onclick="clicked2()";> </button> 
 
 
             <div class="item col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion">
@@ -957,7 +1006,7 @@ class webSite
             </div>
 
             
-        </div>
+        </div>-->
 
 
        <!--   <div class="col-12 text-center botonesMobile">

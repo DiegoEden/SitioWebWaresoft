@@ -1,29 +1,5 @@
 
 
-$(document).ready(function () {
-    var silder = $(".owl-carousel");
-    silder.owlCarousel({
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: false,
-        items: 1,
-        stagePadding: 20,
-        center: true,
-        nav: false,
-        margin: 50,
-        dots: true,
-        loop: true,
-        responsive: {
-            0: { items: 1 },
-            480: { items: 2 },
-            575: { items: 2 },
-            768: { items: 2 },
-            991: { items: 3 },
-            1200: { items: 3 }
-        }
-    });
-});
-
 
 
 $(document).ready(function () {
@@ -36,7 +12,9 @@ $(document).ready(function () {
 });
 
 
- function clicked() {
+/*FUNCIONES COMENTARIADAS PARA UN USO POSIBLE EN EL FUTURO
+
+/*  function clicked() {
     document.getElementById('wrapper').scrollBy(1500, 0);
 }
 
@@ -44,7 +22,7 @@ $(document).ready(function () {
 function clicked2() {
     document.getElementById('wrapper').scrollBy(-1500, 0);
 }
-
+ */
 /*var a = 0;
 
 function clicked3() {
@@ -72,3 +50,14 @@ function clicked4() {
     }
 
 } */
+
+$(document).ready(function() {
+    var rdoIndex = 0;    
+    var rollDemRadios = setInterval(function() {
+        var rdoCount = $('input[name="slider2"]').length;
+        $('input[name="slider2"]:eq(' + rdoIndex%rdoCount + ')').click();
+        rdoIndex++;        
+    }, 5000);
+    
+   
+});
