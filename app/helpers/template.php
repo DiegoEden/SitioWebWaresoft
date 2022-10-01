@@ -601,8 +601,15 @@ class webSite
 
                 <h3 class="rol item-padding">Director</h3>
 
-                <p class="parrafoEquipo item-padding">Ingeniero en Gestión e Informática, titulado con honores en el 2006, especialista en evaluación, implementación y de proyectos IT, arquitectura de software,infraestructura, automatización de inteligencia de negocios a nivel nacional e internacional. 
+                
+                
+                <p class="parrafoEquipo item-padding">Ingeniero en Gestión e Informática, titulado
+                 con honores en el 2006, especialista en evaluación, implementación y de proyectos IT,
+                  arquitectura de software,infraestructura, automatización de 
+                inteligencia de negocios a nivel nacional e internacional. <span id="dots"></span><span id="more"> Vasta experiencia como consultor senior en proyectos de infraestructura, salud, finanzas, banca, software, factory, business intelligence,integración,ERP, facturación electrónica, PaaS y SaaS, servicios de integración, interrelacionado con diversas plataformas de desarrollo y procesos de negocio local y latinoamericano. Con estudios certificados en Ingeniería del Software y Gestión de Proyectos.</span>
                 </p>
+                <button class="btn btnRead" onclick="myFunction()" id="myBtn">Leer más</button>
+
 
             </div>
             <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-2" id="selector-2">
@@ -612,7 +619,7 @@ class webSite
 
                 <h1 class="nombres item-padding">Cesar Quintanilla</h1>
 
-                <h3 class="rol item-padding">Jefa de Proyecto </h3>
+                <h3 class="rol item-padding">Jefe de Proyecto </h3>
 
                 <p class="parrafoEquipo item-padding">Mi función dentro de la empresa Waresoft SA. De C.V. es gestionar los proyectos, planificar, definir recursos, coordinar y supervisar el desarrollo del proyecto, con el objetivo de cumplir con las fechas y alcances propuestos inicialmente y con la mejor calidad posible.
                 </p>

@@ -323,13 +323,31 @@ function reCAPTCHA() {
 }
 
 
-$(document).ready(function() {
-    var rdoIndex = 0;    
-    var rollDemRadios = setInterval(function() {
+$(document).ready(function () {
+    var rdoIndex = 0;
+    var rollDemRadios = setInterval(function () {
         var rdoCount = $('input[name="slider"]').length;
-        $('input[name="slider"]:eq(' + rdoIndex%rdoCount + ')').click();
-        rdoIndex++;        
-    }, 5000);
-    
-   
+        $('input[name="slider"]:eq(' + rdoIndex % rdoCount + ')').click();
+        rdoIndex++;
+    }, 20000);
+
+
 });
+
+
+function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline-block";
+        btnText.innerHTML = "Leer más";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Leer menos";
+        moreText.style.display = "inline-block";
+    }
+}
+
