@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let current_url = document.location;
     /*     console.log(current_url);
      */
-    document.querySelectorAll(".nav-link").forEach(function (e) {
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+/*     console.log(page);
+ */    document.querySelectorAll(".nav-link").forEach(function (e) {
         if (e.href == current_url) {
             e.classList += " current";
         }
-        if (current_url == 'http://localhost/sitioWebWaresoft/views/public/' || current_url == 'http://localhost/sitioWebWaresoft/views/public/#' || current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php#') {
+        if (page == "" || page == "index.php" || page == null) {
             document.getElementById('home').classList.add('current');
         }
     });
@@ -98,15 +101,18 @@ function modoOscuro() {
     document.documentElement.style.setProperty('--colorPrev', "#787878");
     document.documentElement.style.setProperty('--colorNext', "#787878");
     document.documentElement.style.setProperty('--colorOn', "#E0E0E0");
-    let current_url = document.location;
 
-    if (current_url == "http://localhost/sitioWebWaresoft/views/public/proyecto.php") {
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    /*     console.log(page);
+     */
+    if (page == "proyecto.php") {
         document.getElementById('proyectos').className = "d-none";
         document.getElementById('proyectos2').className = "row justify-content-center animate__animated animate__backInUp";
     }
 
 
-    if (current_url == 'http://localhost/sitioWebWaresoft/views/public/' || current_url == 'http://localhost/sitioWebWaresoft/views/public/#' || current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php#' | current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php') {
+    if (page == "" || page == "index.php" || page == null) {
         document.getElementById('imgwsacademy').src = "../../resources/img/wsacademyOscuro.png";
         document.getElementById('bannerMobile').src = "../../resources/img/wsacademyOscuro.png";
 
@@ -151,15 +157,17 @@ function modoClaro() {
     document.documentElement.style.setProperty('--dot-colors', "#C4C4C4");
     document.documentElement.style.setProperty('--opacity', ".5");
 
-    let current_url = document.location;
-
-    if (current_url == "http://localhost/sitioWebWaresoft/views/public/proyecto.php") {
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    /*     console.log(page);
+     */
+    if (page == "proyecto.php") {
 
         document.getElementById('proyectos2').className = "d-none";
         document.getElementById('proyectos').className = "row justify-content-center animate__animated animate__backInUp";
     }
 
-    if (current_url == 'http://localhost/sitioWebWaresoft/views/public/' || current_url == 'http://localhost/sitioWebWaresoft/views/public/#' || current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php#' | current_url == 'http://localhost/sitioWebWaresoft/views/public/index.php') {
+    if (page == "" || page == "index.php" || page == null) {
         document.getElementById('imgwsacademy').src = "../../resources/img/wsacademy.png";
         document.getElementById('bannerMobile').src = "../../resources/img/wsacademy.png";
     }
