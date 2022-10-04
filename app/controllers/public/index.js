@@ -33,7 +33,7 @@ function fillTable(dataset) {
                             <div class="row">
                                 <div class="col col-md-12 col-lg-6 col-xl-6 col-sm-12 col-12 ">
             
-                                    <p class="tituloExperiencia">EXPERIENCIA</p>
+                                    <p class="tituloExperiencia">PROYECTOS</p>
                                     <h2 class="titulosExperiencia">${row.nombre_proyecto}</h2>
             
             
@@ -74,7 +74,7 @@ function fillTable(dataset) {
                             <div class="row">
                                 <div class="col col-md-12 col-lg-6 col-xl-6 col-sm-12 col-12 ">
             
-                                    <p class="tituloExperiencia">EXPERIENCIA</p>
+                                    <p class="tituloExperiencia">PROYECTOS</p>
                                     <h2 class="titulosExperiencia">${row.nombre_proyecto}</h2>
             
             

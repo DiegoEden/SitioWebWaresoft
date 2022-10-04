@@ -206,6 +206,10 @@
 
     }
 
+    .InfoFooter {
+        text-align: left;
+    }
+
 }
 
 .colImg {
@@ -389,7 +393,7 @@ footer {
 
 .worksans {
 
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     color: var(--colorLetra);
     font-size: 11px;
     transition: .6s;
@@ -402,7 +406,7 @@ footer {
 
 .forms {
 
-    font-family: 'Poppins';
+    font-family: 'Montserrat';
     font-weight: 600;
     color: #9FA2B4;
     font-size: 12px;
@@ -415,7 +419,7 @@ footer {
 
 .forms-input {
 
-    font-family: 'Poppins';
+    font-family: 'Montserrat';
     font-weight: 400;
     color: #4B506D;
     font-size: 12px;
@@ -427,7 +431,7 @@ footer {
 
 .forms-textarea {
 
-    font-family: 'Poppins';
+    font-family: 'Montserrat';
     font-weight: 400;
     color: #4B506D;
     font-size: 12px;
@@ -437,7 +441,7 @@ footer {
 
 .forms-button {
     width: 300px;
-    font-family: 'Poppins';
+    font-family: 'Montserrat';
     font-weight: 400;
     height: 50px;
     font-size: 12px;
@@ -452,7 +456,7 @@ footer {
 
     .forms-button {
         width: 200px;
-        font-family: 'Poppins';
+        font-family: 'Montserrat';
         font-weight: 400;
         height: 50px;
         font-size: 12px;
@@ -504,7 +508,7 @@ footer {
 
 .titulosHorizontal {
     color: #35A8E0;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     position: absolute;
     transform: rotate(-90deg);
     margin: 50px;
@@ -624,14 +628,14 @@ footer {
 
 .textowsacademy {
     color: var(--colorTexto);
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     margin-left: -250px;
     transition: .6s;
 }
 
 .mobileText {
     color: var(--colorTexto);
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     padding: 40px;
     transition: .6s;
 
@@ -640,7 +644,7 @@ footer {
 .botonwsacademy {
 
     color: black;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     border-radius: 10px;
     background: #58C8C7;
     font-size: 14px;
@@ -654,7 +658,7 @@ footer {
 .botonwsacademy:active {
 
     color: black;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     border-radius: 10px;
     background: #58C8C7;
     font-size: 14px;
@@ -670,7 +674,7 @@ footer {
 .botonwsacademy:hover {
 
     color: white;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     border-radius: 10px;
     background: #58C8C7;
     font-size: 14px;
@@ -687,7 +691,7 @@ footer {
 .botonwsacademy:focus {
 
     color: black;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     border-radius: 10px;
     background: #58C8C7;
     font-size: 14px;
@@ -703,7 +707,7 @@ footer {
     position: absolute;
     margin-top: 370px;
     color: #35A8E0;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     border: none;
     font-weight: 700;
 
@@ -711,7 +715,7 @@ footer {
 }
 
 .wslink:hover {
-    color: white;
+    color: #1D82C2;
 
 }
 
@@ -726,11 +730,11 @@ footer {
 
 .wsacademylinks {
 
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     color: var(--colorTexto);
     font-size: 12px;
     font-weight: 400;
-    transform: .6s;
+    transition: .6s;
 }
 
 
@@ -947,7 +951,7 @@ body {
 
 .titulosSliderImage {
     color: white;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     text-align: left;
     font-weight: 500;
     font-size: 16px;
@@ -959,7 +963,7 @@ body {
 
 .titulosSliderImage2 {
     color: white;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     text-align: left;
     font-weight: 500;
     font-size: 16px;
@@ -969,7 +973,7 @@ body {
 
 .btnSlider {
     color: white;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     border: none;
     font-weight: 700;
     transition: .6s;
@@ -1026,7 +1030,7 @@ body {
 
 .tituloExperiencia {
     color: #35A8E0;
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     text-align: left;
     font-weight: 500;
     font-size: 16px;
@@ -1053,19 +1057,19 @@ body {
 
 .parrafoExperiencia {
 
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     color: var(--colorLetra);
-    text-align: left;
+    text-align: justify;
     transition: .6s;
 
 }
 
 .parrafoExperiencia2 {
 
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -1087,6 +1091,7 @@ body {
     text-transform: uppercase;
     transition: .6s;
     cursor: pointer;
+    text-align: justify;
 
 }
 
@@ -1287,14 +1292,14 @@ li.menu-item {
 
     font-size: 40px;
     font-weight: 700;
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     color: #35A8E0;
     text-align: right;
     transition: .6s;
 }
 
 .rol {
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1320,13 +1325,13 @@ li.menu-item {
 }
 
 .parrafoEquipo {
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     color: var(--colorLetra);
-    text-align: left;
+    text-align: justify;
     transition: .6s;
 
 
@@ -1334,7 +1339,7 @@ li.menu-item {
 
 
 .btnTeam {
-    font-family: 'work sans', serif;
+    font-family: 'Montserrat';
     border: none;
     font-weight: 700;
     transition: .6s;
@@ -1358,11 +1363,11 @@ li.menu-item {
 /*inicio estilos tarjeta*/
 
 .parrafoCard {
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    text-align: left;
+    text-align: justify;
     color: var(--colorLetra);
     margin: 20px;
     transition: var(--animation);
@@ -1582,7 +1587,7 @@ li.menu-item {
 }
 
 .owl-carousel .owl-item .card .testimonial {
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1666,7 +1671,6 @@ li.menu-item {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    text-transform: uppercase;
     color: white;
     padding-left: 50px;
     padding-bottom: 50px;
@@ -1910,7 +1914,7 @@ li.menu-item {
     color: #35A8E0;
     border: none;
     text-align: right;
-    font-family: 'Work Sans';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1938,3 +1942,24 @@ li.menu-item {
     border: none;
 }
 
+
+.iconos {
+    font-size: 17px !important;
+    vertical-align: middle;
+}
+
+
+.teamLink {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #35A8E0;
+    text-align: right;
+
+}
+
+.teamLink:hover {
+    color: #1D82C2;
+}

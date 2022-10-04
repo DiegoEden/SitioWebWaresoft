@@ -22,8 +22,6 @@ class webSite
                 <link type="text/css" rel="stylesheet" href="../../resources/css/styles.css" />
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
-                <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
                <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -54,7 +52,7 @@ class webSite
               <a class="nav-link" id="home" aria-current="page" href="index.php">INICIO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="experiencia.php">EXPERIENCIA</a>
+              <a class="nav-link" aria-current="page" href="proyecto.php">PROYECTOS</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" aria-current="page" href="servicios.php">SERVICIOS</a>
@@ -146,12 +144,20 @@ class webSite
                 </a>
                 </div>
 
-                <div class=" col col-md-4 col-sm-12 col-12" >
+                <div class="InfoFooter col col-md-4 col-sm-12 col-12" >
 
-                <span class="worksans">
+                <span class="material-icons iconos">
+                location_on
+                </span><span class="worksans">
                 7a Calle Poniente 5146, Colonia Escalon, San Salvador, El Salvador</span>
                 <br>
 
+                <span class="material-icons iconos">
+                phone
+                </span> 
+                <span class="worksans">
+                +503 2222-2222</span>
+                <br>
                 
                 </div>
 
@@ -174,8 +180,8 @@ class webSite
         print '<div class="container animate__animated animate__fadeInLeft" id="formContainer ">
       <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
-          <p class="titulosHorizontal">CONTÁCTANOS</p>
-          <h2 class="headers">En <span class="headerceleste">Waresoft</span> Juntos innovamos, crecemos y ganamos</h2>
+          <p class="tituloExperiencia">CONTÁCTANOS</p>
+          <h2 class="headers">En <span class="headerceleste">Waresoft</span>, juntos innovamos, crecemos y ganamos</h2>
           <form method="post" id="save-form" autocomplete="off" >
           <div style="display: none">     
           <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
@@ -437,7 +443,7 @@ class webSite
                             <h1 class="titulosSlider">Hacemos</h1>
                             <br>
     
-                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="experiencia.php" role="button">Ver proyecto 〉</a></p>
+                            <p class="titulosSliderImage2"> <a class="btn btnSlider" href="proyecto.php" role="button">Ver proyecto 〉</a></p>
     
     
                         </div>
@@ -595,7 +601,7 @@ class webSite
         <input type="radio" name="slider"class="d-none"  id="item-3">
 
         <div class="cards">
-            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-1" id="selector-1">
+            <label class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-1" id="selector-1">
                 <img src="../../resources/img/marco.png" class="profile" alt="">
                 <h1 class="nombres item-padding">Marco Arévalo</h1>
 
@@ -611,8 +617,8 @@ class webSite
                 <button class="btn btnRead" onclick="myFunction()" id="myBtn">Leer más</button>
 
 
-            </div>
-            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-2" id="selector-2">
+            </label>
+            <label class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-2" id="selector-2">
                 <img src="../../resources/img/cesar.png" class="profile" alt="">
 
 
@@ -623,8 +629,8 @@ class webSite
 
                 <p class="parrafoEquipo item-padding">Mi función dentro de la empresa Waresoft SA. De C.V. es gestionar los proyectos, planificar, definir recursos, coordinar y supervisar el desarrollo del proyecto, con el objetivo de cumplir con las fechas y alcances propuestos inicialmente y con la mejor calidad posible.
                 </p>
-            </div>
-            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-3" id="selector-3">
+            </label>
+            <label class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-3" id="selector-3">
                 <img src="../../resources/img/kath.png" class="profile" alt="">
 
 
@@ -635,10 +641,16 @@ class webSite
 
                 <p class="parrafoEquipo item-padding">Mi función dentro de la empresa Waresoft SA. De C.V. es gestionar los proyectos, planificar, definir recursos, coordinar y supervisar el desarrollo del proyecto, con el objetivo de cumplir con las fechas y alcances propuestos inicialmente y con la mejor calidad posible.
                 </p>
-            </div>
+            </label>
+
+
 
         </div>
+
     </div>
+
+    
+    
 
 </div>
         
@@ -744,7 +756,7 @@ class webSite
         <div class="container d-flex flex-column justify-content-center marginsuperior  animate__animated animate__fadeInLeft">
             <div class="row ">
                 <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12">
-                    <p class="titulosHorizontal" style="margin-left:-100px; margin-top: 5px;">SERVICIOS</p>
+                    <p class="tituloExperiencia" >SERVICIOS</p>
                     <h6 class="headers" style="font-size:36px">Estamos aquí para ayudarte</h6>
                     <br>
                     <ul class="listaServicios" id="listaServicios" style="line-height:400%">
@@ -846,7 +858,7 @@ class webSite
 
     public static function getBanner()
     {
-        print'<br>
+        print '<br>
         <br>
         <br>
        
@@ -856,7 +868,7 @@ class webSite
             <h5 class="subtitulo margin-left">Somos una empresa que brinda soluciones tecnológicas y creativas</h5>
 
         </div>';
-    }   
+    }
 
     public static function getTeamInfo()
     {
@@ -875,13 +887,13 @@ class webSite
 
                 <br>
                 <div class="info">
-                    <h1 class="margin-left titleTeam">ACERCA DE WARESOFT</h1>
+                    <h1 class="margin-left headers">ACERCA DE WARESOFT</h1>
 
                 </div>
                 <br>
 
                 
-                <p class="margin-left parrafoExperiencia2 on">WARESOFT S.A DE C.V. Es una empresa constituida en El Salvador ,
+                <p class="margin-left parrafoEquipo on">WARESOFT S.A DE C.V. Es una empresa constituida en El Salvador ,
                     el 4 de abril del 2019, enfocada en la asesoría de soluciones tecnológicas
                     empresariales. con clientes en gran parte de latinoamérica incluido
                     Chile, El Salvador, Panamá, Perú, Argentina y Costa Rica, con experiencia
@@ -934,7 +946,7 @@ class webSite
         <br>
 
         <div class="container__slider2">
-        <h1 class="headers margin-left">Nuestras Características</h1>
+        <h1 class="headers margin-left">Nosotros en números</h1>
         <br>
 
     <div class="container">
@@ -949,27 +961,31 @@ class webSite
             <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-5" id="selector-5">
                 <img src="../../resources/img/location.png" height="45" width="34" alt="">
                 <h3 class="headers" style="margin-top:15px">9 Países</h3>
-                <p class="parrafoEquipo">Nos enorgullece ser líderes en el desarrollo con presencia en 9 países brindando soluciones innovadoras con ubicaciones en zonas estratégicas.
+                <p class="parrafoEquipo">Estamos orgullosos de ser líderes en desarrollo, con presencia en nueve países y proporcionamos soluciones innovadoras a clientes de todo el mundo.
+
                 </p>
 
             </div>
             <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-6" id="selector-6">
                 <img src="../../resources/img/enterprise.png" height="40" width="40" alt="">
                 <h3 class="headers" style="margin-top:15px">15 Empresas</h3>
-                <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenemos presencia.
+                <p class="parrafoEquipo">Estamos orgullosos de haber realizado proyectos de tecnología e innovación en países de todo el mundo bajo estándares de calidad y sostenibilidad.
+
                 </p>
             </div>
             <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-7" id="selector-7">
                 <img src="../../resources/img/crown.png" height="38" width="35" alt="">
                 <h3 class="headers" style="margin-top:15px">40 Certificaciones</h3>
-                <p class="parrafoEquipo">Con un conocimiento respaldado por más de 40 certificaciones tanto nacionales como internacionales en el ambiente tecnológico y de innovación.
+                <p class="parrafoEquipo">Con más de 40 certificaciones nacionales e internacionales en el ámbito tecnológico y de la innovación, podemos ayudarle a encontrar la solución adecuada para su negocio.
+
                 </p>
             </div>
 
             <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-8" id="selector-8">
                 <img src="../../resources/img/person.png"  height="36" width="37" alt="">
                 <h3 class="headers" style="margin-top:15px">200 Profesionales</h3>
-                <p class="parrafoEquipo">Nos complace saber que hemos entregado proyectos de tecnología e innovación bajo estándares de calidad y sostenibilidad en los países en los tenesmos presencia.
+                <p class="parrafoEquipo">Nos complace anunciar que hemos completado con éxito proyectos en los países en los que estamos presentes, y que estos proyectos se han entregado a tiempo y dentro del presupuesto.
+
                 </p>
             </div>
 
