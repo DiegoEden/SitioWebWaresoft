@@ -219,6 +219,8 @@ function showVideo1() {
     document.getElementById('btnV3').classList.remove("activeServicios");
     document.getElementById('btnV4').classList.remove("activeServicios");
     document.getElementById('btnV1').classList.add("activeServicios");
+     window.location.href = "servicios.php";
+
 
 }
 
@@ -232,6 +234,8 @@ function showVideo2() {
     document.getElementById('btnV3').classList.remove("activeServicios");
     document.getElementById('btnV4').classList.remove("activeServicios");
     document.getElementById('btnV2').classList.add("activeServicios");
+    window.location.href = "servicios.php";
+
 
 
 }
@@ -246,6 +250,8 @@ function showVideo3() {
     document.getElementById('btnV1').classList.remove("activeServicios");
     document.getElementById('btnV4').classList.remove("activeServicios");
     document.getElementById('btnV3').classList.add("activeServicios");
+    window.location.href = "servicios.php";
+
 
 
 }
@@ -260,6 +266,8 @@ function showVideo4() {
     document.getElementById('btnV3').classList.remove("activeServicios");
     document.getElementById('btnV1').classList.remove("activeServicios");
     document.getElementById('btnV4').classList.add("activeServicios");
+    window.location.href = "servicios.php";
+
 
 
 }

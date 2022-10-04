@@ -620,10 +620,10 @@ footer {
 
 .imgwsacademy {
 
-    margin-top: 110px;
+    margin-top: 120px;
     margin-left: -270px;
-    width: 540px;
-    height: 170px
+    width: 520px;
+    height: 160px;
 }
 
 .textowsacademy {
@@ -631,6 +631,9 @@ footer {
     font-family: 'Montserrat';
     margin-left: -250px;
     transition: .6s;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 30px;
 }
 
 .mobileText {
@@ -1422,6 +1425,7 @@ li.menu-item {
     background-color: transparent;
     border: none;
     transition: .6s;
+    text-transform: uppercase;
 }
 
 .buttonServicios2:hover {
@@ -1452,6 +1456,7 @@ li.menu-item {
     color: var(--colorLetra);
     margin-top: 30px;
     transition: .6s;
+    text-transform: uppercase;
 }
 
 .servicios {

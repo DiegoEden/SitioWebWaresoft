@@ -178,9 +178,10 @@ class webSite
     {
 
         print '<div class="container animate__animated animate__fadeInLeft" id="formContainer ">
+        <p class="tituloExperiencia">CONTÁCTANOS</p>
+
       <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-sm-12">
-          <p class="tituloExperiencia">CONTÁCTANOS</p>
           <h2 class="headers">En <span class="headerceleste">Waresoft</span>, juntos innovamos, crecemos y ganamos</h2>
           <form method="post" id="save-form" autocomplete="off" >
           <div style="display: none">     
@@ -273,7 +274,7 @@ class webSite
               <img src="../../resources/img/mterrenos.png" height="250" width="250" alt="" />
           </div>
           <div class="slide">
-              <img src="../../resources/img/udb.png" height="200" width="250" alt="" />
+              <img src="../../resources/img/udb.png" height="250" width="250" alt="" />
           </div>
           <div class="slide">
               <img src="../../resources/img/acsa.png" height="250" width="250" alt="" />
@@ -591,7 +592,7 @@ class webSite
     public static function  teamSlider()
     {
         print '
-        <div class="container__slider">
+        <div class="container__slider ">
 
     <div class="container">
     <p class="tituloExperiencia">NOSOTROS</p>
@@ -627,7 +628,7 @@ class webSite
 
                 <h3 class="rol item-padding">Jefe de Proyecto </h3>
 
-                <p class="parrafoEquipo item-padding">Mi función dentro de la empresa Waresoft SA. De C.V. es gestionar los proyectos, planificar, definir recursos, coordinar y supervisar el desarrollo del proyecto, con el objetivo de cumplir con las fechas y alcances propuestos inicialmente y con la mejor calidad posible.
+                <p class="parrafoEquipo item-padding">Soy responsable de atender las necesidades de los analistas de sistemas, brindando una solución a los requerimientos que estos necesiten, estableciendo control de avances y velando el buen término la ejecución de los proyectos.
                 </p>
             </label>
             <label class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-3" id="selector-3">
@@ -757,13 +758,15 @@ class webSite
             <div class="row ">
                 <div class="col col-md-12 col-lg-5 col-xl-5 col-sm-12 col-12">
                     <p class="tituloExperiencia" >SERVICIOS</p>
-                    <h6 class="headers" style="font-size:36px">Estamos aquí para ayudarte</h6>
+                    <h6 class="headers" style="font-size:36px">Descubra lo que podemos hacer por usted
+                    </h6>
                     <br>
                     <ul class="listaServicios" id="listaServicios" style="line-height:400%">
-                        <li class="item"><button id="btnV1" class="buttonServicios2 activeServicios2">01. SERVICIO TECNOLOGÍA</button></li>
-                        <li class="item"><button id="btnV2" class="buttonServicios2">02. SERVICIO SOFTWARE</button></li>
+                        <li class="item"><button id="btnV1" class="buttonServicios2 activeServicios2">01. Soluciones de tecnología 
+                        </button></li>
+                        <li class="item"><button id="btnV2" class="buttonServicios2">02. Arquitectura de software</button></li>
                         <li class="item"><button id="btnV3" class="buttonServicios2">03. SERVICIO CLOUD</button></li>
-                        <li class="item"><button id="btnV4" class="buttonServicios2">04. SERVICIO DIGITAL</button></li>
+                        <li class="item"><button id="btnV4" class="buttonServicios2">04. Digital Design Service</button></li>
         
                     </ul>
         
@@ -774,8 +777,9 @@ class webSite
                     <div id="tecnologia" class="servicios">
                         <img src="../../resources/img/tecnologia-.png" alt="" class="img-fluid imagenesServicios">
         
-                        <h3 class="headerServicios">SERVICIO TECNOLOGÍA</h3>
-                        <p class="parrafoEquipo">La inteligencia artificial es una tecnología en avance que puede tener un impacto significativo en nuestra vida cotidiana. Es una de las tendencias tecnológicas más calientes que ha invadido el escenario empresarial en los últimos años.
+                        <h3 class="headerServicios">Soluciones de tecnología</h3>
+                        <p class="parrafoEquipo">Hoy en día, el papel de la automatización se ha vuelto tan importante que nos obliga a pensar en nuevas formas de trabajo. Cuanto mejor y más rápido podamos realizar funciones repetitivas dentro de nuestras organizaciones, más oportunidades tendremos de mejorar el valor añadido de las mismas.</p>
+                        
                         <ul>
                             <li class="parrafoEquipo">Soluciones IA</li>
                             <li class="parrafoEquipo">Capacitación y Relatoría</li>
@@ -790,7 +794,8 @@ class webSite
                         <img src="../../resources/img/software.png" alt="" class="img-fluid imagenesServicios">
         
                         <h3 class="headerServicios">ARQUITECTURA DE SOFTWARE</h3>
-                        <p class="parrafoEquipo">La Arquitectura de Software se refiere a “las estructuras de un sistema, compuestas de elementos con propiedades visibles de forma externa y las relaciones que existen entre ellos.
+                        <p class="parrafoEquipo">No es fácil elegir las mejores herramientas de desarrollo de software para su proyecto. Puede llevar tiempo, paciencia y experiencia encontrar el conjunto de herramientas adecuado que se ajuste a tus necesidades.                        </p>
+
                         <ul>
                             <li class="parrafoEquipo">Arquitectura de software</li>
                             <li class="parrafoEquipo">Desarrollo de sofware a medida</li>
@@ -798,14 +803,15 @@ class webSite
                             <li class="parrafoEquipo">Testing</li>
                             <li class="parrafoEquipo">Mantenimiento</li>
                         </ul>
-                        </p>
                     </div>
         
                     <div id="cloud" class="d-none">
                         <img src="../../resources/img/cloud.png" alt="" class="img-fluid imagenesServicios">
         
-                        <h3 class="headerServicios">BACKUP AS A SERVICE (BaaS) </h3>
-                        <p class="parrafoEquipo">El servicio de backup en línea, también conocido como backup en cloud o backup como servicio (BaaS), es un método de almacenamiento de datos fuera del sitio en el que se encuentran archivos, carpetas, O todo el contenido de una unidad de disco duro está respaldado regularmente por un proveedor de servicios en un repositorio de datos remoto basado en cloud seguro a través de una conexión de red.
+                        <h3 class="headerServicios">servicio cloud </h3>
+                        <p class="parrafoEquipo">Los servicios en la nube son una de las tendencias más candentes de la informática en la actualidad. Es una nueva forma de crear y utilizar infraestructuras, servicios y aplicaciones informáticas. A las aplicaciones basadas en la nube pueden acceder múltiples usuarios de todo el mundo, en cualquier lugar que tenga una conexión a Internet.
+
+                        </p>
                         <ul>
                             <li class="parrafoEquipo">Backup as Service</li>
                             <li class="parrafoEquipo">Desarrollo de sofware a medida</li>
@@ -819,8 +825,8 @@ class webSite
                     <div id="digital" class="d-none">
                         <img src="../../resources/img/uml.png" alt="" class="img-fluid imagenesServicios">
         
-                        <h3 class="headerServicios">ARQUITECTURA UX/UI</h3>
-                        <p class="parrafoEquipo">En Waresoft entendemos la importancia de la arquitectura UX / UI y lo que trae a mejores beneficios para nuestros clientes. Es por eso que al momento de diseñar una página web, software o aplicación implementamos todos los conocimientos existentes de arquitectura UX / UI.
+                        <h3 class="headerServicios">digital design service</h3>
+                        <p class="parrafoEquipo">En Waresoft entendemos la importancia de la arquitectura UX / UI y lo que trae a mejores beneficios para nuestros clientes. Es por eso que al momento de diseñar una página web, software o aplicación implementamos todos los conocimientos existentes de arquitectura UX / UI.</p>
                         <ul>
                             <li class="parrafoEquipo">Arquitectura UX/UI</li>
                             <li class="parrafoEquipo">Diseño de Interfaz UI</li>
@@ -830,7 +836,7 @@ class webSite
                         </p>
                     </div>
         
-                    <div class="indicadores" id="indicadores" style=" transform: rotate(-90deg);margin-left: 600px;margin-top: -300px;">
+                    <div class="indicadores" id="indicadores" style=" transform: rotate(-90deg);margin-left: 650px;margin-top: -300px;">
         
                         <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnOn"></button>
                         <button type="button" style="pointer-events:none;" class="botonesindicador" id="btnNext"></button>
@@ -887,7 +893,7 @@ class webSite
 
                 <br>
                 <div class="info">
-                    <h1 class="margin-left headers">ACERCA DE WARESOFT</h1>
+                    <h1 class="margin-left headers">Acerca de Waresoft</h1>
 
                 </div>
                 <br>
@@ -909,7 +915,7 @@ class webSite
     
             
 
-            <div id="carouselEquipo" class="margin-left vertical carousel slide" data-bs-ride="false">
+            <div id="carouselEquipo" class="margin-left vertical carousel slide" data-bs-ride="false" style="margin-top:50px;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselEquipo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselEquipo" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -917,15 +923,15 @@ class webSite
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../../resources/img/img1.png" alt="" class="img-fluid">
+                    <img src="../../resources/img/img1.png" alt="" class="img-fluid imagenesServicios">
         
                 </div>
                 <div class="carousel-item">
-                    <img src="../../resources/img/img2.png" alt="" class="img-fluid">
+                    <img src="../../resources/img/img2.png" alt="" class="img-fluid imagenesServicios">
         
                 </div>
                 <div class="carousel-item">
-                    <img src="../../resources/img/img3.png" alt="" class="img-fluid">
+                    <img src="../../resources/img/img3.png" alt="" class="img-fluid imagenesServicios">
         
                 </div>
             </div>
@@ -946,8 +952,10 @@ class webSite
         <br>
 
         <div class="container__slider2">
+ <div class="info">
+
         <h1 class="headers margin-left">Nosotros en números</h1>
-        <br>
+        </div>        <br>
 
     <div class="container">
 
