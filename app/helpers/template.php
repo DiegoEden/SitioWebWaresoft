@@ -574,10 +574,13 @@ class webSite
                     <h2 id="titulo1" class="titulosExperiencia">Estamos <br>aquí<br>para ayudarte</h2>
                     <br>
                     <ul class="listaServicios">
-                        <li class="item"><button id="btnV1" class="buttonServicios activeServicios" onclick="showVideo1()">01. SERVICIO TECNOLOGÍA</button></li>
-                        <li class="item"><button id="btnV2" class="buttonServicios" onclick="showVideo2()">02. SERVICIO SOFTWARE</button></li>
+                        <li class="item"><button id="btnV1" class="buttonServicios activeServicios" onclick="showVideo1()">01. SOLUCIONES DE TECNOLOGÍA
+                        </button></li>
+                        <li class="item"><button id="btnV2" class="buttonServicios" onclick="showVideo2()">02. ARQUITECTURA DE SOFTWARE
+                        </button></li>
                         <li class="item"><button id="btnV3" class="buttonServicios" onclick="showVideo3()">03. SERVICIO CLOUD</button></li>
-                        <li class="item"><button id="btnV4" class="buttonServicios" onclick="showVideo4()">04. SERVICIO DIGITAL</button></li>
+                        <li class="item"><button id="btnV4" class="buttonServicios" onclick="showVideo4()">04. DIGITAL DESIGN SERVICE
+                        </button></li>
         
                     </ul>
         
