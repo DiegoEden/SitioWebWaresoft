@@ -226,15 +226,7 @@
         font-size: 35px !important;
     }
 
-    .item .buttonServicios {
-        font-size: 20px;
-    }
-
-    .item .buttonServicios2 {
-        font-size: 20px;
-
-    }
-
+    
     .listaServicios {
         line-height: 150% !important;
     }
@@ -1189,7 +1181,7 @@ body {
 .buttonServicios {
     text-decoration: none;
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     color: #787878;
     transition: var(--animation);
@@ -1237,7 +1229,7 @@ li.menu-item {
 .activeServicios {
     color: var(--colorLetra) !important;
     transition: .6s;
-    font-size: 22px !important;
+    font-size: 16px !important;
 
 }
 
@@ -1246,7 +1238,7 @@ li.menu-item {
 .buttonServicios2.activeServicios2 {
     color: var(--colorLetra) !important;
     transition: .6s;
-    font-size: 22px;
+    font-size: 16px;
     background: url('../../resources/img/flecha.png');
     background-repeat: no-repeat;
     background-position: 1px 21px;
@@ -1416,7 +1408,7 @@ li.menu-item {
 .buttonServicios2 {
     text-decoration: none;
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--colorPrev);
     transition: var(--animation);
@@ -1865,7 +1857,6 @@ li.menu-item {
     background-color: var(--color-fondo);
     padding: 20px;
     border-radius: 0px !important;
-    transition: .6s;
 }
 
 .container__slider {
