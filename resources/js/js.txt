@@ -1,0 +1,97 @@
+/* Añade aquí tu código JavaScript.
+
+Si estás usando la biblioteca jQuery, entonces no olvides envolver tu código dentro de jQuery.ready() así:
+
+jQuery(document).ready(function( $ ){
+    // Tu código aquí dentro
+});
+
+--
+
+Si quieres enlazar a un archivo JavaScript que resida en otro servidor (como
+<script src="https://example.com/your-js-file.js"></script>), entonces, por favor, usa
+la página «Añadir código HTML» , ya que es un código HTML que enlaza a un archivo JavaScript.
+
+Fin del comentario */ 
+
+jQuery(document).ready(function( $ ){
+	$( "#Javier" ).click(function() {
+		location.href="/formadores/?data-tab=1";
+		});
+	
+	
+	$( "#Marco" ).click(function() {
+		location.href="/formadores/?data-tab=2";
+		});
+	
+	$('a[target="_blank"]').removeAttr('target');
+	
+		setTimeout(function() {
+	  $('.elementor-tabs').show()
+	}, 500);
+
+	
+	(function($) {
+  $.fn.inputFilter = function(inputFilter) {
+    return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      } else {
+        this.value = "";
+      }
+    });
+  };
+}(jQuery));
+
+	
+	
+ $(document).ready(function() {
+  $("#phone").inputFilter(function(value) {
+    return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+  },"Only digits allowed");
+});
+	
+});
+
+const shopId =  new URLSearchParams(window.location.search).get('data-tab');
+console.log(shopId);
+
+document.querySelector('.elementor-tabs').style.display='none';
+
+window.addEventListener('load', (event) => {
+
+	if(shopId=='1'|| shopId=='2'){
+
+		
+		if(shopId=='1'){
+
+			console.log('javier');
+			document.getElementById('elementor-tab-title-2281').click();
+			document.getElementById('elementor-tab-content-2281').style.display='block';
+			document.getElementById('elementor-tab-content-2282').style.display='none';
+
+
+		}
+		else if(shopId=='2'){
+
+			 console.log('marco');
+			 document.getElementById('elementor-tab-title-2282').click();
+			 document.getElementById('elementor-tab-content-2282').style.display='block';
+			 document.getElementById('elementor-tab-content-2281').style.display='none';
+
+
+		}
+	}else{
+		
+		console.log('hola');
+	}
+
+});
+
+
+

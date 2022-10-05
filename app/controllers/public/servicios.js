@@ -14,6 +14,16 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 
+$(document).ready(function () {
+
+    setTimeout(function () {
+        $('#containerServicios').show()
+    }, 1000);
+
+
+});
+
+
 var btnContainer2 = document.getElementById("indicadores");
 
 // Get all buttons with class="btn" inside the container
@@ -31,15 +41,44 @@ for (var i = 0; i < btns2.length; i++) {
 document.addEventListener('DOMContentLoaded', function () {
 
     services();
+    const serViceId = new URLSearchParams(window.location.search).get('data-tab');
+    console.log(serViceId);
+
+    if (serViceId == '1' || serViceId == '2' || serViceId == '3' || serViceId == '4') {
+
+        if (serViceId == '1') {
+
+            document.getElementById('btn1').click();
+        }
+        else if (serViceId == '2') {
+
+            document.getElementById('btn2').click();
+
+
+        } else if (serViceId == '3') {
+            document.getElementById('btn3').click();
+
+        }
+        else if (serViceId == '4') {
+            document.getElementById('btn4').click();
+        }
+    } else {
+
+        console.log('No ha seleccionado');
+    }
 });
+
+
+
+
 
 
 function services() {
 
-    btnTec = document.getElementById("btnV1");
-    btnSoft = document.getElementById("btnV2");
-    btnCloud = document.getElementById("btnV3");
-    btnUx = document.getElementById("btnV4");
+    btnTec = document.getElementById("btn1");
+    btnSoft = document.getElementById("btn2");
+    btnCloud = document.getElementById("btn3");
+    btnUx = document.getElementById("btn4");
 
 
     btnSoft.addEventListener('click', function () {

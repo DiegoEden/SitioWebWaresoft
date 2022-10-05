@@ -52,10 +52,10 @@ class webSite
               <a class="nav-link" id="home" aria-current="page" href="index.php">INICIO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="proyecto.php">PROYECTOS</a>
+              <a class="nav-link" aria-current="page" id="project" href="proyecto.php">PROYECTOS</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="servicios.php">SERVICIOS</a>
+            <a class="nav-link" aria-current="page" id="services" href="servicios.php">SERVICIOS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="nosotros.php">NOSOTROS</a>
@@ -188,11 +188,13 @@ class webSite
           <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
           </div>
               <div class="row margenform">
-                  <div class="col col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12 marginsuperior" id="colForm">
-                      <h1 class="numerows">4<sup>+</sup></h1>
-                      <h5 class="headers">AÑOS</h5>
-                      <h5 class="headers">EXPERIENCIA</h5>
-                      <h5 class="headers">LABORAL</h5>
+                  <div class="col col-md-5 col-lg-5 col-xl-5 col-sm-12 col-12" id="colForm">
+                        <h1 class="numerows">+20</h1>
+                        <h5 class="textoForm">AÑOS EXPERIENCIA EN CHILE</h5>
+
+                        <h1 class="numerows">+4</h1>
+                        <h5 class="textoForm">AÑOS DE PRESENCIA EN CENTROAMÉRICA</h5>
+                        
                   </div>
                   <div class="col col col-md-7 col-lg-7 col-xl-7 col-sm-12 col-12">
                       <label class="forms">NOMBRE COMPLETO</label>
@@ -765,11 +767,11 @@ class webSite
                     </h6>
                     <br>
                     <ul class="listaServicios" id="listaServicios" style="line-height:400%">
-                        <li class="item"><button id="btnV1" class="buttonServicios2 activeServicios2">01. Soluciones de tecnología 
+                        <li class="item"><button id="btn1" class="buttonServicios2 activeServicios2">01. Soluciones de tecnología 
                         </button></li>
-                        <li class="item"><button id="btnV2" class="buttonServicios2">02. Arquitectura de software</button></li>
-                        <li class="item"><button id="btnV3" class="buttonServicios2">03. SERVICIO CLOUD</button></li>
-                        <li class="item"><button id="btnV4" class="buttonServicios2">04. Digital Design Service</button></li>
+                        <li class="item"><button id="btn2" class="buttonServicios2">02. Arquitectura de software</button></li>
+                        <li class="item"><button id="btn3" class="buttonServicios2">03. SERVICIO CLOUD</button></li>
+                        <li class="item"><button id="btn4" class="buttonServicios2">04. Digital Design Service</button></li>
         
                     </ul>
         
@@ -969,7 +971,7 @@ class webSite
 
 
         <div class="cards">
-            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-5" id="selector-5">
+            <div class=" card carta col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-5" id="selector-5">
                 <img src="../../resources/img/location.png" height="45" width="34" alt="">
                 <h3 class="headers" style="margin-top:15px">9 Países</h3>
                 <p class="parrafoEquipo">Estamos orgullosos de ser líderes en desarrollo, con presencia en nueve países y proporcionamos soluciones innovadoras a clientes de todo el mundo.
@@ -977,14 +979,14 @@ class webSite
                 </p>
 
             </div>
-            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-6" id="selector-6">
+            <div class=" card carta col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-6" id="selector-6">
                 <img src="../../resources/img/enterprise.png" height="40" width="40" alt="">
                 <h3 class="headers" style="margin-top:15px">15 Empresas</h3>
                 <p class="parrafoEquipo">Estamos orgullosos de haber realizado proyectos de tecnología e innovación en países de todo el mundo bajo estándares de calidad y sostenibilidad.
 
                 </p>
             </div>
-            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-7" id="selector-7">
+            <div class=" card carta col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-7" id="selector-7">
                 <img src="../../resources/img/crown.png" height="38" width="35" alt="">
                 <h3 class="headers" style="margin-top:15px">40 Certificaciones</h3>
                 <p class="parrafoEquipo">Con más de 40 certificaciones nacionales e internacionales en el ámbito tecnológico y de la innovación, podemos ayudarle a encontrar la solución adecuada para su negocio.
@@ -992,7 +994,7 @@ class webSite
                 </p>
             </div>
 
-            <div class=" card col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-8" id="selector-8">
+            <div class=" card carta col-lg-5 col-sm-12 col-12 col-xl-5 layout decoracion" for="item-8" id="selector-8">
                 <img src="../../resources/img/person.png"  height="36" width="37" alt="">
                 <h3 class="headers" style="margin-top:15px">200 Profesionales</h3>
                 <p class="parrafoEquipo">Nos complace anunciar que hemos completado con éxito proyectos en los países en los que estamos presentes, y que estos proyectos se han entregado a tiempo y dentro del presupuesto.
@@ -1048,19 +1050,6 @@ class webSite
         <button class="btn btnScrollMobile2" id="btnScrollMobile2" onclick="clicked4()";> </button>
 
 
-        </div>  -->
-
-
-
-               
-
-
-
-
-
-
-
-
-';
+        </div>  -->';
     }
 }

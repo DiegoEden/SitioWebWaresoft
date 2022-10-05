@@ -536,9 +536,8 @@ footer {
 .numerows {
     font-weight: 700;
     color: #35A8E0;
-    font-size: 160px;
+    font-size:96px;
     font-family: 'Montserrat';
-    letter-spacing: -25px;
     transition: var(--animation);
 
 }
@@ -1681,6 +1680,16 @@ li.menu-item {
     padding-bottom: 50px;
 }
 
+.textoForm{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15.5px;
+    color: var(--colorLetra);
+    transition: .6s;
+    padding: 10px;
+}
+
 .wrapper {
 
     overflow-x: auto;
@@ -1853,7 +1862,7 @@ li.menu-item {
     margin: auto;
     cursor: pointer;
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background-color: var(--body-color);
+    background-color: var(--color-fondo);
     padding: 20px;
     border-radius: 0px !important;
     transition: .6s;
@@ -1967,4 +1976,8 @@ li.menu-item {
 
 .teamLink:hover {
     color: #1D82C2;
+}
+
+.carta{
+    cursor: default !important;
 }

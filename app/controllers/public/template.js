@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (page == "" || page == "index.php" || page == null) {
             document.getElementById('home').classList.add('current');
         }
+        if (page == "servicios.php") {
+            document.getElementById('services').classList.add('current');
+        }
+        if (page == "proyectos.php") {
+            document.getElementById('project').classList.add('current');
+        }
     });
 
 
@@ -219,7 +225,6 @@ function showVideo1() {
     document.getElementById('btnV3').classList.remove("activeServicios");
     document.getElementById('btnV4').classList.remove("activeServicios");
     document.getElementById('btnV1').classList.add("activeServicios");
-     window.location.href = "servicios.php";
 
 
 }
@@ -234,7 +239,6 @@ function showVideo2() {
     document.getElementById('btnV3').classList.remove("activeServicios");
     document.getElementById('btnV4').classList.remove("activeServicios");
     document.getElementById('btnV2').classList.add("activeServicios");
-    window.location.href = "servicios.php";
 
 
 
@@ -250,7 +254,6 @@ function showVideo3() {
     document.getElementById('btnV1').classList.remove("activeServicios");
     document.getElementById('btnV4').classList.remove("activeServicios");
     document.getElementById('btnV3').classList.add("activeServicios");
-    window.location.href = "servicios.php";
 
 
 
@@ -266,7 +269,6 @@ function showVideo4() {
     document.getElementById('btnV3').classList.remove("activeServicios");
     document.getElementById('btnV1').classList.remove("activeServicios");
     document.getElementById('btnV4').classList.add("activeServicios");
-    window.location.href = "servicios.php";
 
 
 
@@ -349,6 +351,31 @@ $(document).ready(function () {
 
 
 });
+
+$(document).ready(function () {
+
+
+    $("#btnV1").click(function () {
+        location.href = "servicios.php?data-tab=1";
+    });
+
+    $("#btnV2").click(function () {
+        location.href = "servicios.php?data-tab=2";
+    });
+
+    $("#btnV3").click(function () {
+        location.href = "servicios.php?data-tab=3";
+    });
+
+    $("#btnV4").click(function () {
+        location.href = "servicios.php?data-tab=4";
+    });
+
+
+
+});
+
+
 
 
 function myFunction() {
