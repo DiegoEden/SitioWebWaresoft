@@ -359,7 +359,7 @@ if (isset($_GET['action'])) {
         }
     }
     header('content-type: application/json; charset=utf-8');
-    print(json_encode($result));
+    print(json_encode($result,JSON_PRETTY_PRINT));
 } else {
     print(json_encode('Recurso no disponible'));
 }
