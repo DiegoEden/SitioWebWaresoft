@@ -84,6 +84,204 @@ if (isset($_GET['action'])) {
                                                             $result['message'] = 'Gracias por contactarse con nosotros ';
                                                             try {
 
+                                                                $body = "<html>                                                 
+                                                                <body>
+                                                                <table width='100%'>
+                                                                  <div style='background: url(http://waresoft.com.sv/resources/img/fondoCorreo.png); '>
+                                                                    <div style='text-align:center; '>
+                                                                      <div style='text-align: center;'>
+                                                                        <img
+                                                                          src='http://waresoft.com.sv/resources/img/logoOscuro.png'
+                                                                          alt=''
+                                                                          width='328'
+                                                                          height='115'
+                                                                          style='margin-top: 25px; margin-bottom: -10px'
+                                                                        />
+                                                                      </div>
+                                                                      <div style='text-align: center;'>
+                                                                        <h1
+                                                                          style='
+                                                                            color: #fcfcfc;
+                                                                            font-style: normal;
+                                                                            font-weight: 700;
+                                                                            font-size: 40px;
+                                                                            margin-bottom: 30px;
+                                                                          '
+                                                                        >
+                                                                          ¡Gracias por contactarse con nosotros!
+                                                                        </h1>
+                                                                      </div>";
+
+                                                                $body .= "
+
+                                                                <div style='text-align: center;'>
+                                                                <img
+                                                                  src='http://waresoft.com.sv/resources/img/checkCorreo.png'
+                                                                  alt=''
+                                                                  style='margin-bottom: 25px'
+                                                                />
+                                                              </div>
+                                                      
+                                                              <div style='text-align: center;'>
+                                                              <p
+                                                                  style='
+                                                                    font-style: normal;
+                                                                    font-weight: 400;
+                                                                    font-size: 22px;
+                                                                    color: #ffffff;
+                                                                    margin-bottom: 35px;
+                                                                    text-align: center;
+                                                      
+                                                                  '
+                                                                ><span>
+                                                                Hola ".$mail->getNombres().",
+                                                                </span><br>
+                                                                <span></span>
+                                                                hemos recibido correctamente tu mensaje y en breve estaremos
+                                                                  respondiendo tu solicitud.
+                                                                </p>
+                                                              </div>
+                                                              <div style=' display: inline-flex!important;' >
+                                                              <a
+                                                                  target='_blank'
+                                                                  style='
+                                                                    text-decoration: none;
+                                                                    color: #f8f8f8;
+                                                                    font-style: normal;
+                                                                    font-weight: 400;
+                                                                    border: 3px solid #3751ff;
+                                                                    border-radius: 6px;
+                                                                    height: auto;
+                                                                    margin-bottom: 30px;
+                                                                    padding: 20px;
+                                                                    font-size: 22px;
+                                                                    text-align: center;
+                                                                  '
+                                                                  href='https://waresoft.academy'
+                                                                >
+                                                                  <span>Recuerda visitar nuestra academia</span><br /><span>
+                                                                    waresoft.academy</span
+                                                                  ></a
+                                                                >
+                                                              </div>
+                                                      
+                                                              <div style='text-align: center;'>
+
+                                                              
+                                                                <p
+                                                                  style='
+                                                                    font-style: normal;
+                                                                    font-weight: 400;
+                                                                    font-size: 22px;
+                                                                    color: #f8f8f8;
+                                                                    text-align: center;
+                                                                  '
+                                                                >
+                                                                  No te olvides de seguirnos en nuestras redes sociales, encuentranos
+                                                                  en:
+                                                                </p>
+                                                              </div>
+                                                                
+                                                                ";
+
+                                                                $body .= "
+                                                                
+                                                                <div style='text-align: center;'>
+
+                                                                    <a
+                                                                        href='https://www.linkedin.com/company/waresoftsv'
+                                                                        target='_blank'
+                                                                        style='
+                                                                        text-decoration: none;
+                                                                        margin-right: 20px;
+                                                                        '
+                                                                    >
+                                                                        <img
+                                                                        src='http://waresoft.com.sv/resources/img/lkBlanco.png'
+                                                                        width='70'
+                                                                        height='70'
+                                                                        alt=''
+                                                                        />
+                                                                    </a>
+
+                                                                    <a
+                                                                        style='
+                                                                        text-decoration: none;
+                                                                        margin-right: 20px;
+                                                                        '
+                                                                        href='https://www.facebook.com/waresoftsv'
+                                                                        target='_blank'
+                                                                    >
+                                                                        <img
+                                                                        src='http://waresoft.com.sv/resources/img/fbBlanco.png'
+                                                                        width='70'
+                                                                        height='70'
+                                                                        alt=''
+                                                                        />
+                                                                    </a>
+
+                                                                    <a
+                                                                        style='
+                                                                        text-decoration: none;
+                                                                        margin-right: 20px;
+                                                                        '
+                                                                        target='_blank'
+                                                                    >
+                                                                        <img
+                                                                        src='http://waresoft.com.sv/resources/img/instaBlanco.png'
+                                                                        width='70'
+                                                                        height='70'
+                                                                        alt=''
+                                                                        />
+                                                                    </a>
+                                                                    </div>
+
+                                                                    <div style='text-align: center; margin-bottom: 30px;'>
+
+                                                                     <footer style='background: transparent; text-align: center; margin-top:35px'>
+                                                                        <h1
+                                                                        style='
+                                                                            font-style: normal;
+                                                                            font-weight: 500;
+                                                                            font-size: 14px;
+                                                                            line-height: 21px;
+                                                                            letter-spacing: 0.2em;
+                                                                            text-transform: uppercase;
+
+                                                                            color: #fcfcfc;
+                                                                        '
+                                                                        >WARESOFT
+                                                                        </h1>
+                                                                    </footer>
+                                                                    </div>
+                                                                    <div style='text-align: center; margin-bottom: 30px;'>
+
+                                                                    <footer style='background: transparent; text-align: center; margin-top:35px'>
+                                                                    <h1
+                                                                    style='
+                                                                        font-style: normal;
+                                                                        font-weight: 500;
+                                                                        font-size: 14px;
+                                                                        line-height: 21px;
+                                                                        letter-spacing: 0.2em;
+                                                                        text-transform: uppercase;
+
+                                                                        color: transparent;
+                                                                    '
+                                                                    >WARESOFT
+                                                                    </h1>
+                                                                </footer>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                                </table>
+                                                            </body>
+                                                            </html>
+                                                                ";
+
+
+                                                               
+
                                                                 $responseMail = new PHPMailer(true);
                                                                 $responseMail->SMTPDebug = 0;
                                                                 $responseMail->isSMTP();
@@ -99,8 +297,10 @@ if (isset($_GET['action'])) {
 
                                                                 //Contenido
                                                                 $responseMail->isHTML(true);
+
                                                                 $responseMail->Subject = 'Gracias por contactarse con nosotros';
-                                                                $responseMail->Body    = 'Hola, gracias por contactarse con waresoft';
+                                                                $responseMail->Body    = $body;
+
                                                                 if ($responseMail->send()) {
                                                                     $result['status'] = 1;
                                                                 }

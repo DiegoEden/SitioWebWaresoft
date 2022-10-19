@@ -15,16 +15,16 @@ class Database
     private static function connect()
     {
         // Credenciales para establecer la conexión con la base de datos.
-       /*  $server = 'localhost';
+        $server = 'localhost';
         $database = 'waresoft_web';
         $username = 'root';
-        $password = ''; */
+        $password = '';
 
         //credenciales para establecer la conexión con el servidor de base de datos ferozo
-        $server = 'localhost';
+      /*   $server = 'localhost';
         $database = 'c1960222_ws_web';
         $username = 'c1960222_ws_web';
-        $password = 'zonumuBO04';
+        $password = 'zonumuBO04'; */
 
         // Se crea la conexión mediante la extensión PDO y el controlador para MYSQL.
         self::$connection = new PDO('mysql:host='.$server.';dbname='.$database.';port=3306', $username, $password);
