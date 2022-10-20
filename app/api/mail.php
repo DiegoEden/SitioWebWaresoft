@@ -91,7 +91,7 @@ if (isset($_GET['action'])) {
                                                                     <div style='text-align:center; '>
                                                                       <div style='text-align: center;'>
                                                                         <img
-                                                                          src='http://waresoft.com.sv/resources/img/logoOscuro.png'
+                                                                          src='http://waresoft.com.sv/resources/img/LogoClaro.png'
                                                                           alt=''
                                                                           width='328'
                                                                           height='115'
@@ -101,7 +101,7 @@ if (isset($_GET['action'])) {
                                                                       <div style='text-align: center;'>
                                                                         <h1
                                                                           style='
-                                                                            color: #fcfcfc;
+                                                                            color: black;
                                                                             font-style: normal;
                                                                             font-weight: 700;
                                                                             font-size: 40px;
@@ -128,7 +128,7 @@ if (isset($_GET['action'])) {
                                                                     font-style: normal;
                                                                     font-weight: 400;
                                                                     font-size: 22px;
-                                                                    color: #ffffff;
+                                                                    color: black;
                                                                     margin-bottom: 35px;
                                                                     text-align: center;
                                                       
@@ -143,19 +143,19 @@ if (isset($_GET['action'])) {
                                                               </div>
                                                               <div style=' display: inline-flex!important;' >
                                                               <a
-                                                                  target='_blank'
+                                                                  ttarget='_blank'
                                                                   style='
                                                                     text-decoration: none;
-                                                                    color: #f8f8f8;
+                                                                    color: white;
                                                                     font-style: normal;
                                                                     font-weight: 400;
-                                                                    border: 3px solid #3751ff;
                                                                     border-radius: 6px;
                                                                     height: auto;
                                                                     margin-bottom: 30px;
                                                                     padding: 20px;
                                                                     font-size: 22px;
                                                                     text-align: center;
+                                                                    background:linear-gradient(135deg, #55B7D6 18.75%, #7B8CFB 96.68%);
                                                                   '
                                                                   href='https://waresoft.academy'
                                                                 >
@@ -173,7 +173,7 @@ if (isset($_GET['action'])) {
                                                                     font-style: normal;
                                                                     font-weight: 400;
                                                                     font-size: 22px;
-                                                                    color: #f8f8f8;
+                                                                    color:black;
                                                                     text-align: center;
                                                                   '
                                                                 >
@@ -220,20 +220,7 @@ if (isset($_GET['action'])) {
                                                                         />
                                                                     </a>
 
-                                                                    <a
-                                                                        style='
-                                                                        text-decoration: none;
-                                                                        margin-right: 20px;
-                                                                        '
-                                                                        target='_blank'
-                                                                    >
-                                                                        <img
-                                                                        src='http://waresoft.com.sv/resources/img/instaBlanco.png'
-                                                                        width='70'
-                                                                        height='70'
-                                                                        alt=''
-                                                                        />
-                                                                    </a>
+                                                        
                                                                     </div>
 
                                                                     <div style='text-align: center; margin-bottom: 30px;'>
@@ -248,7 +235,7 @@ if (isset($_GET['action'])) {
                                                                             letter-spacing: 0.2em;
                                                                             text-transform: uppercase;
 
-                                                                            color: #fcfcfc;
+                                                                            color: black;
                                                                         '
                                                                         >WARESOFT
                                                                         </h1>
