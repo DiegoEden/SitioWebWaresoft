@@ -136,11 +136,25 @@ if (isset($_GET['action'])) {
                                                                 ><span>
                                                                 Hola ".$mail->getNombres().",
                                                                 </span><br>
-                                                                <span></span>
+                                                    
                                                                 hemos recibido correctamente tu mensaje y en breve estaremos
                                                                   respondiendo tu solicitud.
                                                                 </p>
                                                               </div>
+                                                              <div style='text-align: center;'>
+                                                              <span  style='
+                                                              font-style: normal;
+                                                              font-weight: 400;
+                                                              font-size: 20px;
+                                                              color: black;
+                                                              margin-bottom: 35px;
+                                                              text-align: center;
+                                                              letter-spacing: 0.07em;
+                                                
+                                                            '>Recuerda visitar nuestra academia</span>
+                                                              
+                                                              </div>
+
                                                               <div style=' display: inline-flex!important;' >
                                                               <a
                                                                   ttarget='_blank'
@@ -156,10 +170,11 @@ if (isset($_GET['action'])) {
                                                                     font-size: 22px;
                                                                     text-align: center;
                                                                     background:linear-gradient(135deg, #55B7D6 18.75%, #7B8CFB 96.68%);
+                                                                    margin-top:35px;
                                                                   '
                                                                   href='https://waresoft.academy'
                                                                 >
-                                                                  <span>Recuerda visitar nuestra academia</span><br /><span>
+                                                                <span>
                                                                     waresoft.academy</span
                                                                   ></a
                                                                 >
@@ -177,7 +192,7 @@ if (isset($_GET['action'])) {
                                                                     text-align: center;
                                                                   '
                                                                 >
-                                                                  No te olvides de seguirnos en nuestras redes sociales, encuentranos
+                                                                  No te olvides de seguirnos en nuestras redes sociales, encuéntranos
                                                                   en:
                                                                 </p>
                                                               </div>
@@ -198,8 +213,8 @@ if (isset($_GET['action'])) {
                                                                     >
                                                                         <img
                                                                         src='http://waresoft.com.sv/resources/img/lkBlanco.png'
-                                                                        width='70'
-                                                                        height='70'
+                                                                        width='60'
+                                                                        height='60'
                                                                         alt=''
                                                                         />
                                                                     </a>
@@ -214,8 +229,8 @@ if (isset($_GET['action'])) {
                                                                     >
                                                                         <img
                                                                         src='http://waresoft.com.sv/resources/img/fbBlanco.png'
-                                                                        width='70'
-                                                                        height='70'
+                                                                        width='60'
+                                                                        height='60'
                                                                         alt=''
                                                                         />
                                                                     </a>
@@ -225,7 +240,8 @@ if (isset($_GET['action'])) {
 
                                                                     <div style='text-align: center; margin-bottom: 30px;'>
 
-                                                                     <footer style='background: transparent; text-align: center; margin-top:35px'>
+                                                                     <footer style='background: transparent; text-align: center; margin-top:35px;
+                                                                     border-top: 2px solid #6B7EFD;'>
                                                                         <h1
                                                                         style='
                                                                             font-style: normal;
