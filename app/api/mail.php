@@ -27,7 +27,7 @@ if (isset($_GET['action'])) {
             $_POST = $mail->validateForm($_POST);
             $token = filter_input(INPUT_POST, 'g-recaptcha-response', FILTER_SANITIZE_STRING);
             if ($token) {
-                $secretKey = '6Lf0cuAhAAAAAOsaLBxkADyAyM4CY_s1Iy_zy1YB';
+                $secretKey = '';
                 $ip = $_SERVER['REMOTE_ADDR'];
 
                 $data = array(
@@ -67,8 +67,8 @@ if (isset($_GET['action'])) {
                                                         $mailer->isSMTP();
                                                         $mailer->Host       = 'c1960222.ferozo.com';
                                                         $mailer->SMTPAuth   = true;
-                                                        $mailer->Username   = 'diego.ramirez@waresoft.com.sv';
-                                                        $mailer->Password   = 'W4r3s0ft';
+                                                        $mailer->Username   = $username;
+                                                        $mailer->Password   = $password;
                                                         $mailer->SMTPSecure = 'ssl';
                                                         $mailer->Port       = 465;
                                                         $mailer->CharSet = 'UTF-8';
